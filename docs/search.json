@@ -4,49 +4,35 @@
     "href": "blog.html",
     "title": "Blog",
     "section": "",
-    "text": "More blog posts coming soon! I’ll be sharing thoughts on [your topics here]."
+    "text": "Week Notes: 2026 Week 22\n\n\nWeek beginning Monday 25 May 2026\n\n\n\n\n\n\n\n\nMay 29, 2026\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "blog.html#coming-soon",
-    "href": "blog.html#coming-soon",
-    "title": "Blog",
+    "objectID": "blogposts/20260529_weeknotes_2026_22.html",
+    "href": "blogposts/20260529_weeknotes_2026_22.html",
+    "title": "Week Notes: 2026 Week 22",
     "section": "",
-    "text": "More blog posts coming soon! I’ll be sharing thoughts on [your topics here]."
+    "text": "In the group I’ve joined at the University of Cambridge, there is something of a culture of writing “weeknotes” at the end of each week. The idea being to keep everyone up to date with what one is up to, but also to encourage one to be a little reflective and create some soft accountability. I’m also using it as an excuse to resurrect a blog that has long been in abeyance."
   },
   {
-    "objectID": "publications.html",
-    "href": "publications.html",
-    "title": "Publications",
-    "section": "",
-    "text": "I’m working on compiling my publications. Please check back later, or visit my ORCID profile for more information."
+    "objectID": "blogposts/20260529_weeknotes_2026_22.html#what-i-was-working-on",
+    "href": "blogposts/20260529_weeknotes_2026_22.html#what-i-was-working-on",
+    "title": "Week Notes: 2026 Week 22",
+    "section": "What I was working on",
+    "text": "What I was working on\n\nTESSERA\nTESSERA is a geospatial foundation model developed here in Cambridge. It providing a vast, rich dataset of “embeddings”: summary vectors for every 10m pixel on the planet. My new job is to do a bunch of conservation science with these embeddings.\nThis past week, I had my first proper play with the embeddings. I used them to train a very basic ML model, making some toy habitat maps of the Centre for Landscape Regeneration project areas (the Cairngorms, the Fens, and Cumbria). These were just quick and dirty first passes to get a ‘feel’ for Tessera.\n\n\n\n\n\n\n\nA habitat map of the Cairngorms. Haven’t included a legend, but suffice it to say that most things are heather, bog, or coniferous woodland (the Caledonian Forest!)\n\n\nResearch plan\nI spent a lot of the week thinking about my longer term research goals, both for the coming years in Cambridge and the years thereafter. I’ve written up a first draft of a research plan, just 3 pages. I won’t go into too much detail about it here, but it has been fun reading around a lot of the literature (see below!). One detail I will add here is that I used the typeface Bembo, which I’ve gotten very into recently.\n\n\n\n\n\n\n\nA research plan written in Bembo.\n\n\n100 Maps\nI used the Bank Holiday Monday to get a bit of work done on my side project (“100 Maps of Britain”, hoping to have a page about that on this site soon!). One of the maps is of linguistic roots of British place names. Here, I learned about the Landsker line, a surprisingly sharp linguistic boundary in south Pembrokeshire between regions of predominantly English names (south) and Welsh place names (north). The line is thought to have been formed in the 12th century, when the Normans established themselves in the area and encouraged English settlement.\n\n\n\n\n\n\n\nPredominantly English place names south of the Landsker line."
   },
   {
-    "objectID": "publications.html#coming-soon",
-    "href": "publications.html#coming-soon",
-    "title": "Publications",
-    "section": "",
-    "text": "I’m working on compiling my publications. Please check back later, or visit my ORCID profile for more information."
+    "objectID": "blogposts/20260529_weeknotes_2026_22.html#what-i-was-reading",
+    "href": "blogposts/20260529_weeknotes_2026_22.html#what-i-was-reading",
+    "title": "Week Notes: 2026 Week 22",
+    "section": "What I was reading",
+    "text": "What I was reading\n\nResearch Literature\nI read a bunch of stuff around: agri-environment schemes, causal inference, and some of the older back-catalogue of papers around the “land sharing” versus “land sparing” debate.\n\n\nIncluding many papers from Andrew Balmford’s group here at the Conservation Research Institute in Cambridge.\nThe idea here is that there are two broad approaches one could take to grow a fixed amount of food across a landscape: modern, intensive agriculture at a few sites and pristine nature reserves elsewhere (land sparing), or low-intensity, nature-friendly agriculture everywhere (land sharing).\nOf course, the reality is not so much a binary as a spectrum. Nonetheless, evidence is beginning to accumulating in favour of approaches towards the land-sparing end of the spectrum.\nThis is a nuanced question, and I won’t be able to do it justice yet. Planning to read more about it in coming weeks.\n\n\nElsewhere\nLess work-related, I’ve been reading “What the Railways Did For Us” by Stuart Hylton. A very well-researched and funny book about the coming of the railways to Britain and their impact on society, such as the impact on the economy, on cities, and even on the class system.\nThe opening chapter, concerning everyone’s grumbles about the initial spread of railways, was particularly memorable. Here is Wilhelm I, Kaiser of Prussia, on the subject:\n\nNo one will pay good money to get from Berlin to Potsdam in one hour when he can ride his horse there in one day for free.\n\n\n\nWilhelm I (1864) quoted in ‘What the Railways Did For Us’, Stuart Hylton, (p15).\nParts of the discussion struck a painfully familiar note:\n\nPartly as a result of all this process, Britain became the most expensive country in the world in which to get consent for a railway. Sometimes the parliamentary process alone could cost thousands of pounds a mile, added to which some landowners might extract quite exorbitant payments for their land as the price for removing their objections.\n\n\n\nDiscussion regarding spread of railways in mid-19th century Britain. Idem, (p19). I can’t quite get over the gutting of HS2. Perhaps I’m reading this book a little too soon."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Aneesh Naik",
-    "section": "",
-    "text": "Aneesh Naik\n\n\n\nPhoto\n\n\nResearcher & Developer\nWelcome to my website. I’m interested in [your research interests here].\n\nLast updated: May 28 2026"
-  },
-  {
-    "objectID": "index.html#latest-posts",
-    "href": "index.html#latest-posts",
-    "title": "Aneesh Naik",
-    "section": "Latest Posts",
-    "text": "Latest Posts\nComing soon! Check back later for blog posts and updates."
-  },
-  {
-    "objectID": "index.html#publications",
-    "href": "index.html#publications",
-    "title": "Aneesh Naik",
-    "section": "Publications",
-    "text": "Publications\nInterested in my research? View my publications →\n\nLast updated: 2024"
+    "objectID": "blogposts/20260529_weeknotes_2026_22.html#miscellanea",
+    "href": "blogposts/20260529_weeknotes_2026_22.html#miscellanea",
+    "title": "Week Notes: 2026 Week 22",
+    "section": "Miscellanea",
+    "text": "Miscellanea\nOver the long weekend I saw a lot of birds at WWT Welney, including my first ever crane!\n\n\n\n\n\n\n\nCranes at WWT Welney. Not my photograph! Credit: WWT.\nI’m using a new ink: “Lie de Thé” by J. Herbin. As implied by the name, it’s a beautiful deep-brown colour, I like it a lot.\n\n\n\n\n\n\n\n\n\nPhotograph of a sample of my new ink."
   },
   {
     "objectID": "about.html",
@@ -56,38 +42,10 @@
     "text": "I’m Aneesh Naik, an astrophysicist-turned-ecologist at the University of Cambridge. Formally in the Department of Plant Sciences, I sit in the Conservation Research Institute in the David Attenborough Building. I am also affiliated with the Centre for Landscape Regeneration.\nMy research interests lie at the intersection of ecology, conservation, remote sensing, and AI. I am particularly interested in how we can use geospatial foundation models like TESSERA to:\n\n\nEstimate biodiversity\n\nMap the ranges of species\n\nMap land cover and ecosystems (including habitat condition and habitat connectivity)\n\nQuantify the impact of conservation interventions\n\nIn 2020, I got my PhD in astrophysics from the Institute of Astronomy, University of Cambridge. Then, in 2021-2022, I was a postdoc in the Particle Theory group at the University of Nottingham. Then, my last research position in astrophysics was 2022-2024, when I was a Leverhulme Early Career Research Fellow in the Institute for Astronomy, University of Edinburgh. My research focussed on galactic dynamics, and how one can use it to test fundamental physics, such as our theory of gravity and the nature of dark matter.\nAfter this, I decided I wanted to stop thinking about stars and start thinking about trees. 2025 to early 2026, I worked as a data scientist at a NatureTech company in Edinburgh: Space Intelligence. In 2026 I took up my current position in Cambridge.\nOutside of work, I’m an enthusiastic gardener, reader, rambler, mapmaker, birdwatcher and cruciverbalist."
   },
   {
-    "objectID": "about.html#background",
-    "href": "about.html#background",
-    "title": "About",
-    "section": "",
-    "text": "I’m a researcher and developer based in [your location]. My work focuses on [your research area]. I’m passionate about [your interests] and enjoy [your hobbies]."
-  },
-  {
-    "objectID": "about.html#education",
-    "href": "about.html#education",
-    "title": "About",
-    "section": "Education",
-    "text": "Education\n\nPh.D. in [Field], [University], [Year]\nB.S. in [Field], [University], [Year]"
-  },
-  {
-    "objectID": "about.html#experience",
-    "href": "about.html#experience",
-    "title": "About",
-    "section": "Experience",
-    "text": "Experience\n\nPosition Title at [Organization], [Years]\nPrevious Position at [Organization], [Years]"
-  },
-  {
-    "objectID": "about.html#interests",
-    "href": "about.html#interests",
-    "title": "About",
-    "section": "Interests",
-    "text": "Interests\n\n[Interest 1]\n[Interest 2]\n[Interest 3]"
-  },
-  {
-    "objectID": "about.html#get-in-touch",
-    "href": "about.html#get-in-touch",
-    "title": "About",
-    "section": "Get in Touch",
-    "text": "Get in Touch\nYou can find me on GitHub and ORCID. Feel free to reach out if you’d like to collaborate or discuss research ideas."
+    "objectID": "blogposts/20260529_weeknotes_2026_22.html#footnotes",
+    "href": "blogposts/20260529_weeknotes_2026_22.html#footnotes",
+    "title": "Week Notes: 2026 Week 22 (W/B 25 May)",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nThis note appears in the margin.↩︎"
   }
 ]
