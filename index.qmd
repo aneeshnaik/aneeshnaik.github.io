@@ -1,5 +1,7 @@
 ---
-title: "Website"
+title: ""
 ---
 
-Coming soon!
+<!--TODO: fill in landing page-->
+
+## Coming Soon 

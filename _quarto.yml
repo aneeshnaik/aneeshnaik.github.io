@@ -6,18 +6,22 @@ website:
   title: "Aneesh Naik"
   navbar:
     left:
-      - href: index.qmd
-        text: Home
       - href: about.qmd
         text: About
+      - href: publications.qmd
+        text: Publications
+      - href: blog.qmd
+        text: Blog
+  page-footer:
+    left: © 2026 Aneesh Naik
+    right: Built with [Quarto](https://quarto.org/)
 
 format:
   html:
-    theme:
-      - cosmo
-      - brand
+    theme: cosmo
+    mainfont: "Gill Sans"
     css: styles.css
-    toc: true
+    toc: false
 
-
-
+#TODO github/orcid/email icons in footer
+#TODO favicon
