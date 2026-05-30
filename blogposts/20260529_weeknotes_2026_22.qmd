@@ -54,7 +54,7 @@ Including many papers from [Andrew Balmford's group](https://www.zoo.cam.ac.uk/r
 
 The idea here is that there are two broad approaches one could take to grow a fixed amount of food across a landscape: modern, intensive agriculture at a few sites and pristine nature reserves elsewhere (land sparing), or low-intensity, nature-friendly agriculture everywhere (land sharing).
 
-Of course, the reality is not so much a binary as a spectrum. Nonetheless, evidence is beginning to accumulating in favour of approaches towards the land-sparing end of the spectrum. 
+Of course, the reality is not so much a binary as a spectrum. Nonetheless, evidence is beginning to accumulate in favour of approaches towards the land-sparing end of the spectrum. 
 
 This is a nuanced question, and I won't be able to do it justice yet. Planning to read more about it in coming weeks.
 
@@ -75,14 +75,14 @@ Parts of the discussion struck a painfully familiar note:
 > Partly as a result of all this process, Britain became the most expensive country in the world in which to get consent for a railway. Sometimes the parliamentary process alone could cost thousands of pounds a mile, added to which some landowners might extract quite exorbitant payments for their land as the price for removing their objections.
 
 ::: {.aside}
-Discussion regarding spread of railways in mid-19th century Britain. Idem, (p19). I can't quite get over the gutting of HS2. Perhaps I'm reading this book a little too soon.
+Discussion regarding difficulties in establishing railways in mid-19th century Britain. Idem, (p19). I can't quite get over the gutting of HS2. Perhaps I'm reading this book a little too soon.
 :::
 
 
 ## Miscellanea
 
 
-Over the long weekend I saw a lot of birds at WWT Welney, including my first ever crane!
+Over the long weekend I saw a *lot* of birds at WWT Welney, including my first ever crane!
 
 ![](../images/blogpost_images/20260529_crane.jpg){fig-align="center" fig-alt="Photograph of cranes at WWT Welney" width="500px"}
 
