@@ -29,6 +29,10 @@ My very small contribution to v1.1 was my involvement in the discussion of landm
 
 Yesterday I tidied up and released a python package I made some months back. It's called [`datahues`](https://github.com/aneeshnaik/datahues), and has a very simple functionality: given two colours, generate a perceptually uniform colour ramp between them. I find myself needing to do this all the time and in the past have always just bodged around with some quite complicated colour-space libraries, so I thought I would write a simple utility for it. It's now available on PyPI and conda-forge.
 
+::: {.aside}
+"Needing" is perhaps too strong a word here.
+:::
+
 Here is the figure from the README, demonstrating the need for the utility:
 
 ![](../images/blogpost_images/20260605_ramp_comparison.png){fig-align="center" fig-alt="Two colour ramps: one perceptually uniform, the other not." width="600px"}
@@ -70,10 +74,9 @@ One work in particular I thought I would write about is "Gradient Analysis of Ve
 Idem. Figure 3, top panel.
 :::
 
-Above, I'm reproducing a figure from the paper, showing distributions of major tree species in the Smoky Mountains. Each curve is the distribution of a single species as a function of environmental moisture level, from mesic (wet) to xeric (dry) with increasing x. The point being made here is that no two species have the same curve: each species shows an individualistic response to the environmental gradient. If you stand in a certain place and observe N species, that is an incidental assemblage of N species for which that environment falls within the acceptable range. It will be slightly less acceptable to some of them than others.
+Above, I'm reproducing a figure from the paper, showing distributions of major tree species in the Smoky Mountains. Each curve is the distribution of a single species as a function of environmental moisture level, from mesic (wet) to xeric (dry) with increasing x. The point being made here is that no two species have the same curve: each species shows an individualistic response to the environmental gradient. According to Whittaker, if you stand in a certain place and observe N species, that is an incidental assemblage of N species for which that environment falls within the acceptable range. It will be slightly less acceptable to some of them than others.
 
 These ideas didn't originate with Whittaker: they are known as the "Gleasonian" paradigm, having originated in the earlier 1920s work of Harry Gleason. Whittaker's work arguing in favour of the Gleasonian paradigm was rather controversial. It stood against the prevailing "Clementsian" paradigm, which understood communities as discrete, bounded units, with relatively sharp boundaries ("ecotones") between them.
-
 
 
 ## Miscellanea
