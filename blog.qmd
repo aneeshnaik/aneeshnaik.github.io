@@ -5,5 +5,3 @@ listing:
   sort: "date desc"
   type: default
 ---
-<!--TODO: fill in blog page-->
-

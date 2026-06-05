@@ -1,6 +1,6 @@
 ---
 title: "Week Notes: 2026 Week 22"
-subtitle: "Week beginning Monday 25 May 2026"
+subtitle: "23-29 May 2026"
 date: 2026-05-29
 ---
 
