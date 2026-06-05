@@ -48,10 +48,7 @@ Here is a map I made with `datahues` a few months ago, depicting the annual numb
 ![](../images/blogpost_images/20260605_sunshine.png){fig-align="center" fig-alt="A map of annual sunshine hours across GB." width="60%"}
 
 ::: {.aside}
-In truth, this isn't really the archetypal use case for `datahues`: the map uses a series of discrete steps along the ramp, so would probably get away without strict perceptual uniformity.
-:::
-::: {.aside}
-The map uses Met Office data licensed under the Open Government Licence v3.0. [Met Office (2025), *HadUK-Grid Gridded Climate Observations on a 1km grid over the UK, v1.3.1.ceda (1836-2024)*. NERC EDS Centre for Environmental Data Analysis.](https://catalogue.ceda.ac.uk/uuid/f02cc6ddd92f45b18b9ab6ab544df7d9)
+Map of annual sunshine hours across GB. In truth, this isn't really the archetypal use case for `datahues`: the map uses a series of discrete steps along the ramp, so would probably get away without strict perceptual uniformity. The map uses Met Office data licensed under the Open Government Licence v3.0. [Met Office (2025), *HadUK-Grid Gridded Climate Observations on a 1km grid over the UK, v1.3.1.ceda (1836-2024)*. NERC EDS Centre for Environmental Data Analysis.](https://catalogue.ceda.ac.uk/uuid/f02cc6ddd92f45b18b9ab6ab544df7d9)
 :::
 
 It is very gloomy in the Highlands!
@@ -71,7 +68,7 @@ One work in particular I thought I would write about is "Gradient Analysis of Ve
 ![](../images/blogpost_images/20260605_whittaker.png){fig-align="center" fig-alt="A figure from Whittaker 1967, showing various tree species' distributions as a function of environmental moisture level." width="65%"}
 
 ::: {.aside}
-Idem. Figure 3, top panel.
+Tree species distributions as a function of moisture level in the Smoky Mountains. Idem. Figure 3, top panel.
 :::
 
 Above, I'm reproducing a figure from the paper, showing distributions of major tree species in the Smoky Mountains. Each curve is the distribution of a single species as a function of environmental moisture level, from mesic (wet) to xeric (dry) with increasing x. The point being made here is that no two species have the same curve: each species shows an individualistic response to the environmental gradient. According to Whittaker, if you stand in a certain place and observe N species, that is an incidental assemblage of N species for which that environment falls within the acceptable range. It will be slightly less acceptable to some of them than others.
@@ -83,7 +80,13 @@ These ideas didn't originate with Whittaker: they are known as the "Gleasonian" 
 
 ### Garden
 
-Our vegetable seedlings have had a bit of an adventure in May, they've travelled 800 miles and lived in four different houses. Now, they're finally in the ground in our garden in Edinburgh.
+Our vegetable seedlings had a bit of an adventure in May. They travelled 800 miles and lived in four different houses. Now, they're finally in the ground in our garden in Edinburgh.
+
+![](../images/blogpost_images/20260605_seedlings.jpg){fig-align="center" fig-alt="A photograph of some seedlings in vegetable patch." width="65%"}
+
+::: {.aside}
+Photograph of sweetcorn and courgette seedlings in our garden. Forgive the scruffy environs!
+:::
 
 These are sweetcorn and yellow courgettes. We're growing them in the same bed (along with some upcoming borlotti beans), following the "three sisters" method of companion planting. The idea is that the corn provides a rigid structure for the beans to climb, while the beans fix nitrogen in the soil. The courgettes, meanwhile, provide ground cover to retain moisture and suppress weeds. 
 
