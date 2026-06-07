@@ -4,6 +4,24 @@ project:
 execute:
   freeze: auto
 
+# naster list of allowed blog categories
+blog:
+  categories:
+    - Weeknotes
+    - Research
+    - TESSERA
+    - Maps
+    - Birds
+    - Gardening
+    - Books
+    - Papers
+    - Code
+    - Conservation
+    - Ecology
+    - KBAs
+
+
+
 website:
   title: "Aneesh Naik"
   navbar:

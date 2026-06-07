@@ -1,7 +1,17 @@
 ---
-title: "Week Notes: 2026 Week 23"
-subtitle: "30 May - 5 June 2026"
+title: "Weeknotes: 2026 Week 23"
+subtitle: "2026/05/30 -- 2026/06/05"
 date: 2026-06-05
+categories:
+  - Weeknotes
+  - Research
+  - TESSERA
+  - Maps
+  - Gardening
+  - Papers
+  - Code
+  - Ecology
+  - KBAs
 ---
 
 I've been up in Edinburgh this week after a fun couple of weeks down in Cambridge.

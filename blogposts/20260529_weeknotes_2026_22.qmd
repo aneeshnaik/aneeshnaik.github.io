@@ -1,7 +1,17 @@
 ---
-title: "Week Notes: 2026 Week 22"
-subtitle: "23-29 May 2026"
+title: "Weeknotes: 2026 Week 22"
+subtitle: "2026/05/23 -- 2026/05/29"
 date: 2026-05-29
+categories:
+  - Weeknotes
+  - Research
+  - TESSERA
+  - Maps
+  - Birds
+  - Books
+  - Papers
+  - Conservation
+
 ---
 
 In the group I've joined at the University of Cambridge, there is something of a culture of writing "weeknotes" at the end of each week. The idea being to keep everyone up to date with what one is up to, but also to encourage one to be a little reflective and create some soft accountability. I'm also using it as an excuse to resurrect a blog that has long been in abeyance.
