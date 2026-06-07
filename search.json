@@ -1,12 +1,5 @@
 [
   {
-    "objectID": "blog.html",
-    "href": "blog.html",
-    "title": "Blog",
-    "section": "",
-    "text": "Week Notes: 2026 Week 23\n\n\n30 May - 5 June 2026\n\n\n\n\n\n\n\n\nJun 5, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nWeek Notes: 2026 Week 22\n\n\n23-29 May 2026\n\n\n\n\n\n\n\n\nMay 29, 2026\n\n\n\n\n\nNo matching items"
-  },
-  {
     "objectID": "blogposts/20260529_weeknotes_2026_22.html",
     "href": "blogposts/20260529_weeknotes_2026_22.html",
     "title": "Week Notes: 2026 Week 22",
@@ -35,6 +28,20 @@
     "text": "Miscellanea\nOver the long weekend I saw a lot of birds at WWT Welney, including my first ever crane!\n\n\n\n\n\n\n\nCranes at WWT Welney. Not my photograph! Credit: WWT.\nI’m using a new ink: “Lie de Thé” by J. Herbin. As implied by the name, it’s a beautiful deep-brown colour, I like it a lot.\n\n\n\n\n\n\n\n\n\nPhotograph of a sample of my new ink."
   },
   {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "I’m Aneesh Naik, an astrophysicist-turned-ecologist at the University of Cambridge. Formally in the Department of Plant Sciences, I sit in the Conservation Research Institute in the David Attenborough Building. I am also affiliated with the Centre for Landscape Regeneration.\nMy research interests lie at the intersection of ecology, conservation, remote sensing, and AI. I am particularly interested in how we can use geospatial foundation models like TESSERA to:\n\n\nEstimate biodiversity\n\nMap the ranges of species\n\nMap land cover and ecosystems (including habitat condition and habitat connectivity)\n\nQuantify the impact of conservation interventions\n\nIn 2020, I got my PhD in astrophysics from the Institute of Astronomy, University of Cambridge. Then, in 2021-2022, I was a postdoc in the Particle Theory group at the University of Nottingham. Then, my last research position in astrophysics was 2022-2024, when I was a Leverhulme Early Career Research Fellow in the Institute for Astronomy, University of Edinburgh. My research focussed on galactic dynamics, and how one can use it to test fundamental physics, such as our theory of gravity and the nature of dark matter.\nAfter this, I decided I wanted to stop thinking about stars and start thinking about trees. 2025 to early 2026, I worked as a data scientist at a NatureTech company in Edinburgh: Space Intelligence. In 2026 I took up my current position in Cambridge.\nOutside of work, I’m an enthusiastic gardener, reader, rambler, mapmaker, birdwatcher and cruciverbalist."
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Week Notes: 2026 Week 23\n\n\n30 May - 5 June 2026\n\n\n\n\n\n\n\n\nJun 5, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nWeek Notes: 2026 Week 22\n\n\n23-29 May 2026\n\n\n\n\n\n\n\n\nMay 29, 2026\n\n\n\n\n\nNo matching items"
+  },
+  {
     "objectID": "blogposts/20260605_weeknotes_2026_23.html",
     "href": "blogposts/20260605_weeknotes_2026_23.html",
     "title": "Week Notes: 2026 Week 23",
@@ -61,12 +68,5 @@
     "title": "Week Notes: 2026 Week 23",
     "section": "Miscellanea",
     "text": "Miscellanea\n\nGarden\nOur vegetable seedlings had a bit of an adventure in May. They travelled 800 miles and lived in four different houses. Now, they’re finally in the ground in our garden in Edinburgh.\n\n\n\n\n\n\n\nPhotograph of sweetcorn and courgette seedlings in our garden. Forgive the scruffy environs!\nThese are sweetcorn and yellow courgettes. We’re growing them in the same bed (along with some upcoming borlotti beans), following the “three sisters” method of companion planting. The idea is that the corn provides a rigid structure for the beans to climb, while the beans fix nitrogen in the soil. The courgettes, meanwhile, provide ground cover to retain moisture and suppress weeds.\nAll of our seeds were F1 varieties, a decision I now regret a little. Having recently read Dan Saladino’s excellent book Eating to Extinction, I’m a zealous convert to the idea of preserving traditional, open-pollinated seed varieties. Doing so helps preserve food heritage, rare flavours, and genetic diversity. Next year!\n\n\nIn particular, I’m planning to join the Heritage Seed Library.\n\n\nClerihews\nI learned this week about a very silly poetic form: the clerihew. 4 lines, AABB, whimsical and funny, with the rhymes often extremely contrived and the metre absolutely all over the place. They were invented around the start of the twentieth century by Edmund Clerihew Bentley, and they are typically biographical, with the subject of the poem being the first line. For example, from Bentley’s 1905 Biography for Beginners:\n\nSir Humphry Davy\nAbominated gravy.\nHe lived in the odium\nOf having discovered sodium.\n\n\n\nBentley, E. C. (1905). Biography for Beginners. Read Books.\nAnother example, also from Bentley’s collection:\n\nThe people of Spain think Cervantes\nEqual to half-a-dozen Dantes:\nAn opinion resented most bitterly\nBy the people of Italy.\n\nThey aren’t always biographical. My favourite is from the introduction of Bentley’s collection, and is about the very nature of biography:\n\nThe Art of Biography\nIs different from Geography.\nGeography is about Maps,\nBut Biography is about Chaps."
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "I’m Aneesh Naik, an astrophysicist-turned-ecologist at the University of Cambridge. Formally in the Department of Plant Sciences, I sit in the Conservation Research Institute in the David Attenborough Building. I am also affiliated with the Centre for Landscape Regeneration.\nMy research interests lie at the intersection of ecology, conservation, remote sensing, and AI. I am particularly interested in how we can use geospatial foundation models like TESSERA to:\n\n\nEstimate biodiversity\n\nMap the ranges of species\n\nMap land cover and ecosystems (including habitat condition and habitat connectivity)\n\nQuantify the impact of conservation interventions\n\nIn 2020, I got my PhD in astrophysics from the Institute of Astronomy, University of Cambridge. Then, in 2021-2022, I was a postdoc in the Particle Theory group at the University of Nottingham. Then, my last research position in astrophysics was 2022-2024, when I was a Leverhulme Early Career Research Fellow in the Institute for Astronomy, University of Edinburgh. My research focussed on galactic dynamics, and how one can use it to test fundamental physics, such as our theory of gravity and the nature of dark matter.\nAfter this, I decided I wanted to stop thinking about stars and start thinking about trees. 2025 to early 2026, I worked as a data scientist at a NatureTech company in Edinburgh: Space Intelligence. In 2026 I took up my current position in Cambridge.\nOutside of work, I’m an enthusiastic gardener, reader, rambler, mapmaker, birdwatcher and cruciverbalist."
   }
 ]
