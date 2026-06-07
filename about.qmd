@@ -2,7 +2,7 @@
 title: "About"
 ---
 
-I'm Aneesh Naik, an astrophysicist-turned-ecologist at the University of Cambridge. Formally in the Department of Plant Sciences, I sit in the [Conservation Research Institute](https://www.conservation.cam.ac.uk/) in the [David Attenborough Building](https://www.cambridgeconservation.org/about/the-david-attenborough-building/). I am also affiliated with the [Centre for Landscape Regeneration](https://www.clr.conservation.cam.ac.uk/).
+I'm Dr. Aneesh Naik, an astrophysicist-turned-ecologist at the University of Cambridge. Formally in the Department of Plant Sciences, I sit in the [Conservation Research Institute](https://www.conservation.cam.ac.uk/) in the [David Attenborough Building](https://www.cambridgeconservation.org/about/the-david-attenborough-building/). I am also affiliated with the [Centre for Landscape Regeneration](https://www.clr.conservation.cam.ac.uk/).
 
 My research interests lie at the intersection of ecology, conservation, remote sensing, and AI. I am particularly interested in how we can use geospatial foundation models like [TESSERA](https://geotessera.org/) to:
 <ul>
