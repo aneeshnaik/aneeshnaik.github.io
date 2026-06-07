@@ -2,6 +2,10 @@ on:
   workflow_dispatch:
   push:
     branches: main
+    paths-ignore:
+      - 'TODO'
+      - 'README.md'
+      - '.gitignore'
 
 name: Quarto Render and Publish
 
