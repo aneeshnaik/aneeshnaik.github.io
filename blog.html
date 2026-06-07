@@ -82,9 +82,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-subtitle','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-image','listing-date','listing-title','listing-subtitle','listing-categories','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -135,7 +135,7 @@ window.Quarto = {
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed fullcontent quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -175,7 +175,8 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="QmlyZHM=">Birds <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Qm9va3M=">Books <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Q29kZQ==">Code <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Q29uc2VydmF0aW9u">Conservation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RWNvbG9neQ==">Ecology <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R2FyZGVuaW5n">Gardening <span class="quarto-category-count">(1)</span></div><div class="category" data-category="S0JBcw==">KBAs <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TWFwcw==">Maps <span class="quarto-category-count">(2)</span></div><div class="category" data-category="UGFwZXJz">Papers <span class="quarto-category-count">(2)</span></div><div class="category" data-category="UmVzZWFyY2g=">Research <span class="quarto-category-count">(2)</span></div><div class="category" data-category="VEVTU0VSQQ==">TESSERA <span class="quarto-category-count">(2)</span></div><div class="category" data-category="V2Vla25vdGVz">Weeknotes <span class="quarto-category-count">(2)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -204,7 +205,7 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1780617600000" data-listing-file-modified-sort="1780847361579" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1183">
+<div class="quarto-post image-right" data-index="0" data-categories="V2Vla25vdGVzJTJDUmVzZWFyY2glMkNURVNTRVJBJTJDTWFwcyUyQ0dhcmRlbmluZyUyQ1BhcGVycyUyQ0NvZGUlMkNFY29sb2d5JTJDS0JBcw==" data-listing-date-sort="1780617600000" data-listing-file-modified-sort="1780848908003" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1183">
 <div class="thumbnail"><a href="./blogposts/20260605_weeknotes_2026_23.html" class="no-external">
 
 <p class="card-img-top"><img loading='lazy' src="images/blogpost_images/20260605_ramp_comparison.png" alt="Two colour ramps: one perceptually uniform, the other not."  class="thumbnail-image card-img"/></p>
@@ -212,24 +213,43 @@ window.Quarto = {
 </a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./blogposts/20260605_weeknotes_2026_23.html" class="no-external">Week Notes: 2026 Week 23</a>
+<a href="./blogposts/20260605_weeknotes_2026_23.html" class="no-external">Weeknotes: 2026 Week 23</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./blogposts/20260605_weeknotes_2026_23.html" class="no-external">30 May - 5 June 2026</a>
+<a href="./blogposts/20260605_weeknotes_2026_23.html" class="no-external">2026/05/30 – 2026/06/05</a>
 </div>
-<div class="delink listing-description"><a href="./blogposts/20260605_weeknotes_2026_23.html" class="no-external">
-I’ve been up in Edinburgh this week after a fun couple of weeks down in Cambridge.
-</a></div>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('V2Vla25vdGVz'); return false;">Weeknotes</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('UmVzZWFyY2g='); return false;">Research</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('VEVTU0VSQQ=='); return false;">TESSERA</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('TWFwcw=='); return false;">Maps</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('R2FyZGVuaW5n'); return false;">Gardening</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('UGFwZXJz'); return false;">Papers</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Q29kZQ=='); return false;">Code</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('RWNvbG9neQ=='); return false;">Ecology</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('S0JBcw=='); return false;">KBAs</div>
+
+</div>
 </div>
 <div class="metadata">
 <a href="./blogposts/20260605_weeknotes_2026_23.html" class="no-external">
 <div class="listing-date">
 Jun 5, 2026
 </div>
+<div class="listing-reading-time">6 min</div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1780012800000" data-listing-file-modified-sort="1780847361579" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="836">
+<div class="quarto-post image-right" data-index="1" data-categories="V2Vla25vdGVzJTJDUmVzZWFyY2glMkNURVNTRVJBJTJDTWFwcyUyQ0JpcmRzJTJDQm9va3MlMkNQYXBlcnMlMkNDb25zZXJ2YXRpb24=" data-listing-date-sort="1780012800000" data-listing-file-modified-sort="1780848908002" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="836">
 <div class="thumbnail"><a href="./blogposts/20260529_weeknotes_2026_22.html" class="no-external">
 
 <p class="card-img-top"><img loading='lazy' src="images/blogpost_images/20260529_cairngorms.png" alt="A habitat map of the Cairngorms"  class="thumbnail-image card-img"/></p>
@@ -237,20 +257,37 @@ Jun 5, 2026
 </a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./blogposts/20260529_weeknotes_2026_22.html" class="no-external">Week Notes: 2026 Week 22</a>
+<a href="./blogposts/20260529_weeknotes_2026_22.html" class="no-external">Weeknotes: 2026 Week 22</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./blogposts/20260529_weeknotes_2026_22.html" class="no-external">23-29 May 2026</a>
+<a href="./blogposts/20260529_weeknotes_2026_22.html" class="no-external">2026/05/23 – 2026/05/29</a>
 </div>
-<div class="delink listing-description"><a href="./blogposts/20260529_weeknotes_2026_22.html" class="no-external">
-In the group I’ve joined at the University of Cambridge, there is something of a culture of writing “weeknotes” at the end of each week. The idea being to keep everyone up…
-</a></div>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('V2Vla25vdGVz'); return false;">Weeknotes</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('UmVzZWFyY2g='); return false;">Research</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('VEVTU0VSQQ=='); return false;">TESSERA</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('TWFwcw=='); return false;">Maps</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('QmlyZHM='); return false;">Birds</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Qm9va3M='); return false;">Books</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('UGFwZXJz'); return false;">Papers</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Q29uc2VydmF0aW9u'); return false;">Conservation</div>
+
+</div>
 </div>
 <div class="metadata">
 <a href="./blogposts/20260529_weeknotes_2026_22.html" class="no-external">
 <div class="listing-date">
 May 29, 2026
 </div>
+<div class="listing-reading-time">5 min</div>
 </a>
 </div>
 </div>
