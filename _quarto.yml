@@ -22,6 +22,3 @@ format:
     mainfont: "Gill Sans"
     css: styles.css
     toc: false
-
-#TODO github/orcid/email icons in footer
-#TODO favicon
