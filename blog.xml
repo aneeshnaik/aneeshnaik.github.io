@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Aneesh Naik</title>
+<link>https://aneeshnaik.github.io/blog.html</link>
+<atom:link href="https://aneeshnaik.github.io/blog.xml" rel="self" type="application/rss+xml"/>
+<description>Personal webpage and blog of Aneesh Naik.</description>
+<generator>quarto-1.9.38</generator>
+<lastBuildDate>Fri, 05 Jun 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Weeknotes: 2026 Week 23</title>
+  <link>https://aneeshnaik.github.io/blogposts/20260605_weeknotes_2026_23.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>I’ve been up in Edinburgh this week after a fun couple of weeks down in Cambridge.</p>
+<section id="what-i-was-working-on" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="what-i-was-working-on">What I was working on</h2>
+<section id="research" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="research">Research</h3>
+<p>I made incremental progress on various projects. Don’t want to plant too many flags here yet until these are a <em>little</em> more mature. However, a couple of exciting bits:</p>
+<p><strong>KBAs.</strong> I’m going to be working with <a href="https://www.birdlife.org/">BirdLife International</a> on finding new candidates for <a href="https://www.keybiodiversityareas.org/">Key Biodiversity Areas (KBAs)</a>. These are areas around the world flagged as key for conservation.</p>
+<p>The criteria for identifying KBAs are a little complicated, and the existing method for longlisting KBAs involves many repeated iterations of manual validation (and is therefore quite expensive). We’re hoping to find a clever way, likely with TESSERA (see below), to automate a little bit of the longlisting.</p>
+<p>This past week, BirdLife shared some of their data with me and I’ve started getting my teeth into it.</p>
+<p><strong>TESSERA v1.1.</strong> I wrote about <a href="https://geotessera.org/">TESSERA</a> in last week’s notes. This past week, a new version (1.1) has been released. This addresses some issues with v1.0, such as tiling artefacts. It also goes a little farther out from the coast everywhere. I’ve spent a bit of time playing around with the new embeddings, <a href="https://tze.geotessera.org/?store=v1.1">which are very pretty</a>!</p>
+
+<div class="no-row-height column-margin column-container"><div class="margin-aside">
+<p>My very small contribution to v1.1 was my involvement in the discussion of landmask choice. In arguing for a more generous coastal buffer, my ulterior motive was that I would really like to make a nice goose map.</p>
+</div></div></section>
+<section id="python-package-datahues" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="python-package-datahues">Python package: <code>datahues</code></h3>
+<p>Yesterday I tidied up and released a python package I made some months back. It’s called <a href="https://github.com/aneeshnaik/datahues"><code>datahues</code></a>, and has a very simple functionality: given two colours, generate a perceptually uniform colour ramp between them. I find myself needing to do this all the time and in the past have always just bodged around with some quite complicated colour-space libraries, so I thought I would write a simple utility for it. It’s now available on PyPI and conda-forge.</p>
+
+<div class="no-row-height column-margin column-container"><div class="margin-aside">
+<p>“Needing” is perhaps too strong a word here.</p>
+</div></div><p>Here is the figure from the README, demonstrating the need for the utility:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://aneeshnaik.github.io/images/blogpost_images/20260605_ramp_comparison.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Two colour ramps: one perceptually uniform, the other not." width="600"></p>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="margin-aside">
+<p>Plots of some mock data (2D Gaussian mixture), comparing a naïve linear RGB colour ramp versus a ramp generated with <code>datahues</code>. The start and end colours here are #F61212 (“Pure Red”) and #12F612 (“Lime”).</p>
+</div></div><p>In the left-hand panel, the green transitions very unevenly to red: there is some awful banding in the transition zone. Without perceptual uniformity (as in the right-hand panel), one might well see patterns in data that aren’t truly there.</p>
+<p>Here is a map I made with <code>datahues</code> a few months ago, depicting the annual number of sunshine hours across GB:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://aneeshnaik.github.io/images/blogpost_images/20260605_sunshine.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" alt="A map of annual sunshine hours across GB."></p>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="margin-aside">
+<p>Map of annual sunshine hours across GB. In truth, this isn’t really the archetypal use case for <code>datahues</code>: the map uses a series of discrete steps along the ramp, so would probably get away without strict perceptual uniformity. The map uses Met Office data licensed under the Open Government Licence v3.0. <a href="https://catalogue.ceda.ac.uk/uuid/f02cc6ddd92f45b18b9ab6ab544df7d9">Met Office (2025), <em>HadUK-Grid Gridded Climate Observations on a 1km grid over the UK, v1.3.1.ceda (1836-2024)</em>. NERC EDS Centre for Environmental Data Analysis.</a></p>
+</div></div><p>It is very gloomy in the Highlands!</p>
+</section>
+</section>
+<section id="what-i-was-reading" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="what-i-was-reading">What I was reading</h2>
+<p>Having written a first draft of my research plan <a href="../blogposts/20260529_weeknotes_2026_22.html">last week</a>, I spent a lot of time this week reading around the various topics that I plan to work on. Both contemporary methodological papers and some of older “classics” and foundational works.</p>
+<p>One work in particular I thought I would write about is “Gradient Analysis of Vegetation” by R. H. Whittaker (1967). This was quite an important review work in vegetation ecology. Whittaker was interested in vegetation communities and how they are spatially distributed. The central idea he argued for is the “individualistic” concept, in which each species has its own unique response to environmental gradients. Observed communities then are just incidental assemblages of species at a given point along the gradient.</p>
+
+<div class="no-row-height column-margin column-container"><div class="margin-aside">
+<p><a href="https://onlinelibrary.wiley.com/doi/10.1111/j.1469-185X.1967.tb01419.x">Whittaker, R.H. (1967). <em>Gradient Analysis of Vegetation</em>. Biological Reviews.</a></p>
+</div></div><div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://aneeshnaik.github.io/images/blogpost_images/20260605_whittaker.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:65.0%" alt="A figure from Whittaker 1967, showing various tree species' distributions as a function of environmental moisture level."></p>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="margin-aside">
+<p>Tree species distributions as a function of moisture level in the Smoky Mountains. Idem. Figure 3, top panel.</p>
+</div></div><p>Above, I’m reproducing a figure from the paper, showing distributions of major tree species in the Smoky Mountains. Each curve is the distribution of a single species as a function of environmental moisture level, from mesic (wet) to xeric (dry) with increasing x. The point being made here is that no two species have the same curve: each species shows an individualistic response to the environmental gradient. According to Whittaker, if you stand in a certain place and observe N species, that is an incidental assemblage of N species for which that environment falls within the acceptable range. It will be slightly less acceptable to some of them than others.</p>
+<p>These ideas didn’t originate with Whittaker: they are known as the “Gleasonian” paradigm, having originated in the earlier 1920s work of Harry Gleason. Whittaker’s work arguing in favour of the Gleasonian paradigm was rather controversial. It stood against the prevailing “Clementsian” paradigm, which understood communities as discrete, bounded units, with relatively sharp boundaries (“ecotones”) between them.</p>
+</section>
+<section id="miscellanea" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="miscellanea">Miscellanea</h2>
+<section id="garden" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="garden">Garden</h3>
+<p>Our vegetable seedlings had a bit of an adventure in May. They travelled 800 miles and lived in four different houses. Now, they’re finally in the ground in our garden in Edinburgh.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://aneeshnaik.github.io/images/blogpost_images/20260605_seedlings.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:65.0%" alt="A photograph of some seedlings in vegetable patch."></p>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="margin-aside">
+<p>Photograph of sweetcorn and courgette seedlings in our garden. Forgive the scruffy environs!</p>
+</div></div><p>These are sweetcorn and yellow courgettes. We’re growing them in the same bed (along with some upcoming borlotti beans), following the “three sisters” method of companion planting. The idea is that the corn provides a rigid structure for the beans to climb, while the beans fix nitrogen in the soil. The courgettes, meanwhile, provide ground cover to retain moisture and suppress weeds.</p>
+<p>All of our seeds were F1 varieties, a decision I now regret a little. Having recently read Dan Saladino’s excellent book <a href="https://www.dansaladino.com/about-the-book"><em>Eating to Extinction</em></a>, I’m a zealous convert to the idea of preserving traditional, open-pollinated seed varieties. Doing so helps preserve food heritage, rare flavours, and genetic diversity. Next year!</p>
+
+<div class="no-row-height column-margin column-container"><div class="margin-aside">
+<p>In particular, I’m planning to join the <a href="https://www.gardenorganic.org.uk/what-we-do/hsl">Heritage Seed Library</a>.</p>
+</div></div></section>
+<section id="clerihews" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="clerihews">Clerihews</h3>
+<p>I learned this week about a very silly poetic form: the <a href="https://en.wikipedia.org/wiki/Clerihew">clerihew</a>. 4 lines, AABB, whimsical and funny, with the rhymes often extremely contrived and the metre absolutely all over the place. They were invented around the start of the twentieth century by Edmund Clerihew Bentley, and they are typically biographical, with the subject of the poem being the first line. For example, from Bentley’s 1905 <a href="https://www.gutenberg.org/ebooks/46691"><em>Biography for Beginners</em></a>:</p>
+<blockquote class="blockquote">
+<p>Sir Humphry Davy<br>
+Abominated gravy.<br>
+He lived in the odium<br>
+Of having discovered sodium.</p>
+</blockquote>
+
+<div class="no-row-height column-margin column-container"><div class="margin-aside">
+<p>Bentley, E. C. (1905). <em>Biography for Beginners</em>. Read Books.</p>
+</div></div><p>Another example, also from Bentley’s collection:</p>
+<blockquote class="blockquote">
+<p>The people of Spain think Cervantes<br>
+Equal to half-a-dozen Dantes:<br>
+An opinion resented most bitterly<br>
+By the people of Italy.</p>
+</blockquote>
+<p>They aren’t always biographical. My favourite is from the introduction of Bentley’s collection, and is about the very nature of biography:</p>
+<blockquote class="blockquote">
+<p>The Art of Biography<br>
+Is different from Geography.<br>
+Geography is about Maps,<br>
+But Biography is about Chaps.</p>
+</blockquote>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>Weeknotes</category>
+  <category>Research</category>
+  <category>TESSERA</category>
+  <category>Maps</category>
+  <category>Gardening</category>
+  <category>Papers</category>
+  <category>Code</category>
+  <category>Ecology</category>
+  <category>KBAs</category>
+  <guid>https://aneeshnaik.github.io/blogposts/20260605_weeknotes_2026_23.html</guid>
+  <pubDate>Fri, 05 Jun 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Weeknotes: 2026 Week 22</title>
+  <link>https://aneeshnaik.github.io/blogposts/20260529_weeknotes_2026_22.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>In the group I’ve joined at the University of Cambridge, there is something of a culture of writing “weeknotes” at the end of each week. The idea being to keep everyone up to date with what one is up to, but also to encourage one to be a little reflective and create some soft accountability. I’m also using it as an excuse to resurrect a blog that has long been in abeyance.</p>
+<section id="what-i-was-working-on" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="what-i-was-working-on">What I was working on</h2>
+<section id="tessera" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="tessera">TESSERA</h3>
+<p><a href="https://geotessera.org/">TESSERA</a> is a geospatial foundation model developed here in Cambridge. It providing a vast, rich dataset of “embeddings”: summary vectors for every 10m pixel on the planet. My new job is to do a bunch of conservation science with these embeddings.</p>
+<p>This past week, I had my first proper play with the embeddings. I used them to train a very basic ML model, making some toy habitat maps of the <a href="https://www.clr.conservation.cam.ac.uk/">Centre for Landscape Regeneration</a> project areas (the Cairngorms, the Fens, and Cumbria). These were just quick and dirty first passes to get a ‘feel’ for Tessera.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://aneeshnaik.github.io/images/blogpost_images/20260529_cairngorms.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="A habitat map of the Cairngorms" width="300"></p>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="margin-aside">
+<p>A habitat map of the Cairngorms. Haven’t included a legend, but suffice it to say that most things are heather, bog, or coniferous woodland (the Caledonian Forest!)</p>
+</div></div></section>
+<section id="research-plan" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="research-plan">Research plan</h3>
+<p>I spent a lot of the week thinking about my longer term research goals, both for the coming years in Cambridge and the years thereafter. I’ve written up a first draft of a research plan, just 3 pages. I won’t go into too much detail about it here, but it has been fun reading around a lot of the literature (see below!). One detail I will add here is that I used the typeface <a href="https://en.wikipedia.org/wiki/Bembo">Bembo</a>, which I’ve gotten very into recently.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://aneeshnaik.github.io/images/blogpost_images/20260529_bembo.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="A research plan written in Bembo" width="600"></p>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="margin-aside">
+<p>A research plan written in Bembo.</p>
+</div></div></section>
+<section id="maps" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="maps">100 Maps</h3>
+<p>I used the Bank Holiday Monday to get a bit of work done on my side project (“100 Maps of Britain”, hoping to have a page about that on this site soon!). One of the maps is of linguistic roots of British place names. Here, I learned about the <a href="https://en.wikipedia.org/wiki/Landsker_Line">Landsker line</a>, a surprisingly sharp linguistic boundary in south Pembrokeshire between regions of predominantly English names (south) and Welsh place names (north). The line is thought to have been formed in the 12th century, when the Normans established themselves in the area and encouraged English settlement.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://aneeshnaik.github.io/images/blogpost_images/20260529_lebw.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Predominantly English place names south of the Landsker line" width="300"></p>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="margin-aside">
+<p>Predominantly English place names south of the Landsker line.</p>
+</div></div></section>
+</section>
+<section id="what-i-was-reading" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="what-i-was-reading">What I was reading</h2>
+<section id="research-literature" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="research-literature">Research Literature</h3>
+<p>I read a bunch of stuff around: agri-environment schemes, causal inference, and some of the older back-catalogue of papers around the “land sharing” versus “land sparing” debate.</p>
+
+<div class="no-row-height column-margin column-container"><div class="margin-aside">
+<p>Including many papers from <a href="https://www.zoo.cam.ac.uk/research/conservation-science/conservation-science">Andrew Balmford’s group</a> here at the Conservation Research Institute in Cambridge.</p>
+</div></div><p>The idea here is that there are two broad approaches one could take to grow a fixed amount of food across a landscape: modern, intensive agriculture at a few sites and pristine nature reserves elsewhere (land sparing), or low-intensity, nature-friendly agriculture everywhere (land sharing).</p>
+<p>Of course, the reality is not so much a binary as a spectrum. Nonetheless, evidence is beginning to accumulate in favour of approaches towards the land-sparing end of the spectrum.</p>
+<p>This is a nuanced question, and I won’t be able to do it justice yet. Planning to read more about it in coming weeks.</p>
+</section>
+<section id="elsewhere" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="elsewhere">Elsewhere</h3>
+<p>Less work-related, I’ve been reading “What the Railways Did For Us” by Stuart Hylton. A very well-researched and funny book about the coming of the railways to Britain and their impact on society, such as the impact on the economy, on cities, and even on the class system.</p>
+<p>The opening chapter, concerning everyone’s grumbles about the initial spread of railways, was particularly memorable. Here is Wilhelm I, Kaiser of Prussia, on the subject:</p>
+<blockquote class="blockquote">
+<p>No one will pay good money to get from Berlin to Potsdam in one hour when he can ride his horse there in one day for free.</p>
+</blockquote>
+
+<div class="no-row-height column-margin column-container"><div class="margin-aside">
+<p>Wilhelm I (1864) quoted in ‘What the Railways Did For Us’, Stuart Hylton, (p15).</p>
+</div></div><p>Parts of the discussion struck a painfully familiar note:</p>
+<blockquote class="blockquote">
+<p>Partly as a result of all this process, Britain became the most expensive country in the world in which to get consent for a railway. Sometimes the parliamentary process alone could cost thousands of pounds a mile, added to which some landowners might extract quite exorbitant payments for their land as the price for removing their objections.</p>
+</blockquote>
+
+<div class="no-row-height column-margin column-container"><div class="margin-aside">
+<p>Discussion regarding difficulties in establishing railways in mid-19th century Britain. Idem, (p19). I can’t quite get over the gutting of HS2. Perhaps I’m reading this book a little too soon.</p>
+</div></div></section>
+</section>
+<section id="miscellanea" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="miscellanea">Miscellanea</h2>
+<p>Over the long weekend I saw a <em>lot</em> of birds at WWT Welney, including my first ever crane!</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://aneeshnaik.github.io/images/blogpost_images/20260529_crane.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Photograph of cranes at WWT Welney" width="500"></p>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="margin-aside">
+<p>Cranes at WWT Welney. Not my photograph! Credit: WWT.</p>
+</div></div><p>I’m using a new ink: “Lie de Thé” by J. Herbin. As implied by the name, it’s a beautiful deep-brown colour, I like it a lot.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://aneeshnaik.github.io/images/blogpost_images/20260529_ink.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Sample of my new ink" width="500"></p>
+</figure>
+</div>
+
+
+
+<div class="no-row-height column-margin column-container"><div class="margin-aside">
+<p>Photograph of a sample of my new ink.</p>
+</div></div></section>
+
+ ]]></description>
+  <category>Weeknotes</category>
+  <category>Research</category>
+  <category>TESSERA</category>
+  <category>Maps</category>
+  <category>Birds</category>
+  <category>Books</category>
+  <category>Papers</category>
+  <category>Conservation</category>
+  <guid>https://aneeshnaik.github.io/blogposts/20260529_weeknotes_2026_22.html</guid>
+  <pubDate>Fri, 29 May 2026 00:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>
