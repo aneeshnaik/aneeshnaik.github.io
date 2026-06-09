@@ -24,6 +24,8 @@ blog:
 
 website:
   title: "Aneesh Naik"
+  description: "Personal webpage and blog of Aneesh Naik."
+  site-url: "https://aneeshnaik.github.io/"
   navbar:
     left:
       - href: about.qmd
