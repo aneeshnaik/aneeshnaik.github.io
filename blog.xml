@@ -42,7 +42,7 @@
 </div></div><p>Here is the figure from the README, demonstrating the need for the utility:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://aneeshnaik.github.io/images/blogpost_images/20260605_ramp_comparison.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Two colour ramps: one perceptually uniform, the other not." width="600"></p>
+<p><img src="https://aneeshnaik.github.io/assets/blogpost_images/20260605_ramp_comparison.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Two colour ramps: one perceptually uniform, the other not." width="600"></p>
 </figure>
 </div>
 
@@ -52,7 +52,7 @@
 <p>Here is a map I made with <code>datahues</code> a few months ago, depicting the annual number of sunshine hours across GB:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://aneeshnaik.github.io/images/blogpost_images/20260605_sunshine.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" alt="A map of annual sunshine hours across GB."></p>
+<p><img src="https://aneeshnaik.github.io/assets/blogpost_images/20260605_sunshine.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" alt="A map of annual sunshine hours across GB."></p>
 </figure>
 </div>
 
@@ -70,7 +70,7 @@
 <p><a href="https://onlinelibrary.wiley.com/doi/10.1111/j.1469-185X.1967.tb01419.x">Whittaker, R.H. (1967). <em>Gradient Analysis of Vegetation</em>. Biological Reviews.</a></p>
 </div></div><div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://aneeshnaik.github.io/images/blogpost_images/20260605_whittaker.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:65.0%" alt="A figure from Whittaker 1967, showing various tree species' distributions as a function of environmental moisture level."></p>
+<p><img src="https://aneeshnaik.github.io/assets/blogpost_images/20260605_whittaker.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:65.0%" alt="A figure from Whittaker 1967, showing various tree species' distributions as a function of environmental moisture level."></p>
 </figure>
 </div>
 
@@ -86,7 +86,7 @@
 <p>Our vegetable seedlings had a bit of an adventure in May. They travelled 800 miles and lived in four different houses. Now, they’re finally in the ground in our garden in Edinburgh.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://aneeshnaik.github.io/images/blogpost_images/20260605_seedlings.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:65.0%" alt="A photograph of some seedlings in vegetable patch."></p>
+<p><img src="https://aneeshnaik.github.io/assets/blogpost_images/20260605_seedlings.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:65.0%" alt="A photograph of some seedlings in vegetable patch."></p>
 </figure>
 </div>
 
@@ -159,7 +159,7 @@ But Biography is about Chaps.</p>
 <p>This past week, I had my first proper play with the embeddings. I used them to train a very basic ML model, making some toy habitat maps of the <a href="https://www.clr.conservation.cam.ac.uk/">Centre for Landscape Regeneration</a> project areas (the Cairngorms, the Fens, and Cumbria). These were just quick and dirty first passes to get a ‘feel’ for Tessera.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://aneeshnaik.github.io/images/blogpost_images/20260529_cairngorms.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="A habitat map of the Cairngorms" width="300"></p>
+<p><img src="https://aneeshnaik.github.io/assets/blogpost_images/20260529_cairngorms.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="A habitat map of the Cairngorms" width="300"></p>
 </figure>
 </div>
 
@@ -171,7 +171,7 @@ But Biography is about Chaps.</p>
 <p>I spent a lot of the week thinking about my longer term research goals, both for the coming years in Cambridge and the years thereafter. I’ve written up a first draft of a research plan, just 3 pages. I won’t go into too much detail about it here, but it has been fun reading around a lot of the literature (see below!). One detail I will add here is that I used the typeface <a href="https://en.wikipedia.org/wiki/Bembo">Bembo</a>, which I’ve gotten very into recently.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://aneeshnaik.github.io/images/blogpost_images/20260529_bembo.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="A research plan written in Bembo" width="600"></p>
+<p><img src="https://aneeshnaik.github.io/assets/blogpost_images/20260529_bembo.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="A research plan written in Bembo" width="600"></p>
 </figure>
 </div>
 
@@ -183,7 +183,7 @@ But Biography is about Chaps.</p>
 <p>I used the Bank Holiday Monday to get a bit of work done on my side project (“100 Maps of Britain”, hoping to have a page about that on this site soon!). One of the maps is of linguistic roots of British place names. Here, I learned about the <a href="https://en.wikipedia.org/wiki/Landsker_Line">Landsker line</a>, a surprisingly sharp linguistic boundary in south Pembrokeshire between regions of predominantly English names (south) and Welsh place names (north). The line is thought to have been formed in the 12th century, when the Normans established themselves in the area and encouraged English settlement.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://aneeshnaik.github.io/images/blogpost_images/20260529_lebw.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Predominantly English place names south of the Landsker line" width="300"></p>
+<p><img src="https://aneeshnaik.github.io/assets/blogpost_images/20260529_lebw.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Predominantly English place names south of the Landsker line" width="300"></p>
 </figure>
 </div>
 
@@ -227,7 +227,7 @@ But Biography is about Chaps.</p>
 <p>Over the long weekend I saw a <em>lot</em> of birds at WWT Welney, including my first ever crane!</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://aneeshnaik.github.io/images/blogpost_images/20260529_crane.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Photograph of cranes at WWT Welney" width="500"></p>
+<p><img src="https://aneeshnaik.github.io/assets/blogpost_images/20260529_crane.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Photograph of cranes at WWT Welney" width="500"></p>
 </figure>
 </div>
 
@@ -236,7 +236,7 @@ But Biography is about Chaps.</p>
 </div></div><p>I’m using a new ink: “Lie de Thé” by J. Herbin. As implied by the name, it’s a beautiful deep-brown colour, I like it a lot.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://aneeshnaik.github.io/images/blogpost_images/20260529_ink.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Sample of my new ink" width="500"></p>
+<p><img src="https://aneeshnaik.github.io/assets/blogpost_images/20260529_ink.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Sample of my new ink" width="500"></p>
 </figure>
 </div>
 
