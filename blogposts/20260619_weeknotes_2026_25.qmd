@@ -28,8 +28,8 @@ Inspired by Guy Shrubsole's excellent book on the subject, I thought I would mak
 
 Some context:
 
-- Temperate rainforests are oak-dominated or hazel-dominated woodland that are very rainy.
-- They occurs along the soggy western edge of Britain (hence: “Celtic rainforest”).
+- Temperate rainforests are oak-dominated or hazel-dominated woodlands that are very rainy.
+- They occur along the soggy western edge of Britain (hence: “Celtic rainforest”).
 - They are very biodiverse, hosting internationally important assemblages of bryophytes/lichens/fungi etc.
 - In Britain, they are rare/fragmented/degraded/overgrazed
 - They are not well mapped. To my knowledge, the best map to date is the [crowd-sourced one](https://lostrainforestsofbritain.org/2022/12/13/public-create-map-of-britains-lost-rainforests/) produced by Guy Shrubsole. This was a fantastic project, but due to its crowd-sourced nature is certain to be incomplete.
