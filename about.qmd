@@ -2,7 +2,7 @@
 title: "About"
 ---
 
-I'm Dr. Aneesh Naik, an astrophysicist-turned-ecologist at the University of Cambridge. Formally in the Department of Plant Sciences, I sit in the [Conservation Research Institute](https://www.conservation.cam.ac.uk/) in the [David Attenborough Building](https://www.cambridgeconservation.org/about/the-david-attenborough-building/). I am also affiliated with the [Centre for Landscape Regeneration](https://www.clr.conservation.cam.ac.uk/).
+I'm Dr. Aneesh Naik, an astrophysicist-turned-ecologist at the University of Cambridge.
 
 My research interests lie at the intersection of ecology, conservation, remote sensing, and AI. I am particularly interested in how we can use geospatial foundation models like [TESSERA](https://geotessera.org/) to:
 <ul>
@@ -14,6 +14,6 @@ My research interests lie at the intersection of ecology, conservation, remote s
 
 In 2020, I got my PhD in astrophysics from the Institute of Astronomy, University of Cambridge. Then, in 2021-2022, I was a postdoc in the Particle Theory group at the University of Nottingham. Then, my last research position in astrophysics was 2022-2024, when I was a Leverhulme Early Career Research Fellow in the Institute for Astronomy, University of Edinburgh. My research focussed on galactic dynamics, and how one can use it to test fundamental physics, such as our theory of gravity and the nature of dark matter.
 
-After this, I decided I wanted to stop thinking about stars and start thinking about trees. 2025 to early 2026, I worked as a data scientist at a NatureTech company in Edinburgh: [Space Intelligence](https://www.space-intelligence.com/). In 2026 I took up my current position in Cambridge.
+After this, I decided I wanted to stop thinking about stars and start thinking about trees. 2025 to early 2026, I worked as a data scientist at a NatureTech company in Edinburgh: [Space Intelligence](https://www.space-intelligence.com/). In 2026 I took up my current position in Cambridge. Formally in the Department of Plant Sciences, I sit in the [Conservation Research Institute](https://www.conservation.cam.ac.uk/) in the [David Attenborough Building](https://www.cambridgeconservation.org/about/the-david-attenborough-building/). I am also affiliated with the [Centre for Landscape Regeneration](https://www.clr.conservation.cam.ac.uk/).
 
 Outside of work, I'm an enthusiastic gardener, reader, rambler, mapmaker, birdwatcher and cruciverbalist.
