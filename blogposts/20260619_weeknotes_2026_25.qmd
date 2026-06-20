@@ -52,9 +52,6 @@ The map certainly seems to catch a great deal of rainforest down the western sea
 
 In the coming weeks, I'll have a go at improving this map. Primarily, I'll improve my training data and switch from a PU approach by getting some 'negative' examples. That said, we aren't sure yet whether there is a valuable 'science' case (read: publication) for the map, it might just be a fun story to engage the public. If so, still worth pursuing!
 
-::: {.aside}
-A colleague noted: "There is a spectrum from science to fluff, and this... is fluff."
-:::
 
 ### Other Tidbits
 
