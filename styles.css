@@ -1,3 +1,4 @@
-.column-margin, aside {
-  font-size: 0.7rem; /* Adjust this value to your preferred size */
+.column-margin, .margin-caption {
+  font-size: 0.75rem;
+  line-height: 1.4;
 }

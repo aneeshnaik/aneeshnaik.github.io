@@ -167,55 +167,40 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>KBAs.</strong> I’m going to be working with <a href="https://www.birdlife.org/">BirdLife International</a> on finding new candidates for <a href="https://www.keybiodiversityareas.org/">Key Biodiversity Areas (KBAs)</a>. These are areas around the world flagged as key for conservation.</p>
 <p>The criteria for identifying KBAs are a little complicated, and the existing method for longlisting KBAs involves many repeated iterations of manual validation (and is therefore quite expensive). We’re hoping to find a clever way, likely with TESSERA (see below), to automate a little bit of the longlisting.</p>
 <p>This past week, BirdLife shared some of their data with me and I’ve started getting my teeth into it.</p>
-<p><strong>TESSERA v1.1.</strong> I wrote about <a href="https://geotessera.org/">TESSERA</a> in last week’s notes. This past week, a new version (1.1) has been released. This addresses some issues with v1.0, such as tiling artefacts. It also goes a little farther out from the coast everywhere. I’ve spent a bit of time playing around with the new embeddings, <a href="https://tze.geotessera.org/?store=v1.1">which are very pretty</a>!</p>
-
-<div class="no-row-height column-margin column-container"><div class="margin-aside">
-<p>My very small contribution to v1.1 was my involvement in the discussion of landmask choice. In arguing for a more generous coastal buffer, my ulterior motive was that I would really like to make a nice goose map.</p>
-</div></div></section>
+<p><strong>TESSERA v1.1.</strong> I wrote about <a href="https://geotessera.org/">TESSERA</a> in last week’s notes. This past week, a new version (1.1) has been released.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> This addresses some issues with v1.0, such as tiling artefacts. It also goes a little farther out from the coast everywhere. I’ve spent a bit of time playing around with the new embeddings, <a href="https://tze.geotessera.org/?store=v1.1">which are very pretty</a>!</p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;My very small contribution to v1.1 was my involvement in the discussion of landmask choice. In arguing for a more generous coastal buffer, my ulterior motive was that I would really like to make a nice goose map.</p></div></div></section>
 <section id="python-package-datahues" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="python-package-datahues">Python package: <code>datahues</code></h3>
-<p>Yesterday I tidied up and released a python package I made some months back. It’s called <a href="https://github.com/aneeshnaik/datahues"><code>datahues</code></a>, and has a very simple functionality: given two colours, generate a perceptually uniform colour ramp between them. I find myself needing to do this all the time and in the past have always just bodged around with some quite complicated colour-space libraries, so I thought I would write a simple utility for it. It’s now available on PyPI and conda-forge.</p>
-
-<div class="no-row-height column-margin column-container"><div class="margin-aside">
-<p>“Needing” is perhaps too strong a word here.</p>
-</div></div><p>Here is the figure from the README, demonstrating the need for the utility:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../assets/blogpost_images/20260605_ramp_comparison.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Two colour ramps: one perceptually uniform, the other not." width="600"></p>
+<p>Yesterday I tidied up and released a python package I made some months back. It’s called <a href="https://github.com/aneeshnaik/datahues"><code>datahues</code></a>, and has a very simple functionality: given two colours, generate a perceptually uniform colour ramp between them. I find myself needing<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> to do this all the time and in the past have always just bodged around with some quite complicated colour-space libraries, so I thought I would write a simple utility for it. It’s now available on PyPI and conda-forge.</p>
+<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;“Needing” is perhaps too strong a word here.</p></div></div><p>Here is the figure from the README, demonstrating the need for the utility:</p>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="../assets/blogpost_images/20260605_ramp_comparison.png" class="img-fluid figure-img" alt="Two colour ramps: one perceptually uniform, the other not." width="600"></p>
+<figcaption class="margin-caption">Plots of some mock data (2D Gaussian mixture), comparing a naïve linear RGB colour ramp versus a ramp generated with <code>datahues</code>. The start and end colours here are #F61212 (“Pure Red”) and #12F612 (“Lime”).</figcaption>
 </figure>
 </div>
-
-<div class="no-row-height column-margin column-container"><div class="margin-aside">
-<p>Plots of some mock data (2D Gaussian mixture), comparing a naïve linear RGB colour ramp versus a ramp generated with <code>datahues</code>. The start and end colours here are #F61212 (“Pure Red”) and #12F612 (“Lime”).</p>
-</div></div><p>In the left-hand panel, the green transitions very unevenly to red: there is some awful banding in the transition zone. Without perceptual uniformity (as in the right-hand panel), one might well see patterns in data that aren’t truly there.</p>
+<p>In the left-hand panel, the green transitions very unevenly to red: there is some awful banding in the transition zone. Without perceptual uniformity (as in the right-hand panel), one might well see patterns in data that aren’t truly there.</p>
 <p>Here is a map I made with <code>datahues</code> a few months ago, depicting the annual number of sunshine hours across GB:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../assets/blogpost_images/20260605_sunshine.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" alt="A map of annual sunshine hours across GB."></p>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="../assets/blogpost_images/20260605_sunshine.png" class="img-fluid figure-img" style="width:60.0%" alt="A map of annual sunshine hours across GB."></p>
+<figcaption class="margin-caption">Map of annual sunshine hours across GB. In truth, this isn’t really the archetypal use case for <code>datahues</code>: the map uses a series of discrete steps along the ramp, so would probably get away without strict perceptual uniformity. The map uses Met Office data licensed under the Open Government Licence v3.0. <a href="https://catalogue.ceda.ac.uk/uuid/f02cc6ddd92f45b18b9ab6ab544df7d9">Met Office (2025), <em>HadUK-Grid Gridded Climate Observations on a 1km grid over the UK, v1.3.1.ceda (1836-2024)</em>. NERC EDS Centre for Environmental Data Analysis.</a></figcaption>
 </figure>
 </div>
-
-<div class="no-row-height column-margin column-container"><div class="margin-aside">
-<p>Map of annual sunshine hours across GB. In truth, this isn’t really the archetypal use case for <code>datahues</code>: the map uses a series of discrete steps along the ramp, so would probably get away without strict perceptual uniformity. The map uses Met Office data licensed under the Open Government Licence v3.0. <a href="https://catalogue.ceda.ac.uk/uuid/f02cc6ddd92f45b18b9ab6ab544df7d9">Met Office (2025), <em>HadUK-Grid Gridded Climate Observations on a 1km grid over the UK, v1.3.1.ceda (1836-2024)</em>. NERC EDS Centre for Environmental Data Analysis.</a></p>
-</div></div><p>It is very gloomy in the Highlands!</p>
+<p>It is very gloomy in the Highlands!</p>
 </section>
 </section>
 <section id="what-i-was-reading" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="what-i-was-reading">What I was reading</h2>
 <p>Having written a first draft of my research plan <a href="../blogposts/20260529_weeknotes_2026_22.html">last week</a>, I spent a lot of time this week reading around the various topics that I plan to work on. Both contemporary methodological papers and some of older “classics” and foundational works.</p>
-<p>One work in particular I thought I would write about is “Gradient Analysis of Vegetation” by R. H. Whittaker (1967). This was quite an important review work in vegetation ecology. Whittaker was interested in vegetation communities and how they are spatially distributed. The central idea he argued for is the “individualistic” concept, in which each species has its own unique response to environmental gradients. Observed communities then are just incidental assemblages of species at a given point along the gradient.</p>
-
-<div class="no-row-height column-margin column-container"><div class="margin-aside">
-<p><a href="https://onlinelibrary.wiley.com/doi/10.1111/j.1469-185X.1967.tb01419.x">Whittaker, R.H. (1967). <em>Gradient Analysis of Vegetation</em>. Biological Reviews.</a></p>
-</div></div><div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../assets/blogpost_images/20260605_whittaker.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:65.0%" alt="A figure from Whittaker 1967, showing various tree species' distributions as a function of environmental moisture level."></p>
+<p>One work in particular I thought I would write about is “Gradient Analysis of Vegetation” by R. H. Whittaker (1967).<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> This was quite an important review work in vegetation ecology. Whittaker was interested in vegetation communities and how they are spatially distributed. The central idea he argued for is the “individualistic” concept, in which each species has its own unique response to environmental gradients. Observed communities then are just incidental assemblages of species at a given point along the gradient.</p>
+<div class="no-row-height column-margin column-container"><div id="fn3"><p><sup>3</sup>&nbsp;<a href="https://onlinelibrary.wiley.com/doi/10.1111/j.1469-185X.1967.tb01419.x">Whittaker, R.H. (1967). <em>Gradient Analysis of Vegetation</em>. Biological Reviews.</a></p></div></div><div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="../assets/blogpost_images/20260605_whittaker.png" class="img-fluid figure-img" style="width:65.0%" alt="A figure from Whittaker 1967, showing various tree species' distributions as a function of environmental moisture level."></p>
+<figcaption class="margin-caption">Tree species distributions as a function of moisture level in the Smoky Mountains. Idem. Figure 3, top panel.</figcaption>
 </figure>
 </div>
-
-<div class="no-row-height column-margin column-container"><div class="margin-aside">
-<p>Tree species distributions as a function of moisture level in the Smoky Mountains. Idem. Figure 3, top panel.</p>
-</div></div><p>Above, I’m reproducing a figure from the paper, showing distributions of major tree species in the Smoky Mountains. Each curve is the distribution of a single species as a function of environmental moisture level, from mesic (wet) to xeric (dry) with increasing x. The point being made here is that no two species have the same curve: each species shows an individualistic response to the environmental gradient. According to Whittaker, if you stand in a certain place and observe N species, that is an incidental assemblage of N species for which that environment falls within the acceptable range. It will be slightly less acceptable to some of them than others.</p>
+<p>Above, I’m reproducing a figure from the paper, showing distributions of major tree species in the Smoky Mountains. Each curve is the distribution of a single species as a function of environmental moisture level, from mesic (wet) to xeric (dry) with increasing x. The point being made here is that no two species have the same curve: each species shows an individualistic response to the environmental gradient. According to Whittaker, if you stand in a certain place and observe N species, that is an incidental assemblage of N species for which that environment falls within the acceptable range. It will be slightly less acceptable to some of them than others.</p>
 <p>These ideas didn’t originate with Whittaker: they are known as the “Gleasonian” paradigm, having originated in the earlier 1920s work of Harry Gleason. Whittaker’s work arguing in favour of the Gleasonian paradigm was rather controversial. It stood against the prevailing “Clementsian” paradigm, which understood communities as discrete, bounded units, with relatively sharp boundaries (“ecotones”) between them.</p>
 </section>
 <section id="miscellanea" class="level2 page-columns page-full">
@@ -223,33 +208,25 @@ ul.task-list li input[type="checkbox"] {
 <section id="garden" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="garden">Garden</h3>
 <p>Our vegetable seedlings had a bit of an adventure in May. They travelled 800 miles and lived in four different houses. Now, they’re finally in the ground in our garden in Edinburgh.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../assets/blogpost_images/20260605_seedlings.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:65.0%" alt="A photograph of some seedlings in vegetable patch."></p>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="../assets/blogpost_images/20260605_seedlings.jpg" class="img-fluid figure-img" style="width:65.0%" alt="A photograph of some seedlings in vegetable patch."></p>
+<figcaption class="margin-caption">Photograph of sweetcorn and courgette seedlings in our garden. Forgive the scruffy environs!</figcaption>
 </figure>
 </div>
-
-<div class="no-row-height column-margin column-container"><div class="margin-aside">
-<p>Photograph of sweetcorn and courgette seedlings in our garden. Forgive the scruffy environs!</p>
-</div></div><p>These are sweetcorn and yellow courgettes. We’re growing them in the same bed (along with some upcoming borlotti beans), following the “three sisters” method of companion planting. The idea is that the corn provides a rigid structure for the beans to climb, while the beans fix nitrogen in the soil. The courgettes, meanwhile, provide ground cover to retain moisture and suppress weeds.</p>
-<p>All of our seeds were F1 varieties, a decision I now regret a little. Having recently read Dan Saladino’s excellent book <a href="https://www.dansaladino.com/about-the-book"><em>Eating to Extinction</em></a>, I’m a zealous convert to the idea of preserving traditional, open-pollinated seed varieties. Doing so helps preserve food heritage, rare flavours, and genetic diversity. Next year!</p>
-
-<div class="no-row-height column-margin column-container"><div class="margin-aside">
-<p>In particular, I’m planning to join the <a href="https://www.gardenorganic.org.uk/what-we-do/hsl">Heritage Seed Library</a>.</p>
-</div></div></section>
+<p>These are sweetcorn and yellow courgettes. We’re growing them in the same bed (along with some upcoming borlotti beans), following the “three sisters” method of companion planting. The idea is that the corn provides a rigid structure for the beans to climb, while the beans fix nitrogen in the soil. The courgettes, meanwhile, provide ground cover to retain moisture and suppress weeds.</p>
+<p>All of our seeds were F1 varieties, a decision I now regret a little. Having recently read Dan Saladino’s excellent book <a href="https://www.dansaladino.com/about-the-book"><em>Eating to Extinction</em></a>, I’m a zealous convert to the idea of preserving traditional, open-pollinated seed varieties. Doing so helps preserve food heritage, rare flavours, and genetic diversity. Next year!<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn4"><p><sup>4</sup>&nbsp;In particular, I’m planning to join the <a href="https://www.gardenorganic.org.uk/what-we-do/hsl">Heritage Seed Library</a>.</p></div></div></section>
 <section id="clerihews" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="clerihews">Clerihews</h3>
-<p>I learned this week about a very silly poetic form: the <a href="https://en.wikipedia.org/wiki/Clerihew">clerihew</a>. 4 lines, AABB, whimsical and funny, with the rhymes often extremely contrived and the metre absolutely all over the place. They were invented around the start of the twentieth century by Edmund Clerihew Bentley, and they are typically biographical, with the subject of the poem being the first line. For example, from Bentley’s 1905 <a href="https://www.gutenberg.org/ebooks/46691"><em>Biography for Beginners</em></a>:</p>
-<blockquote class="blockquote">
+<p>I learned this week about a very silly poetic form: the <a href="https://en.wikipedia.org/wiki/Clerihew">clerihew</a>. 4 lines, AABB, whimsical and funny, with the rhymes often extremely contrived and the metre absolutely all over the place. They were invented around the start of the twentieth century by Edmund Clerihew Bentley, and they are typically biographical, with the subject of the poem being the first line. For example, from Bentley’s 1905 <a href="https://www.gutenberg.org/ebooks/46691"><em>Biography for Beginners</em></a>:<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn5"><p><sup>5</sup>&nbsp;Bentley, E. C. (1905). <em>Biography for Beginners</em>. Read Books.</p></div></div><blockquote class="blockquote">
 <p>Sir Humphry Davy<br>
 Abominated gravy.<br>
 He lived in the odium<br>
 Of having discovered sodium.</p>
 </blockquote>
-
-<div class="no-row-height column-margin column-container"><div class="margin-aside">
-<p>Bentley, E. C. (1905). <em>Biography for Beginners</em>. Read Books.</p>
-</div></div><p>Another example, also from Bentley’s collection:</p>
+<p>Another example, also from Bentley’s collection:</p>
 <blockquote class="blockquote">
 <p>The people of Spain think Cervantes<br>
 Equal to half-a-dozen Dantes:<br>
@@ -267,6 +244,7 @@ But Biography is about Chaps.</p>
 
 </section>
 </section>
+
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
