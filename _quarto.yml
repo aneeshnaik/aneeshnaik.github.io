@@ -6,7 +6,7 @@ execute:
   warning: false     # Hides annoying Python/package package warnings
   message: false     # Hides package startup messages
 
-# naster list of allowed blog categories
+# master list of allowed blog categories
 blog:
   categories:
     - Weeknotes
@@ -29,6 +29,7 @@ website:
   description: "Personal webpage and blog of Aneesh Naik."
   site-url: "https://aneeshnaik.github.io/"
   navbar:
+    logo: assets/AneeshNaikCropped.jpg
     left:
       - href: about.qmd
         text: About

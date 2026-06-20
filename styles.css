@@ -1,4 +1,14 @@
+
+/* margin notes and figure captions (which land in margin bc yaml setting) */
 .column-margin, .margin-caption {
   font-size: 0.75rem;
   line-height: 1.4;
+}
+
+/* circular photo in nav-bar */
+.navbar-logo {
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  max-height: 3rem;
 }
