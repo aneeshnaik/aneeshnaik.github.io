@@ -13,3 +13,23 @@
   max-height: 3rem;
   margin-right: 0.5rem;
 }
+
+/* photo on landing page */
+.landing-photo {
+  display: block;
+  width: 320px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto 1.5rem;
+}
+
+/* page titles */
+#title-block-header .title {
+  text-align: center;
+}
+
+/* little hack: disable external link icons in footer */
+.nav-footer a.external::after {
+  content: none;
+}

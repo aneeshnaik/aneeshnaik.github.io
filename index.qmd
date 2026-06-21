@@ -1,5 +1,16 @@
 ---
-title: ""
+title: "Dr. Aneesh Naik"
+link-external-icon: false
 ---
 
-## Coming Soon 
+![](assets/AneeshNaik.jpg){.landing-photo}
+
+Computational ecologist at University of Cambridge, former astrophysicist. Trying to measure biodiversity from space.
+
+Read my bio [here](about.qmd).\
+Read my publications [here](publications.qmd).\
+Read my blog [here](blog.qmd).\
+
+Or, find me out in the wild: [{{< fa brands github >}}](https://github.com/aneeshnaik) [{{< fa brands linkedin >}}](https://linkedin.com/in/aneesh-naik-2030191a5)
+[{{< fa brands orcid >}}](https://orcid.org/0000-0001-6841-1496)
+
