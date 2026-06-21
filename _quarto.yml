@@ -27,7 +27,7 @@ blog:
 website:
   title: "Aneesh Naik"
   description: "Personal webpage and blog of Aneesh Naik."
-  site-url: "https://aneeshnaik.github.io/"
+  site-url: "https://www.aneeshnaik.com/"
   navbar:
     logo: assets/AneeshNaikCropped.jpg
     left:
