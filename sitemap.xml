@@ -1,27 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://aneeshnaik.github.io/index.html</loc>
+    <lastmod>2026-06-21T10:25:58.881Z</lastmod>
+  </url>
+  <url>
     <loc>https://aneeshnaik.github.io/publications.html</loc>
-    <lastmod>2026-06-20T18:08:06.109Z</lastmod>
+    <lastmod>2026-06-21T10:25:58.881Z</lastmod>
   </url>
   <url>
     <loc>https://aneeshnaik.github.io/blogposts/20260605_weeknotes_2026_23.html</loc>
-    <lastmod>2026-06-20T18:08:06.109Z</lastmod>
+    <lastmod>2026-06-21T10:25:58.881Z</lastmod>
   </url>
   <url>
     <loc>https://aneeshnaik.github.io/blogposts/20260529_weeknotes_2026_22.html</loc>
-    <lastmod>2026-06-20T18:08:06.108Z</lastmod>
+    <lastmod>2026-06-21T10:25:58.880Z</lastmod>
   </url>
   <url>
     <loc>https://aneeshnaik.github.io/blogposts/20260619_weeknotes_2026_25.html</loc>
-    <lastmod>2026-06-20T18:08:06.109Z</lastmod>
+    <lastmod>2026-06-21T10:25:58.881Z</lastmod>
   </url>
   <url>
     <loc>https://aneeshnaik.github.io/about.html</loc>
-    <lastmod>2026-06-20T18:08:06.049Z</lastmod>
+    <lastmod>2026-06-21T10:25:58.815Z</lastmod>
   </url>
   <url>
     <loc>https://aneeshnaik.github.io/blog.html</loc>
-    <lastmod>2026-06-20T18:08:06.108Z</lastmod>
+    <lastmod>2026-06-21T10:25:58.879Z</lastmod>
   </url>
 </urlset>
