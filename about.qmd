@@ -7,8 +7,8 @@ I'm Dr. Aneesh Naik, an astrophysicist-turned-ecologist at the University of Cam
 My research interests lie at the intersection of ecology, conservation, remote sensing, and AI. I am particularly interested in how we can use geospatial foundation models like [TESSERA](https://geotessera.org/) to:
 <ul>
 <li> Estimate biodiversity
-<li> Map the ranges of species
-<li> Map land cover and ecosystems (including habitat condition and habitat connectivity)
+<li> Map the distributions of species
+<li> Map habitats and ecosystems (including their condition and connectivity)
 <li> Quantify the impact of conservation interventions
 </ul>
 
