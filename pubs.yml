@@ -1,0 +1,90 @@
+- title: "The angular momentum spiral of the Milky Way disc in Gaia"
+  authors: "R. Yaaqib, **A. P. Naik**, J. Peñarrubia, & M. S. Petersen"
+  year: 2025
+  venue: "MNRAS"
+  preprint: "https://arxiv.org/abs/2501.04095"
+  doi: "https://doi.org/10.1093/mnras/staf1815"
+
+- title: "lintsampler: Easy random sampling via linear interpolation"
+  authors: "**A. P. Naik**, & M. Petersen"
+  year: 2024
+  venue: "JOSS"
+  preprint: "https://arxiv.org/abs/2410.05811"
+  doi: "https://doi.org/10.21105/joss.06906"
+
+- title: "First spiral arm detection using dynamical mass measurements of the Milky Way disk"
+  authors: "A. Widmark, & **A. P. Naik**"
+  year: 2024
+  venue: "A&A"
+  preprint: "https://arxiv.org/abs/2401.04571"
+  doi: "https://doi.org/10.1051/0004-6361/202449199"
+
+- title: "Accurate computation of the screening of scalar fifth forces in galaxies"
+  authors: "C. Burrage, B. March, & **A. P. Naik**"
+  year: 2024
+  venue: "JCAP"
+  preprint: "https://arxiv.org/abs/2310.19955"
+  doi: "https://doi.org/10.1088/1475-7516/2024/04/004"
+
+- title: "The missing radial velocities of Gaia: a catalogue of Bayesian estimates for DR3"
+  authors: "**A. P. Naik**, & A. Widmark"
+  year: 2024
+  venue: "MNRAS"
+  preprint: "https://arxiv.org/abs/2307.13398"
+  doi: "https://doi.org/10.1093/mnras/stad3822"
+
+- title: "Mapping Milky Way disk perturbations in stellar number density and vertical velocity using Gaia DR3"
+  authors: "A. Widmark, L. Widrow, & **A. P. Naik**"
+  year: 2022
+  venue: "A&A"
+  preprint: "https://arxiv.org/abs/2207.03492"
+  doi: "https://doi.org/10.1051/0004-6361/202244453"
+
+- title: "The missing radial velocities of Gaia: Blind predictions for DR3"
+  authors: "**A. P. Naik**, & A. Widmark"
+  year: 2022
+  venue: "MNRAS"
+  preprint: "https://arxiv.org/abs/2206.04102"
+  doi: "https://doi.org/10.1093/mnras/stac2425"
+
+- title: "Dark sector domain walls could explain the observed planes of satellites"
+  authors: "**A. P. Naik**, & C. Burrage"
+  year: 2022
+  venue: "JCAP"
+  preprint: "https://arxiv.org/abs/2205.00712"
+  doi: "https://doi.org/10.1088/1475-7516/2022/08/020"
+
+- title: "Charting galactic accelerations II: how to 'learn' accelerations in the solar neighbourhood"
+  authors: "**A. P. Naik**, J. An, C. Burrage, & N. W. Evans"
+  year: 2022
+  venue: "MNRAS"
+  preprint: "https://arxiv.org/abs/2112.07657"
+  doi: "https://doi.org/10.1093/mnras/stac153"
+
+- title: "Charting galactic accelerations: when and how to extract a unique potential from the distribution function"
+  authors: "J. An, **A. P. Naik**, N. W. Evans, & C. Burrage"
+  year: 2021
+  venue: "MNRAS"
+  preprint: "https://arxiv.org/abs/2106.05981"
+  doi: "https://doi.org/10.1093/mnras/stab2049"
+
+- title: "Stellar Streams in Chameleon Gravity"
+  authors: "**A. P. Naik**, N. W. Evans, E. Puchwein, H. Zhao, & A.-C. Davis"
+  year: 2020
+  venue: "PRD"
+  preprint: "https://arxiv.org/abs/2002.05738"
+  doi: "https://doi.org/10.1103/PhysRevD.102.084066"
+
+- title: "Constraints on chameleon $f(R)$ gravity from galaxy rotation curves of the SPARC sample"
+  authors: "**A. P. Naik**, E. Puchwein, A.-C. Davis, D. Sijacki, & H. Desmond"
+  year: 2019
+  venue: "MNRAS"
+  preprint: "https://arxiv.org/abs/1905.13330"
+  doi: "https://doi.org/10.1093/mnras/stz2131"
+
+- title: "Imprints of chameleon $f(R)$ gravity on galaxy rotation curves"
+  authors: "**A. P. Naik**, E. Puchwein, A.-C. Davis, & C. Arnold"
+  year: 2018
+  venue: "MNRAS"
+  preprint: "https://arxiv.org/abs/1805.12221"
+  doi: "https://doi.org/10.1093/mnras/sty2199"

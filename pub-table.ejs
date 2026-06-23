@@ -1,0 +1,18 @@
+::: {style="font-size: 0.88em;"}
+
+| Year | Title | Authors | Venue | Links |
+|:---|:---|:---|:---|:---|
+<% 
+let lastYear = null;
+for (const item of items) { 
+  // Only display the year if it's different from the previous row
+  let displayYear = (item.year !== lastYear) ? item.year : "";
+  lastYear = item.year;
+
+  let links = [];
+  if (item.preprint) links.push("[" + "arXiv](" + item.preprint + ")");
+  if (item.doi) links.push("[" + "DOI](" + item.doi + ")");
+%>| <%= displayYear %> | <%= item.title %> | <%= item.authors %> | <%= item.venue %> | <%= links.join(' &nbsp; ') %> |
+<% } %>
+
+:::
