@@ -10,7 +10,81 @@
 <atom:link href="https://www.aneeshnaik.com/blog.xml" rel="self" type="application/rss+xml"/>
 <description>Personal webpage and blog of Aneesh Naik.</description>
 <generator>quarto-1.9.38</generator>
-<lastBuildDate>Fri, 05 Jun 2026 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Fri, 03 Jul 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Weeknotes: 2026 Weeks 26 &amp; 27</title>
+  <link>https://www.aneeshnaik.com/blogposts/20260703_weeknotes_2026_27.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="what-i-was-working-on" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="what-i-was-working-on">What I was working on</h2>
+<section id="species-distribution-modelling-geolifeclef" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="species-distribution-modelling-geolifeclef">Species Distribution Modelling: GeoLifeClef</h3>
+<p>This is the main thing I’ve been working on for the last ~1.5 weeks. The idea is to see how well <a href="https://geotessera.org/">TESSERA</a> does at species distribution modelling (<a href="https://en.wikipedia.org/wiki/Species_distribution_modelling">SDM</a>). SDM is a fun idea: given a set of species occurrence records and some environmental covariates / remotely sensed images, predict the distribution of the species across a landscape. For years I’ve been interested in SDM, because it combines basically all of my interests: nature, maps, grungy Bayesian statistics to deal with the extreme observational bias.<sup>1</sup> I’ve dabbled a little in the past with small projects, but this is my first time really pursuing a project full time in a professional capacity. I’m excited to be working on this!</p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;The only thing missing is cryptic crosswords. Perhaps I could ask the Guardian for the IP addresses of online crossword solvers, then make a species distribution model of cruciverbalists.</p></div><div id="fn2"><p><sup>2</sup>&nbsp;Presence-only data are opportunistic samples, such as citizen science data, simply logging where a species was found. With presence-only data, absence of evidence is not evidence of absence. Presence-absence data are structured surveys confirming both where a species was found and <em>where it was not</em>.</p></div></div><p>My idea for a first project here was to apply Tessera to the <a href="https://www.kaggle.com/competitions/geolifeclef-2024/overview">2024 GeoLifeClef competition</a>. This is an annual SDM competition hosted on Kaggle, run by the Pl@ntNet team. The idea is to make multi-species SDMs using the GeoPlant data: ~10k plant species, ~90000 presence-absence points, and ~5 million presence-only points.<sup>2</sup></p>
+<p><strong>Experiment:</strong> GeoLifeClef provides a “baseline” model using just Sentinel-2 images (128x128 10m pixels, R/G/B/NIR). It ignores the presence-only data in the GeoPlant dataset, and trains only on the presence-absence data. It’s a relatively simple model. Not to say light, it’s a relatively big neural net, but just plug+play, nothing fancy at all with hyperparameter tuning / ensemble learning etc (which the winning submissions all do). Basically I took that baseline and swapped in Tessera “images”. I’m using Tessera v1.0 because 1.1 is not yet available over the whole region (which spans basically all of Europe).</p>
+<p><strong>Headline result:</strong> Tessera beats the baseline model <em>by a wide margin</em>. It gives an even better result than the baseline model with S2 supplemented with landsat+bioclim time series.</p>
+<p><strong>Detailed scores:</strong> These are the “private” F1 scores used to rank submissions for the GeoLifeClef competition.<br>
+1. Baseline S2-only model: 0.23629 (would have ranked 38th in competition)<br>
+2. Baseline S2 +Landsat time series + Bioclim time series model: 0.31626 (would have ranked 25th in competition)<br>
+3. Tessera-only model (i.e., model 1 with S2 images replaced by Tessera images): 0.33032 (would have ranked 11th in competition)<br>
+</p>
+<p>For reference, the top 3 scores were: 0.40890, 0.36837, 0.35292. But, as I mentioned above, these all do much more sophisticated things. Not necessarily heftier architectures, but a lot of hyperparameter tuning, ensemble stuff, and they incorporate the GeoPlant presence-only data, which the “baseline” models ignore.<sup>3</sup></p>
+<div class="no-row-height column-margin column-container"><div id="fn3"><p><sup>3</sup>&nbsp;Perhaps surprisingly, it seems that adding the presence-only data was only marginally beneficial for these submissions, even though it’s a <em>huge</em> augmentation of the training data.</p></div></div></section>
+</section>
+<section id="what-i-was-reading" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="what-i-was-reading">What I was reading</h2>
+<p>In conjunction with my SDM work described above, I’ve been reading around a lot of the recent SDM literature. One thing in particular I wanted to learn about is how to effectively quantify uncertainty. One very recent work I read on the subject is <a href="https://www.sciencedirect.com/science/chapter/bookseries/abs/pii/S0065250426000073"><em>Conformal prediction quantifies the uncertainty of species distribution models</em></a> by Poisot (2026).<sup>4</sup> It explores the idea of using the (presently very trendy!) technique of <a href="https://en.wikipedia.org/wiki/Conformal_prediction">conformal predictions</a> to provide uncertainties<sup>5</sup> on the predictions of SDMs. This seems like quite a promising avenue! It is a frequentist approach to uncertainty quantification, which to me is much less appealling than a fully Bayesian formalism would be. However, it is likely a much more robust approach in the regime where models are somewhat ‘misspecified’, as any SDM is likely to be. Much to chew on!</p>
+<div class="no-row-height column-margin column-container"><div id="fn4"><p><sup>4</sup>&nbsp;<a href="https://www.sciencedirect.com/science/chapter/bookseries/abs/pii/S0065250426000073">Poisot, T. (2026), <em>Conformal prediction quantifies the uncertainty of species distribution models</em>, Advances in Ecological Research</a></p></div><div id="fn5"><p><sup>5</sup>&nbsp;Or, more precisely: coverage guarantees.</p></div><div id="fn6"><p><sup>6</sup>&nbsp;<a href="https://www.sciencedirect.com/science/article/pii/S0169534719302551">Isaac, N. J. B. et al., (2020), <em>Data Integration for Large-Scale Models of Species Distributions</em>, Trends in Ecology &amp; Evolution</a></p></div><div id="fn7"><p><sup>7</sup>&nbsp;<a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/ecog.06451">Morera-Pujol, V. et al.&nbsp;(2023), <em>Bayesian species distribution models integrate presence-only and presence–absence data to predict deer distribution and relative abundance</em>, Ecography.</a></p></div></div><p>On the subject of more Bayesian approaches to SDM: I read a couple of papers describing the usage of INLA (integrated nested Laplace approximation) for Bayesian inference in the context of SDM. For example, <a href="https://www.sciencedirect.com/science/article/pii/S0169534719302551">Isaac et al., (2020)</a> wrote a lovely review article.<sup>6</sup> The basic idea is to treat species observations as a point process. There is an underlying “true” species distribution, and observations are points sampled from the distribution. Presence-only and presence-absence data can be separately modelled from the same underlying distribution by writing down different observational likelihoods capturing the different observation processes. One can then infer the posterior (i.e., the “true” species distribution) by applying normal Bayesian inference techniques. In practice, techniques like Markov Chain Monte Carlo (MCMC) are likely too expensive for the extremely high-dimensional posterior, but if one makes some approximations then one can perform the inference relatively cheaply with INLA. <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/ecog.06451">Morera-Pujol et al., (2023)</a> provide a great example of doing this in practice, mapping deer distributions in Ireland, combining presence-only and presence-absence data.<sup>7</sup></p>
+<p>I <em>really</em> like this Bayesian approach to SDM. It exactly matches the idea I carry around in my head for how SDM (and basically all empirical science!) ought to work in principle. That being said, it is not without its problems. One issue is that one ‘models away’ the <a href="https://en.wikipedia.org/wiki/Spatial_analysis#Spatial_auto-correlation">spatial autocorrelation</a> by adding a ‘random spatial field’ term to the model. The same group that wrote the review paper cited above have <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/ecog.06391">separately shown</a> that the results you get from INLA are <em>extremely</em> sensitive to your choice of mesh size on this random spatial field.<sup>8</sup></p>
+<div class="no-row-height column-margin column-container"><div id="fn8"><p><sup>8</sup>&nbsp;<a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/ecog.06391">Dambly, L. et al.&nbsp;(2023), <em>Integrated species distribution models fitted in INLA are sensitive to mesh parameterisation</em>, Ecography.</a></p></div></div></section>
+<section id="miscellanea" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="miscellanea">Miscellanea</h2>
+<section id="trees-of-the-cambridge-university-botanic-garden" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="trees-of-the-cambridge-university-botanic-garden">Trees of the Cambridge University Botanic Garden</h3>
+<p>I’ve visited the Cambridge University Botanic Garden many times. Last weekend was my first time really appreciating its <em>wonderful</em> collection of trees. My wife and I diligently followed the <a href="https://www.botanic.cam.ac.uk/learning/trails/trees-trail/">Trees of the Botanic Garden Trail</a>,<sup>9</sup> which took us to 13 excellent trees around the garden. Two highlights:</p>
+<div class="no-row-height column-margin column-container"><div id="fn9"><p><sup>9</sup>&nbsp;There are is a booklet at the Garden’s entrance, containing a map of the trail and a description of each tree and its significance.</p></div></div><ol type="1">
+<li>The Osage orange (<em>Maclura pomifera</em>). This is a tree with very odd-looking fruit, described in the trail booklet as “pickled gardeners’ brains”.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="https://www.aneeshnaik.com/assets/blogpost_images/20260703_osage.jpg" class="img-fluid figure-img" style="width:55.0%" alt="Funky fruit on the Osage orange tree."></p>
+<figcaption class="margin-caption">Funky fruit on the Osage orange tree.</figcaption>
+</figure>
+</div>
+<ol start="2" type="1">
+<li>The Indian horse-chestnut (<em>Aesculus indica</em>). This is a glorious tree, and was in flower when we visited. Interestingly, the flowers all have either pink or yellow centres: yellow at first, then pink once they have been pollinated!</li>
+</ol>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="https://www.aneeshnaik.com/assets/blogpost_images/20260703_aesculus.jpg" class="img-fluid figure-img" style="width:65.0%" alt="Pink and yellow flowers on the Indian horse-chestnut"></p>
+<figcaption class="margin-caption">Pink (pollinated) and yellow (not-yet-pollinated) flowers on the Indian horse-chestnut. Photo credit: CU Botanic Garden.</figcaption>
+</figure>
+</div>
+</section>
+<section id="james-hutton-memorial-garden" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="james-hutton-memorial-garden">James Hutton Memorial Garden</h3>
+<p>Continuing the subject of visiting gardens and diligently following paper guides. My wife and I have been working through a book called “Secret Edinburgh: An Unusual Guide”. This is a guidebook full of weird and hidden spots around the city. Earlier this week it took us to the James Hutton Memorial Garden, not far from Holyrood. Despite its central location, it was extremely difficult to find. One reaches it by going into the car park of the University gym (the Pleasance Complex), then looking for the entrance to a path in between parking bays 20 and 21. This path then snakes down a steep hill to the garden.</p>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="https://www.aneeshnaik.com/assets/blogpost_images/20260703_hutton.jpg" class="img-fluid figure-img" style="width:55.0%" alt="Photograph of James Hutton memorial garden"></p>
+<figcaption class="margin-caption">Central stone of James Hutton memorial garden, Edinburgh. Just visible at top left: stone from Glen Tilt. The granite bands led Hutton to propose that rocks weren’t all from the sea!</figcaption>
+</figure>
+</div>
+<p>The garden was built on the site where once stood the house of James Hutton, the 18<sup>th</sup> century Scottish “Father of Modern Geology”.<sup>10</sup> An interesting feature here is the collection of rocks placed around the garden. One interesting rock, just visible at the top-left of my photo above, was taken from Glen Tilt in the Cairngorms. This was the site where James Hutton observed veins of granite running through schist and limestone (as in the photographed rock). From this, he developed the theory of <em>plutonism</em>, that igneous rocks formed from volcanic activity, and not from crystallisation in the oceans.</p>
+
+
+<div class="no-row-height column-margin column-container"><div id="fn10"><p><sup>10</sup>&nbsp;I’ve learned a lot about James Hutton since moving to Scotland. I’ve often experienced a kind of déjà vu when coming across a rock formation with a nearby plaque describing it as “Hutton’s Unconformity”: <em>the</em> site where James Hutton noted rock layers at different angles and thus came up with his ideas of uniformitarianism. He seems to have undergone this revelation 10 or 12 times.</p></div></div></section>
+</section>
+
+
+ ]]></description>
+  <guid>https://www.aneeshnaik.com/blogposts/20260703_weeknotes_2026_27.html</guid>
+  <pubDate>Fri, 03 Jul 2026 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Weeknotes: 2026 Weeks 24 &amp; 25</title>
   <link>https://www.aneeshnaik.com/blogposts/20260619_weeknotes_2026_25.html</link>
