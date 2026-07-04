@@ -19,6 +19,7 @@
 
 
 
+<p>Since my last post, I have changed the domain name of the website from aneeshnaik.github.io to aneeshnaik.com. Any RSS subscriptions will likely break as a result!</p>
 <section id="what-i-was-working-on" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="what-i-was-working-on">What I was working on</h2>
 <section id="species-distribution-modelling-geolifeclef" class="level3 page-columns page-full">
@@ -82,6 +83,11 @@
 
 
  ]]></description>
+  <category>Weeknotes</category>
+  <category>Research</category>
+  <category>TESSERA</category>
+  <category>Papers</category>
+  <category>SDM</category>
   <guid>https://www.aneeshnaik.com/blogposts/20260703_weeknotes_2026_27.html</guid>
   <pubDate>Fri, 03 Jul 2026 00:00:00 GMT</pubDate>
 </item>
