@@ -1,6 +1,9 @@
 project:
   type: website
 
+editor: 
+  render-on-save: true
+
 execute:
   freeze: auto
   warning: false     # Hides annoying Python/package package warnings
@@ -21,6 +24,7 @@ blog:
     - Conservation
     - Ecology
     - KBAs
+    - SDM
 
 
 
