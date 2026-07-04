@@ -49,7 +49,7 @@ format:
   html:
     theme: cosmo
     reference-location: margin
-    mainfont: "Gill Sans"
+    mainfont: "EB Garamond"
     css: styles.css
     toc: false
     cap-location: margin
