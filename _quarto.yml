@@ -42,8 +42,12 @@ website:
       - href: blog.qmd
         text: Blog
   page-footer:
-    left: © 2026 Aneesh Naik
-    right: Built with [Quarto](https://quarto.org/)
+    left: © 2026 Aneesh Naik. Site built with [Quarto](https://quarto.org/).
+    right: |
+      Find me out in the wild: &nbsp;
+      [{{< fa brands github >}}](https://github.com/aneeshnaik) &nbsp;
+      [{{< fa brands linkedin >}}](https://linkedin.com/in/aneesh-naik-2030191a5) &nbsp;
+      [{{< fa brands orcid >}}](https://orcid.org/0000-0001-6841-1496)
 
 format:
   html:
