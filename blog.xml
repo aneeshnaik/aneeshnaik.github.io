@@ -9,8 +9,128 @@
 <link>https://www.aneeshnaik.com/blog.html</link>
 <atom:link href="https://www.aneeshnaik.com/blog.xml" rel="self" type="application/rss+xml"/>
 <description>Personal webpage and blog of Aneesh Naik.</description>
-<generator>quarto-1.9.38</generator>
-<lastBuildDate>Mon, 20 Jul 2026 00:00:00 GMT</lastBuildDate>
+<generator>quarto-1.10.18</generator>
+<lastBuildDate>Sun, 02 Aug 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Weeknotes: 2026 Weeks 30 &amp; 31</title>
+  <link>https://www.aneeshnaik.com/blogposts/20260802_weeknotes_2026_31.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Thus far, I’ve worked very hard to prevent this blog from devolving into Yet Another Cryptic Crossword Blog. Today, these efforts fail.</p>
+<section id="what-i-was-working-on" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="what-i-was-working-on">What I was working on</h2>
+<section id="species-distribution-modelling" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="species-distribution-modelling">Species Distribution Modelling</h3>
+<p>As in previous weeks, I’ve spent a good amount of time playing around with doing species distribution modelling with <a href="https://geotessera.org/">TESSERA</a>.<sup>1</sup> In particular, I’ve been using the GeoPlant dataset used for the annual <a href="https://www.kaggle.com/competitions/geolifeclef-2024/overview">GeoLifeClef competition</a>. Over the last month or so I’ve made a big mess with a myriad of scattered experiments. I’m now attempting to bring everything together with a final “grid” of models that encapsulate my various conclusions. I’ll run this grid over the coming period.</p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;See also my weeknotes <a href="../blogposts/20260703_weeknotes_2026_27.html">26+27</a> and <a href="../blogposts/20260720_weeknotes_2026_29.html">28+29</a> for discussion of this project.</p></div><div id="fn2"><p><sup>2</sup>&nbsp;The fiducial model is a ResNet-18 CNN. Before hitting the CNN, the data passes through a small two-layer adapter block (convolution + ReLU) that maps the input data to 32 channels. The idea here was to make the comparison across modalities as fair as possible: only the input data and preprocessing differ while the core architecture is held constant. Post-backbone, there is then a lightweight two-layer classification head. At prediction time, each model is ensembled across 8 spatial folds.</p></div></div><p>As a first taster, here is a bar chart showing the performance of my “fiducial” model<sup>2</sup> with three input data modalities: Sentinel-2 images, AlphaEarth embedding “images”, and TESSERA embedding “images”. All images 128x128 10m pixels. Performance is measured by the sample-weighted F1 score used in the GeoLifeClef competition.</p>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="https://www.aneeshnaik.com/assets/blogpost_images/20260802_glc.png" class="img-fluid figure-img" style="width:80.0%" alt="Bar chart showing GeoLifeClef scores for three models."></p>
+<figcaption class="margin-caption">Bar chart showing GeoLifeClef scores for three models: one fed with Sentinel-2 data, one with AlphaEarth embeddings, and one with TESSERA embeddings. The two geospatial foundation models beat the traditional remote sensing input quite convincingly. Of the two, TESSERA wins by a slight margin.</figcaption>
+</figure>
+</div>
+<p>The two geospatial foundation models, AlphaEarth and TESSERA, beat the “traditional” remote sensing modality (Sentinel-2) by a convincing margin. Of the two, TESSERA just about inches ahead of AlphaEarth.<sup>3</sup></p>
+<div class="no-row-height column-margin column-container"><div id="fn3"><p><sup>3</sup>&nbsp;To give some context for these scores, AlphaEarth and TESSERA are roughly comparable with the second/third/fourth place entries in the 2024 GeoLifeClef competition.</p></div></div></section>
+<section id="bird-assemblage-mapping" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="bird-assemblage-mapping">Bird Assemblage Mapping</h3>
+<p>These past few weeks I’ve spent one day per week working on bird-derived habitat mapping project I described in <a href="[28+29](20260720_weeknotes_2026_29.qmd)">my previous weeknote</a>.<sup>4</sup> I haven’t gotten as far as making a map yet, as I’ve been spending quite a bit of time understanding and preparing the data that have been shared with me by my collaborators.</p>
+<div class="no-row-height column-margin column-container"><div id="fn4"><p><sup>4</sup>&nbsp;It’s worth noting also that this project is conceptually quite similar to the project I’m working on with Michael Dales and Alison Eyres, described on Michael’s blog <a href="https://digitalflapjack.com/weeknotes/2026-07-20/">here</a> and <a href="https://digitalflapjack.com/weeknotes/2026-07-27/">here</a>.</p></div><div id="fn5"><p><sup>5</sup>&nbsp;The association strengths shown in the diagram are:<br>
+- Obligate: species found only in a given habitat / very rarely in another.<br>
+- Strong Indicator: species usually found in a given habitat but not restricted to it.<br>
+- Weak Indicator: species seen in less than a third of habitats on a continent, generally all within the same biome.<br>
+- Nominally Present: species found in given habitat but also in many other habitats, of multiple biomes.<br>
+</p></div></div><p>The main dataset is a table of associations between bird species and the habitat types under the <a href="https://press.princeton.edu/series/habitats-of-the-world?srsltid=AfmBOopA0eX5yfi3EDSaHSuiNeEX-oPrrmJlt3xoYo2kKNfx2ws8R7jP">Habitats of the World</a> typology. To give a sense of what this looks like, the bar chart below shows the number of species in each of the 57 African habitats, disaggregated by association strength.<sup>5</sup></p>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="https://www.aneeshnaik.com/assets/blogpost_images/20260802_birdies.png" class="img-fluid figure-img" style="width:100.0%" alt="Bar chart showing birds associated with African habitats, disaggregated by association strength."></p>
+<figcaption class="margin-caption">Bar chart showing birds associated with African habitats, disaggregated by association strength.</figcaption>
+</figure>
+</div>
+<p>In addition to this table, I was also given a wealth of birding checklists from various sites in South Africa and Australia. Here, a somewhat irksome problem creeps in: species identifiers. Many of the birdlists use a different name for a given species compared with the bird-habitat table.<sup>6</sup> On Friday, over the course of several rather strong cups of coffee, I manually built a table of corrections.<sup>7</sup> This was non-trivial: often, the name differences are not simply synonyms but taxon merges/splits. In the case of a split, I had to use geographic information to work out which of the derived species more likely corresponded to the observation. As part of my sanitisation, I moved to using the eBird “species code” as a more stable unique identifier for each species.</p>
+<div class="no-row-height column-margin column-container"><div id="fn6"><p><sup>6</sup>&nbsp;The latter uses the <a href="https://www.birds.cornell.edu/clementschecklist/introduction/updateindex/october-2024/">2024 Clements checklist</a>.</p></div><div id="fn7"><p><sup>7</sup>&nbsp;I used <a href="https://avibase.bsc-eoc.org/avibase.jsp?lang=EN">avibase</a> to look up synonyms. In principle one could imagine automating this process, but there were so many quirks and exceptions that any kind of robust process would take even longer to develop than my manual procedure took to complete.</p></div></div><p>Painful, but actually quite fun! Plus I got to look at a lot of nice birds as I went along. For example, the Papuan pitta (<em>Erythropitta macklotii</em>… or is it <em>Pitta erythrogaster</em>??).</p>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="https://www.aneeshnaik.com/assets/blogpost_images/20260802_pitta.jpg" class="img-fluid figure-img" style="width:60.0%" alt="Photograph of a Papuan pitta."></p>
+<figcaption class="margin-caption">The Papuan pitta. Photo credit: Wikipedia (user: JJ Harrison)</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="meetings" class="level2">
+<h2 class="anchored" data-anchor-id="meetings">Meetings</h2>
+<p>I had quite a few interesting meetings this past fortnight:</p>
+<ul>
+<li>Meeting with <a href="https://www.wcs.org/our-work/solutions/conservation-planning/paul-elsen">Paul Elsen from the Wildlife Conservation Society</a> to discuss using TESSERA / geospatial goundation models in their <a href="https://www.nceas.ucsb.edu/workinggroups/nature-health-index-holistic-approach-measuring-and-mapping-ecological-integrity">Nature Health Index</a>.</li>
+<li>Mini-workshop in the David Attenborough Building with all the various people doing habitat mapping with TESSERA. Organised by <a href="https://www.plantsci.cam.ac.uk/people/david-coomes">David Coomes</a>.</li>
+<li>Meeting with <a href="https://digitalflapjack.com/">Michael Dales</a> and <a href="https://www.zoo.cam.ac.uk/people/alison-eyres">Alison Eyres</a> to discuss our global habitat mapping work (see margin note 4 above).</li>
+<li>Meeting with <a href="https://svr-sk818-web.cl.cam.ac.uk/keshav/">S. Keshav</a>, <a href="https://www.cst.cam.ac.uk/people/sas268">Silja Sormunen</a>, and <a href="https://www.plantsci.cam.ac.uk/people/david-coomes">David Coomes</a> to discuss a potential new project building a global landcover hierarchy.</li>
+<li>Meeting with <a href="https://www.plantsci.cam.ac.uk/people/jacob-drucker">Jacob Drucker</a> to discuss occupancy modelling of bird species.</li>
+<li>Telecon with <a href="https://www.gu.se/en/about/find-staff/e-pingrau">E-Ping Rau</a> to discuss tree species distribution modelling with TESSERA.</li>
+</ul>
+</section>
+<section id="miscellanea" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="miscellanea">Miscellanea</h2>
+<section id="crossword" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="crossword">Crossword</h3>
+<p>Over a few sessions in July, I worked on a delightful crossword with my wife and some friends: the <a href="https://www.theguardian.com/crosswords/2026/jul/06/genius-crossword-no-277">Guardian “Genius” crossword, number 277</a>.</p>
+<p>The Genius is a monthly crossword associated with a cash prize.<sup>8</sup> The clues themselves are actually not <em>too</em> hard, but each puzzle does have an unusual twist which makes the overall puzzle quite a challenge. In #277, the rubric itself was hilariously cryptic:</p>
+<div class="no-row-height column-margin column-container"><div id="fn8"><p><sup>8</sup>&nbsp;The deadline was yesterday, Saturday 1st August. So, I’m allowed to post my solution here. See also the writeup on <a href="https://fifteensquared.net/2026/08/02/guardian-genius-no-277-by-soup/">fifteensquared</a>.</p></div></div><blockquote class="blockquote">
+<p>The puzzle is a safe. Solvers must reveal its contents using four dials, applying cach to a quarter of the clues. Dial by dial in clue order, certain letters give a property of 23 cells to be highlighted:<br>
+Dial 1 clues: extra letter indicated by wordplay<br>
+Dial 2 clues: first letter of an extra word<br>
+Dial 3 clues: letter omitted by wordplay<br>
+Dial 4 clues (normal): clue’s first letter<br>
+</p>
+</blockquote>
+<p>I had to read this ten or twelve times before I understood it (/ gave up trying to understand it). The essence of it is that each clue in the crossword yields an additional letter, falling into one of four categories. Concatenate them in the right order to receive further instructions. Below is an image of the completed crossword, with colours indicating the four categories.</p>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="https://www.aneeshnaik.com/assets/blogpost_images/20260802_xword_1.jpg" class="img-fluid figure-img" style="width:60.0%" alt="Image of Guardian Genius Crossword with answers filled in."></p>
+<figcaption class="margin-caption">Guardian Genius Crossword #277, with answers filled in. Each clue/answer also yields an additional letter, falling into one of four categories. When concatenated in the right order, these additional letters spell out: “Contain same letter as today’s cryptic”.</figcaption>
+</figure>
+</div>
+<p>The additional letters, spelt out dial by dial, then say: CONTAINSAMELETTERASTODAYSCRYPTIC. Or, “contain same letter as today’s cryptic”. “Today’s cryptic” refers to the “normal” <a href="https://www.theguardian.com/crosswords/cryptic/30051">Guardian cryptic #30051</a>, which was released on the same day as Genius #277. If one highlights just the cells in which both crosswords contain the same letter, one sees the hidden objects emerge:</p>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="https://www.aneeshnaik.com/assets/blogpost_images/20260802_xword_2.jpg" class="img-fluid figure-img" style="width:60.0%" alt="Bar chart showing GeoLifeClef scores for three models."></p>
+<figcaption class="margin-caption">The same crossword, now only showing the cells where the letter is the same as that in the corresponding cell of the day’s “normal” cryptic crossword in the Guardian. Three hidden objects are now revealed: DAGGER, FAKE ID, DIAMOND RING.</figcaption>
+</figure>
+</div>
+<p>Dagger, fake ID, diamond ring. I can’t see a connection between the three (other than that they might go in a safe?), but I suspect there’s a cultural reference I’m missing!</p>
+<p>In addition to a weird and wonderful puzzle concept, the crossword also had a new (to me) type of clue. 25 across:</p>
+<blockquote class="blockquote">
+<p>____ ____ exemplify ruin? (7)</p>
+</blockquote>
+<p>The answer is DESTROY (=“ruin”). The blank parts of the clue are “Does Troy” (there’s an extraneous letter O here, according to dial 1). So, the clue’s wordplay <em>includes</em> the literal answer!</p>
+</section>
+<section id="crochet" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="crochet">Crochet</h3>
+<p>Last week was my wife’s and my “cotton” anniversary, and we exchanged gifts of cotton. For my part, I attempted my first ever three-dimensional crochet, a <em>Crassula umbellata</em>. Pattern from <a href="https://www.searchpress.com/book/9781782219019/stylish-succulents-to-crochet">“Stylish Succulents to Crochet”</a> by Sarah Abbondio. Photo below.</p>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="https://www.aneeshnaik.com/assets/blogpost_images/20260802_crassula.jpg" class="img-fluid figure-img" style="width:70.0%" alt="A crocheted Crassula umbellata."></p>
+<figcaption class="margin-caption">A crocheted <em>Crassula umbellata</em>.</figcaption>
+</figure>
+</div>
+<p>It was <em>much</em> harder than I thought it would be. I’m going to return to two dimensions for a while.</p>
+
+
+</section>
+</section>
+
+
+ ]]></description>
+  <category>Weeknotes</category>
+  <category>SDM</category>
+  <category>Crosswords</category>
+  <category>Crochet</category>
+  <category>Birds</category>
+  <guid>https://www.aneeshnaik.com/blogposts/20260802_weeknotes_2026_31.html</guid>
+  <pubDate>Sun, 02 Aug 2026 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Weeknotes: 2026 Weeks 28 &amp; 29</title>
   <link>https://www.aneeshnaik.com/blogposts/20260720_weeknotes_2026_29.html</link>

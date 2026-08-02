@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-07-20">
+<meta name="dcterms.date" content="2026-08-02">
 
-<title>Weeknotes: 2026 Weeks 28 &amp; 29 – Aneesh Naik</title>
+<title>Weeknotes: 2026 Weeks 30 &amp; 31 – Aneesh Naik</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -132,15 +132,14 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Weeknotes: 2026 Weeks 28 &amp; 29</h1>
-<p class="subtitle lead">2026/07/04 – 2026/07/17</p>
+<h1 class="title">Weeknotes: 2026 Weeks 30 &amp; 31</h1>
+<p class="subtitle lead">2026/07/18 – 2026/07/31</p>
   <div class="quarto-categories">
     <div class="quarto-category">Weeknotes</div>
-    <div class="quarto-category">TESSERA</div>
-    <div class="quarto-category">Birds</div>
-    <div class="quarto-category">Papers</div>
-    <div class="quarto-category">Conservation</div>
     <div class="quarto-category">SDM</div>
+    <div class="quarto-category">Crosswords</div>
+    <div class="quarto-category">Crochet</div>
+    <div class="quarto-category">Birds</div>
   </div>
   </div>
 
@@ -152,7 +151,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">July 20, 2026</p>
+      <p class="date">August 2, 2026</p>
     </div>
   </div>
   
@@ -164,66 +163,103 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>Thus far, I’ve worked very hard to prevent this blog from devolving into Yet Another Cryptic Crossword Blog. Today, these efforts fail.</p>
 <section id="what-i-was-working-on" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="what-i-was-working-on">What I was working on</h2>
-<section id="species-distribution-modelling-geolifeclef" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="species-distribution-modelling-geolifeclef">Species Distribution Modelling: GeoLifeClef</h3>
-<p>As I mentioned in my <a href="../blogposts/20260703_weeknotes_2026_27.html">previous weeknote</a>, I’ve been working on <a href="https://en.wikipedia.org/wiki/Species_distribution_modelling">species distribution modelling (SDM)</a> using <a href="https://geotessera.org/">Tessera</a> embeddings as covariates. In particular, I’ve been playing around with the <a href="https://www.kaggle.com/competitions/geolifeclef-2024/overview">GeoLifeClef challenge</a>, an annual SDM competition using the GeoPlant benchmark dataset.</p>
-<p>This has been the main thing I’ve been working on these past couple of weeks. In particular, I’ve been doing a lot of experiments with different models / ML architectures, both with Tessera and with the provided data (Sentinel 2 + Landsat + Bioclim).</p>
-<p>The main result so far: <strong>Tessera plus a relatively simple model gets a pretty high score, equivalent to roughly 2nd place in the 2024 competition.</strong><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
-<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;Last time I wrote, I was at 11th place. Remarkably, the improved result is actually with a more light-weight model (i.e., one with fewer trainable parameters). The main cause of the boost is using an ensemble of models, using a spatial block strategy to feed different subsets of the data to each ensemble member.</p></div><div id="fn2"><p><sup>2</sup>&nbsp;See my <a href="../blogposts/20260703_weeknotes_2026_27.html">previous weeknote</a> for a discussion of presence-absence versus presence-only data.</p></div></div><p>It’s worth noting that even this high-scoring model only uses the presence-absence data in the GeoPlant dataset. The winning efforts in the competition all incorporated the additional presence-only data.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> I’m not sure if I will attempt to incorporate the additional data or not: I think the results I have so far are already sufficent to demonstrate a nice point: geospatial foundation models are good at species distribution modelling!</p>
-</section>
-<section id="bird-assemblages" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="bird-assemblages">Bird Assemblages</h3>
-<p>This past fortnight I’ve started working with some colleagues downstairs at BirdLife International, plus some other colleagues from farther afield, on a project using opportunistic bird observations (e.g., from eBird) alongside Tessera to build habitat maps. The idea is that <em>assemblages</em> of birds are highly indicative of ecosystem type.</p>
-<p>I haven’t done any “science” yet. So far, I’ve just read a few papers and played around with some data my colleagues shared with me, including a table of associations between bird assemblages and habitat types. Playing around with this table, I’ve learned about a few new birds and habitats, such as the <a href="https://en.wikipedia.org/wiki/Bananaquit">bananaquit</a> and the <a href="https://en.wikipedia.org/wiki/Renosterveld">renosterveld</a>.</p>
+<section id="species-distribution-modelling" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="species-distribution-modelling">Species Distribution Modelling</h3>
+<p>As in previous weeks, I’ve spent a good amount of time playing around with doing species distribution modelling with <a href="https://geotessera.org/">TESSERA</a>.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> In particular, I’ve been using the GeoPlant dataset used for the annual <a href="https://www.kaggle.com/competitions/geolifeclef-2024/overview">GeoLifeClef competition</a>. Over the last month or so I’ve made a big mess with a myriad of scattered experiments. I’m now attempting to bring everything together with a final “grid” of models that encapsulate my various conclusions. I’ll run this grid over the coming period.</p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;See also my weeknotes <a href="../blogposts/20260703_weeknotes_2026_27.html">26+27</a> and <a href="../blogposts/20260720_weeknotes_2026_29.html">28+29</a> for discussion of this project.</p></div><div id="fn2"><p><sup>2</sup>&nbsp;The fiducial model is a ResNet-18 CNN. Before hitting the CNN, the data passes through a small two-layer adapter block (convolution + ReLU) that maps the input data to 32 channels. The idea here was to make the comparison across modalities as fair as possible: only the input data and preprocessing differ while the core architecture is held constant. Post-backbone, there is then a lightweight two-layer classification head. At prediction time, each model is ensembled across 8 spatial folds.</p></div></div><p>As a first taster, here is a bar chart showing the performance of my “fiducial” model<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> with three input data modalities: Sentinel-2 images, AlphaEarth embedding “images”, and TESSERA embedding “images”. All images 128x128 10m pixels. Performance is measured by the sample-weighted F1 score used in the GeoLifeClef competition.</p>
 <div class="quarto-figure quarto-figure-center page-columns page-full">
 <figure class="figure page-columns page-full">
-<p><img src="../assets/blogpost_images/20260720_bananaquit.jpg" class="img-fluid figure-img" style="width:65.0%" alt="Photo of a bananaquit."></p>
-<figcaption class="margin-caption">A bananaquit (<em>Coereba flaveola</em>). Photo credit: Wikipedia.</figcaption>
+<p><img src="../assets/blogpost_images/20260802_glc.png" class="img-fluid figure-img" style="width:80.0%" alt="Bar chart showing GeoLifeClef scores for three models."></p>
+<figcaption class="margin-caption">Bar chart showing GeoLifeClef scores for three models: one fed with Sentinel-2 data, one with AlphaEarth embeddings, and one with TESSERA embeddings. The two geospatial foundation models beat the traditional remote sensing input quite convincingly. Of the two, TESSERA wins by a slight margin.</figcaption>
+</figure>
+</div>
+<p>The two geospatial foundation models, AlphaEarth and TESSERA, beat the “traditional” remote sensing modality (Sentinel-2) by a convincing margin. Of the two, TESSERA just about inches ahead of AlphaEarth.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn3"><p><sup>3</sup>&nbsp;To give some context for these scores, AlphaEarth and TESSERA are roughly comparable with the second/third/fourth place entries in the 2024 GeoLifeClef competition.</p></div></div></section>
+<section id="bird-assemblage-mapping" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="bird-assemblage-mapping">Bird Assemblage Mapping</h3>
+<p>These past few weeks I’ve spent one day per week working on bird-derived habitat mapping project I described in <a href="[28+29](20260720_weeknotes_2026_29.qmd)">my previous weeknote</a>.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> I haven’t gotten as far as making a map yet, as I’ve been spending quite a bit of time understanding and preparing the data that have been shared with me by my collaborators.</p>
+<div class="no-row-height column-margin column-container"><div id="fn4"><p><sup>4</sup>&nbsp;It’s worth noting also that this project is conceptually quite similar to the project I’m working on with Michael Dales and Alison Eyres, described on Michael’s blog <a href="https://digitalflapjack.com/weeknotes/2026-07-20/">here</a> and <a href="https://digitalflapjack.com/weeknotes/2026-07-27/">here</a>.</p></div><div id="fn5"><p><sup>5</sup>&nbsp;The association strengths shown in the diagram are:<br>
+- Obligate: species found only in a given habitat / very rarely in another.<br>
+- Strong Indicator: species usually found in a given habitat but not restricted to it.<br>
+- Weak Indicator: species seen in less than a third of habitats on a continent, generally all within the same biome.<br>
+- Nominally Present: species found in given habitat but also in many other habitats, of multiple biomes.<br>
+</p></div></div><p>The main dataset is a table of associations between bird species and the habitat types under the <a href="https://press.princeton.edu/series/habitats-of-the-world?srsltid=AfmBOopA0eX5yfi3EDSaHSuiNeEX-oPrrmJlt3xoYo2kKNfx2ws8R7jP">Habitats of the World</a> typology. To give a sense of what this looks like, the bar chart below shows the number of species in each of the 57 African habitats, disaggregated by association strength.<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></p>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="../assets/blogpost_images/20260802_birdies.png" class="img-fluid figure-img" style="width:100.0%" alt="Bar chart showing birds associated with African habitats, disaggregated by association strength."></p>
+<figcaption class="margin-caption">Bar chart showing birds associated with African habitats, disaggregated by association strength.</figcaption>
+</figure>
+</div>
+<p>In addition to this table, I was also given a wealth of birding checklists from various sites in South Africa and Australia. Here, a somewhat irksome problem creeps in: species identifiers. Many of the birdlists use a different name for a given species compared with the bird-habitat table.<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> On Friday, over the course of several rather strong cups of coffee, I manually built a table of corrections.<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a> This was non-trivial: often, the name differences are not simply synonyms but taxon merges/splits. In the case of a split, I had to use geographic information to work out which of the derived species more likely corresponded to the observation. As part of my sanitisation, I moved to using the eBird “species code” as a more stable unique identifier for each species.</p>
+<div class="no-row-height column-margin column-container"><div id="fn6"><p><sup>6</sup>&nbsp;The latter uses the <a href="https://www.birds.cornell.edu/clementschecklist/introduction/updateindex/october-2024/">2024 Clements checklist</a>.</p></div><div id="fn7"><p><sup>7</sup>&nbsp;I used <a href="https://avibase.bsc-eoc.org/avibase.jsp?lang=EN">avibase</a> to look up synonyms. In principle one could imagine automating this process, but there were so many quirks and exceptions that any kind of robust process would take even longer to develop than my manual procedure took to complete.</p></div></div><p>Painful, but actually quite fun! Plus I got to look at a lot of nice birds as I went along. For example, the Papuan pitta (<em>Erythropitta macklotii</em>… or is it <em>Pitta erythrogaster</em>??).</p>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="../assets/blogpost_images/20260802_pitta.jpg" class="img-fluid figure-img" style="width:60.0%" alt="Photograph of a Papuan pitta."></p>
+<figcaption class="margin-caption">The Papuan pitta. Photo credit: Wikipedia (user: JJ Harrison)</figcaption>
 </figure>
 </div>
 </section>
 </section>
-<section id="what-i-was-reading" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="what-i-was-reading">What I was reading</h2>
-<section id="synthetic-silviculture" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="synthetic-silviculture">Synthetic Silviculture</h3>
-<p>A few weeks back, I met <a href="https://www.informatik.tu-darmstadt.de/iams/home_iams/index.en.jsp">Dominik Michels</a> from TU Darmstadt. He told me about some of the work his group is doing on forest simulations. This past week, I finally got round to reading some of their papers. For example: <a href="https://dl.acm.org/doi/10.1145/3306346.3323039">Synthetic Silviculture</a>.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
-<div class="no-row-height column-margin column-container"><div id="fn3"><p><sup>3</sup>&nbsp;<a href="https://dl.acm.org/doi/10.1145/3306346.3323039">Makowski, M et al., <em>Synthetic silviculture: multi-scale modeling of plant ecosystems</em>, ACM Trans. Graph (2019).</a></p></div></div><p>The basic idea is that a <em>real</em> tree is represented by a <em>topological</em> tree: nodes and edges. It has various parameters that set its growth and branching rate. Neighbouring trees shade each other following ray physics calculations. Other processes (reproduction, fire, etc.) are also implemented.</p>
-<p>Videos of the simulations seem really impressive. We talked a little about how we might use remote sensing to provide validation experiments for the simulations, and we also talked about conservation research questions one might address with such simulations, like simulating the effects of deer control in the Cairngorms.</p>
-<div class="quarto-figure quarto-figure-center page-columns page-full">
-<figure class="figure page-columns page-full">
-<p><img src="../assets/blogpost_images/20260720_silviculture.png" class="img-fluid figure-img" style="width:95.0%" alt="Figure from synthetic silviculture simulation."></p>
-<figcaption class="margin-caption">Fig. 19 from Makowski et al.&nbsp;(2019). Temporal progession of a developing ecosystem with 500k individual plants from three types (shrub, conifer, deciduous).</figcaption>
-</figure>
-</div>
-</section>
-<section id="reasons-for-conservation-monitoring" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="reasons-for-conservation-monitoring">15 Reasons for Conservation Monitoring</h3>
-<p>A few weeks ago, we had <a href="https://en.wikipedia.org/wiki/Hugh_Possingham">Prof.&nbsp;Hugh Possingham</a> visit us to give a colloquium. His talk was, by design, rather provocative. In particular, he seemed to be advocating a philosophy where one should only pursue a nature monitoring project when one envisages a specific on-the-ground action that will result from the monitoring.</p>
-<p>I found myself worrying quite a lot about this philosophy. While it seems pragmatic in principle, I fretted about all the data that would never have been collected had scientists always strictly followed this philosophy. For example, a great deal of knowledge we have today about effective conservation practice comes from conservationists continuing their monitoring schemes well into the post-intervention phase, even when they knew the outcomes of their interventions, when they had no further planned actions in mind, and when they might well have devoted their resources elsewhere.</p>
-<p>This past week I went away and read <a href="https://doi.org/10.1098/rspb.2025.2527">his paper on the subject</a>.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> The paper is actually much more circumspect than the talk. It lists 15 reasons for a conservation monitoring programme, framing them as a checklist that one can go through when planning a project. Included among the reasons are some of the more ‘nebulous’ reasons for data-gathering, like ‘basic research’, ‘taking the pulse of nature’, and ‘societal curiosity’. These are all framed as valid reasons to pursue research. The main point of the article is to encourage scientists to think a little more explicitly about their reasons to pursue different projects. Then, by having thought more explicitly, they can might be able to allocate their finite resources in the best way.<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></p>
-<div class="no-row-height column-margin column-container"><div id="fn4"><p><sup>4</sup>&nbsp;<a href="https://doi.org/10.1098/rspb.2025.2527">Helmstedt, K. J. et al., <em>How monitoring matters for nature conservation: 15 reasons framed in a theory of change</em>, Proc. R. Soc. B (2025)</a></p></div><div id="fn5"><p><sup>5</sup>&nbsp;The paper also encourages the reader to couch their various motivations into a <a href="https://en.wikipedia.org/wiki/Theory_of_change">‘theory of change’</a>, to help understand how the different project motivations relate to downstream impacts/outcomes.</p></div></div><p>I certainly feel I could do with taking this message on board! I’m not sure whether any of my current research can be classed as ‘conservation monitoring’. However, I might nonetheless consult this checklist next time I am planning a project, in order to be a little more clear and intentional about the expected impact of my research.</p>
-</section>
+<section id="meetings" class="level2">
+<h2 class="anchored" data-anchor-id="meetings">Meetings</h2>
+<p>I had quite a few interesting meetings this past fortnight:</p>
+<ul>
+<li>Meeting with <a href="https://www.wcs.org/our-work/solutions/conservation-planning/paul-elsen">Paul Elsen from the Wildlife Conservation Society</a> to discuss using TESSERA / geospatial goundation models in their <a href="https://www.nceas.ucsb.edu/workinggroups/nature-health-index-holistic-approach-measuring-and-mapping-ecological-integrity">Nature Health Index</a>.</li>
+<li>Mini-workshop in the David Attenborough Building with all the various people doing habitat mapping with TESSERA. Organised by <a href="https://www.plantsci.cam.ac.uk/people/david-coomes">David Coomes</a>.</li>
+<li>Meeting with <a href="https://digitalflapjack.com/">Michael Dales</a> and <a href="https://www.zoo.cam.ac.uk/people/alison-eyres">Alison Eyres</a> to discuss our global habitat mapping work (see margin note 4 above).</li>
+<li>Meeting with <a href="https://svr-sk818-web.cl.cam.ac.uk/keshav/">S. Keshav</a>, <a href="https://www.cst.cam.ac.uk/people/sas268">Silja Sormunen</a>, and <a href="https://www.plantsci.cam.ac.uk/people/david-coomes">David Coomes</a> to discuss a potential new project building a global landcover hierarchy.</li>
+<li>Meeting with <a href="https://www.plantsci.cam.ac.uk/people/jacob-drucker">Jacob Drucker</a> to discuss occupancy modelling of bird species.</li>
+<li>Telecon with <a href="https://www.gu.se/en/about/find-staff/e-pingrau">E-Ping Rau</a> to discuss tree species distribution modelling with TESSERA.</li>
+</ul>
 </section>
 <section id="miscellanea" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="miscellanea">Miscellanea</h2>
-<section id="leuven" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="leuven">Leuven</h3>
-<p>Last weekend I visited Leuven, in Flanders. This was my first time visiting Leuven, and I thought it was delightful. It reminded me a little of Cambridge: a beautiful university town with narrow streets, many bicycles, and a winding river lined with willows and ancient buildings.</p>
+<section id="crossword" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="crossword">Crossword</h3>
+<p>Over a few sessions in July, I worked on a delightful crossword with my wife and some friends: the <a href="https://www.theguardian.com/crosswords/2026/jul/06/genius-crossword-no-277">Guardian “Genius” crossword, number 277</a>.</p>
+<p>The Genius is a monthly crossword associated with a cash prize.<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a> The clues themselves are actually not <em>too</em> hard, but each puzzle does have an unusual twist which makes the overall puzzle quite a challenge. In #277, the rubric itself was hilariously cryptic:</p>
+<div class="no-row-height column-margin column-container"><div id="fn8"><p><sup>8</sup>&nbsp;The deadline was yesterday, Saturday 1st August. So, I’m allowed to post my solution here. See also the writeup on <a href="https://fifteensquared.net/2026/08/02/guardian-genius-no-277-by-soup/">fifteensquared</a>.</p></div></div><blockquote class="blockquote">
+<p>The puzzle is a safe. Solvers must reveal its contents using four dials, applying cach to a quarter of the clues. Dial by dial in clue order, certain letters give a property of 23 cells to be highlighted:<br>
+Dial 1 clues: extra letter indicated by wordplay<br>
+Dial 2 clues: first letter of an extra word<br>
+Dial 3 clues: letter omitted by wordplay<br>
+Dial 4 clues (normal): clue’s first letter<br>
+</p>
+</blockquote>
+<p>I had to read this ten or twelve times before I understood it (/ gave up trying to understand it). The essence of it is that each clue in the crossword yields an additional letter, falling into one of four categories. Concatenate them in the right order to receive further instructions. Below is an image of the completed crossword, with colours indicating the four categories.</p>
 <div class="quarto-figure quarto-figure-center page-columns page-full">
 <figure class="figure page-columns page-full">
-<p><img src="../assets/blogpost_images/20260720_beguinage.jpg" class="img-fluid figure-img" style="width:75.0%" alt="Part of the Great Beguinage, Leuven."></p>
-<figcaption class="margin-caption">Part of the Great Beguinage, Leuven. Photo credit: Wikipedia (user EmDee).</figcaption>
+<p><img src="../assets/blogpost_images/20260802_xword_1.jpg" class="img-fluid figure-img" style="width:60.0%" alt="Image of Guardian Genius Crossword with answers filled in."></p>
+<figcaption class="margin-caption">Guardian Genius Crossword #277, with answers filled in. Each clue/answer also yields an additional letter, falling into one of four categories. When concatenated in the right order, these additional letters spell out: “Contain same letter as today’s cryptic”.</figcaption>
 </figure>
 </div>
-<p>A highlight of the city is the UNESCO-listed “Great Beguinage”.<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> The article I read beforehand recommended seeing some of the other beguinages of Flanders so that I could really appreciate the greatness of the Great Beguinage. It didn’t, however, explain what a beguinage was, so I went in blind.</p>
-<div class="no-row-height column-margin column-container"><div id="fn6"><p><sup>6</sup>&nbsp;In Dutch/Flemish: the Groot Begijnhof.</p></div></div><p>As it turns out, a beguinage is a built community created by <em>beguines</em>: religious women who lived a communal life, without taking the strict vows of the convent. There are a number of these beguinages around the Low Countries, Flanders in particular. The Great Beguinage in Leuven is particularly charming. It was founded in the 13th century but with most present buildings from the 17th century. It has lovely cobbled streets and courtyards and red brick buildings deviating quite far from rectilinear. The whole site was purchased by the university, KU Leuven, in the 1960s.</p>
+<p>The additional letters, spelt out dial by dial, then say: CONTAINSAMELETTERASTODAYSCRYPTIC. Or, “contain same letter as today’s cryptic”. “Today’s cryptic” refers to the “normal” <a href="https://www.theguardian.com/crosswords/cryptic/30051">Guardian cryptic #30051</a>, which was released on the same day as Genius #277. If one highlights just the cells in which both crosswords contain the same letter, one sees the hidden objects emerge:</p>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="../assets/blogpost_images/20260802_xword_2.jpg" class="img-fluid figure-img" style="width:60.0%" alt="Bar chart showing GeoLifeClef scores for three models."></p>
+<figcaption class="margin-caption">The same crossword, now only showing the cells where the letter is the same as that in the corresponding cell of the day’s “normal” cryptic crossword in the Guardian. Three hidden objects are now revealed: DAGGER, FAKE ID, DIAMOND RING.</figcaption>
+</figure>
+</div>
+<p>Dagger, fake ID, diamond ring. I can’t see a connection between the three (other than that they might go in a safe?), but I suspect there’s a cultural reference I’m missing!</p>
+<p>In addition to a weird and wonderful puzzle concept, the crossword also had a new (to me) type of clue. 25 across:</p>
+<blockquote class="blockquote">
+<p>____ ____ exemplify ruin? (7)</p>
+</blockquote>
+<p>The answer is DESTROY (=“ruin”). The blank parts of the clue are “Does Troy” (there’s an extraneous letter O here, according to dial 1). So, the clue’s wordplay <em>includes</em> the literal answer!</p>
 </section>
-<section id="linkedin" class="level3">
-<h3 class="anchored" data-anchor-id="linkedin">LinkedIn</h3>
-<p>I finally caved in and set up a <a href="https://linkedin.com/in/aneesh-naik-2030191a5">LinkedIn profile</a>. I was quite nervous about this as I’ve never much liked social media. Let’s see.</p>
+<section id="crochet" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="crochet">Crochet</h3>
+<p>Last week was my wife’s and my “cotton” anniversary, and we exchanged gifts of cotton. For my part, I attempted my first ever three-dimensional crochet, a <em>Crassula umbellata</em>. Pattern from <a href="https://www.searchpress.com/book/9781782219019/stylish-succulents-to-crochet">“Stylish Succulents to Crochet”</a> by Sarah Abbondio. Photo below.</p>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="../assets/blogpost_images/20260802_crassula.jpg" class="img-fluid figure-img" style="width:70.0%" alt="A crocheted Crassula umbellata."></p>
+<figcaption class="margin-caption">A crocheted <em>Crassula umbellata</em>.</figcaption>
+</figure>
+</div>
+<p>It was <em>much</em> harder than I thought it would be. I’m going to return to two dimensions for a while.</p>
 
 
 </section>
