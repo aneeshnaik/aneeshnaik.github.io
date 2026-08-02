@@ -17,11 +17,11 @@ Thus far, I've worked very hard to prevent this blog from devolving into Yet Ano
 
 ### Species Distribution Modelling
 
-As in previous weeks, I've spent a good amount of time playing around with doing species distribution modelling with [TESSERA](https://geotessera.org/).[^1] In particular, I've been using the GeoPlant dataset used for the annual [GeoLifeClef competition](https://www.kaggle.com/competitions/geolifeclef-2024/overview). Over the last month or so I've made a big mess with a myriad of scattered experiments. I'm now attempting to bring everything together with a final "grid" of models that encapsulate my various conclusions. I'll run this grid over the coming period.  
+As in previous weeks, I've spent a good amount of time playing around with species distribution modelling with [TESSERA](https://geotessera.org/).[^1] In particular, I've been using the GeoPlant dataset used for the annual [GeoLifeClef competition](https://www.kaggle.com/competitions/geolifeclef-2024/overview). Over the last month or so I've made a big mess with a myriad of scattered experiments. I'm now attempting to bring everything together with a final "grid" of models that encapsulate my various conclusions. I'll run this grid over the coming period.  
 
 [^1]: See also my weeknotes [26+27](20260703_weeknotes_2026_27.qmd) and [28+29](20260720_weeknotes_2026_29.qmd) for discussion of this project.
 
-As a first taster, here is a bar chart showing the performance of my "fiducial" model[^2] with three input data modalities: Sentinel-2 images, AlphaEarth embedding "images", and TESSERA embedding "images". All images 128x128 10m pixels. Performance is measured by the sample-weighted F1 score used in the GeoLifeClef competition.
+As a first taster, here is a bar chart showing the performance of my "fiducial" model[^2] with three input data modalities: Sentinel-2 images, [AlphaEarth](https://deepmind.google/blog/alphaearth-foundations-helps-map-our-planet-in-unprecedented-detail/) embedding "images", and TESSERA embedding "images". All images are 128x128 10m pixels. Performance is measured by the sample-weighted F1 score used in the GeoLifeClef competition.
 
 [^2]: The fiducial model is a ResNet-18 CNN. Before hitting the CNN, the data passes through a small two-layer adapter block (convolution + ReLU) that maps the input data to 32 channels. The idea here was to make the comparison across modalities as fair as possible: only the input data and  preprocessing differ while the core architecture is held constant. Post-backbone, there is then a lightweight two-layer classification head. At prediction time, each model is ensembled across 8 spatial folds.
 
@@ -29,7 +29,7 @@ As a first taster, here is a bar chart showing the performance of my "fiducial" 
 
 The two geospatial foundation models, AlphaEarth and TESSERA, beat the "traditional" remote sensing modality (Sentinel-2) by a convincing margin. Of the two, TESSERA just about inches ahead of AlphaEarth.[^3]
 
-[^3]: To give some context for these scores, AlphaEarth and TESSERA are roughly comparable with the second/third/fourth place entries in the 2024 GeoLifeClef competition.
+[^3]: To give some context for these scores, AlphaEarth and TESSERA are roughly comparable with the second/third/fourth place entries in the 2024 GeoLifeClef competition. However, as I've noted before, these entries supplement the 80,000 survey plots which I am using with an additional 5 million opportunistic plant records. 
 
 
 ### Bird Assemblage Mapping
@@ -92,7 +92,7 @@ The additional letters, spelt out dial by dial, then say: CONTAINSAMELETTERASTOD
 
 ![The same crossword, now only showing the cells where the letter is the same as that in the corresponding cell of the day's "normal" cryptic crossword in the Guardian. Three hidden objects are now revealed: DAGGER, FAKE ID, DIAMOND RING.](../assets/blogpost_images/20260802_xword_2.jpg){fig-align="center" fig-alt="Bar chart showing GeoLifeClef scores for three models." width="60%"}
 
-Dagger, fake ID, diamond ring. I can't see a connection between the three (other than that they might go in a safe?), but I suspect there's a cultural reference I'm missing!
+Dagger, fake ID, diamond ring. The are the final answers which are submitted for the prize. I confess I can't see a connection between the three (other than that they might go in a safe?), but I suspect there's a cultural reference I'm missing.
 
 In addition to a weird and wonderful puzzle concept, the crossword also had a new (to me) type of clue. 25 across:
 
