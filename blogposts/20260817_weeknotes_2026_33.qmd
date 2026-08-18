@@ -4,9 +4,12 @@ subtitle: "2026/08/01 -- 2026/08/13"
 date: 2026-08-16
 categories:
   - Weeknotes
+  - Research
+  - TESSERA
+  - Birds
+  - Crosswords
+  - SDM
 ---
-
-#TODO: categories
 
 Much briefer note this week!
 
