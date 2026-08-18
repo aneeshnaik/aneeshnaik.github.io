@@ -1,43 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.aneeshnaik.com/publications.html</loc>
+    <lastmod>2026-08-18T17:21:17.618Z</lastmod>
+  </url>
+  <url>
     <loc>https://www.aneeshnaik.com/index.html</loc>
-    <lastmod>2026-08-03T08:23:44.618Z</lastmod>
+    <lastmod>2026-08-18T17:21:17.618Z</lastmod>
   </url>
   <url>
     <loc>https://www.aneeshnaik.com/blogposts/20260529_weeknotes_2026_22.html</loc>
-    <lastmod>2026-08-03T08:23:44.617Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.aneeshnaik.com/blogposts/20260802_weeknotes_2026_31.html</loc>
-    <lastmod>2026-08-03T08:23:44.618Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.aneeshnaik.com/blogposts/20260619_weeknotes_2026_25.html</loc>
-    <lastmod>2026-08-03T08:23:44.618Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.aneeshnaik.com/publications.html</loc>
-    <lastmod>2026-08-03T08:23:44.618Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.aneeshnaik.com/about.html</loc>
-    <lastmod>2026-08-03T08:23:44.479Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.aneeshnaik.com/blog.html</loc>
-    <lastmod>2026-08-03T08:23:44.617Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.aneeshnaik.com/blogposts/20260605_weeknotes_2026_23.html</loc>
-    <lastmod>2026-08-03T08:23:44.618Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.aneeshnaik.com/blogposts/20260703_weeknotes_2026_27.html</loc>
-    <lastmod>2026-08-03T08:23:44.618Z</lastmod>
+    <lastmod>2026-08-18T17:21:17.617Z</lastmod>
   </url>
   <url>
     <loc>https://www.aneeshnaik.com/blogposts/20260720_weeknotes_2026_29.html</loc>
-    <lastmod>2026-08-03T08:23:44.618Z</lastmod>
+    <lastmod>2026-08-18T17:21:17.618Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.aneeshnaik.com/blogposts/20260802_weeknotes_2026_31.html</loc>
+    <lastmod>2026-08-18T17:21:17.618Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.aneeshnaik.com/blogposts/20260817_weeknotes_2026_33.html</loc>
+    <lastmod>2026-08-18T17:21:17.618Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.aneeshnaik.com/blogposts/20260703_weeknotes_2026_27.html</loc>
+    <lastmod>2026-08-18T17:21:17.618Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.aneeshnaik.com/blogposts/20260619_weeknotes_2026_25.html</loc>
+    <lastmod>2026-08-18T17:21:17.618Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.aneeshnaik.com/blogposts/20260605_weeknotes_2026_23.html</loc>
+    <lastmod>2026-08-18T17:21:17.618Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.aneeshnaik.com/about.html</loc>
+    <lastmod>2026-08-18T17:21:17.452Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.aneeshnaik.com/blog.html</loc>
+    <lastmod>2026-08-18T17:21:17.617Z</lastmod>
   </url>
 </urlset>

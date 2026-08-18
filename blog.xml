@@ -10,7 +10,68 @@
 <atom:link href="https://www.aneeshnaik.com/blog.xml" rel="self" type="application/rss+xml"/>
 <description>Personal webpage and blog of Aneesh Naik.</description>
 <generator>quarto-1.10.18</generator>
-<lastBuildDate>Sun, 02 Aug 2026 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sun, 16 Aug 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Weeknotes: 2026 Weeks 32 &amp; 33</title>
+  <link>https://www.aneeshnaik.com/blogposts/20260817_weeknotes_2026_33.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>#TODO: categories</p>
+<p>Much briefer note this week!</p>
+<section id="natural-england-meeting" class="level2">
+<h2 class="anchored" data-anchor-id="natural-england-meeting">Natural England meeting</h2>
+<p>Last week we had a very fun mini-workshop in Cambridge, with three visitors from Natural England.</p>
+<p>We’re going to be collaborating on two fronts: - We’re going to investigate using Tessera for the change detection component of Natural England’s Living England product. - Natural England will share a lot of their field survey data with us, for our own habitat mapping tasks.</p>
+<p>The workshop covered a lot of technical details, such as their proposal for change detection, what the dataset looks like etc.</p>
+</section>
+<section id="species-distribution-modelling" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="species-distribution-modelling">Species Distribution Modelling</h2>
+<p>#TODO: write up properly</p>
+<p>I made some progress on the SDM benchmarking project I’ve described in recent weeknotes (e.g.&nbsp;<a href="../blogposts/20260720_weeknotes_2026_29.html">29</a> and <a href="../blogposts/20260802_weeknotes_2026_31.html">31</a>).</p>
+<p>One of the main things I’ve done is to migrate Tessera versions, from version 1.0 to 2.0.<sup>1</sup> The migration proved to be a bit of a pain: I’m downloading many small patches rather than one big continuous raster, and I wanted to choose the best data format. After a few mis-steps, I settled on zarr v3. As well as a small(er) data footprint because of clever compression, the “sharding” means that pytorch can read individual patches rather than loading a whole chunk into memory.</p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;With the caveat that I’m actually using an experimental version of Tessera v2.</p></div></div><div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="https://www.aneeshnaik.com/assets/blogpost_images/20260817_glc_fig.png" class="img-fluid figure-img" style="width:70.0%" alt="Bar chart showing GeoLifeClef scores for three models."></p>
+<figcaption class="margin-caption">Bar chart showing GeoLifeClef scores for three models: one fed with Sentinel-2 data, one with AlphaEarth embeddings, and one with TESSERA embeddings. The two geospatial foundation models beat the traditional remote sensing input quite convincingly. Of the two, TESSERA wins by a slight margin.</figcaption>
+</figure>
+</div>
+<p>Migrating to version 2 gives a decent bump to the sample-weighted F1 score, and now Tessera is beating AlphaEarth by a more convincing margin than <a href="(20260802_weeknotes_2026_31.qmd)">last week</a>.</p>
+<p>I’ve also been running a wider series of experiments, the results of which I’ll post in my next note. These include:</p>
+<ul>
+<li>Testing a grid of patch sizes.</li>
+<li>Testing the addition of extra “environmental” layers, spatial coordinates, and Landsat time series data.<sup>2</sup></li>
+<li>Testing a grid of training set sizes.</li>
+<li>Testing beefier and less beefy model architectures compared with my “fiducial” architecture.</li>
+</ul>
+<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;Tessera was trained on Sentinel alone, not Landsat. So, it might be interesting to see whether Landsat has an additional information that boosts performance.</p></div></div></section>
+<section id="various-other-projects" class="level2">
+<h2 class="anchored" data-anchor-id="various-other-projects">Various other projects</h2>
+<p>In addition to the above, I spent some time working on various other projects:</p>
+<ul>
+<li>As described <a href="../blogposts/20260802_weeknotes_2026_31.html">last week</a>: bird mapping from assemblages. Following a conversation with one of my collaborators, I had a go at migrating our bird-habitat database to a different taxonomic reference: the <a href="https://www.avilist.org/">AviList</a>. This proved a deep quagmire indeed: a myriad of taxonomic merges/splits and other ambiguities. In the end I decided to give up altogether: as this is a proof-of-concept project, so it shouldn’t matter too much that we use the very latest taxonomic reference.</li>
+<li>I’ve been working with PhD student <a href="https://coomeslab.org/research-group/current-members/nina-de-jong/">Nina de Jong</a>. She has a very interesting project studying long-term change in New Zealand. I’m going to be collaborating with her a little by doing some stats-crunching. So far, I’ve just been doing some exploratory data analyses with her data.</li>
+</ul>
+</section>
+<section id="crossword-corner" class="level2">
+<h2 class="anchored" data-anchor-id="crossword-corner">Crossword Corner</h2>
+<p>There was a fun clue in the Guardian’s Prize crossword last week (<a href="https://www.theguardian.com/crosswords/prize/30068">30,068, compiled by Paul</a>). 29 across:</p>
+<blockquote class="blockquote">
+<p>Really think on it, and open the door to a new basin? (3, 4, 4, 2)</p>
+</blockquote>
+<p>Double definition: LET THAT SINK IN.</p>
+
+
+</section>
+
+
+ ]]></description>
+  <category>Weeknotes</category>
+  <guid>https://www.aneeshnaik.com/blogposts/20260817_weeknotes_2026_33.html</guid>
+  <pubDate>Sun, 16 Aug 2026 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Weeknotes: 2026 Weeks 30 &amp; 31</title>
   <link>https://www.aneeshnaik.com/blogposts/20260802_weeknotes_2026_31.html</link>
