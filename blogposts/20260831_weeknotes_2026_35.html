@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-08-16">
+<meta name="dcterms.date" content="2026-08-31">
 
-<title>Weeknotes: 2026 Weeks 32 &amp; 33 – Aneesh Naik</title>
+<title>Weeknotes: 2026 Weeks 34 &amp; 35 – Aneesh Naik</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -132,14 +132,15 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Weeknotes: 2026 Weeks 32 &amp; 33</h1>
-<p class="subtitle lead">2026/08/01 – 2026/08/14</p>
+<h1 class="title">Weeknotes: 2026 Weeks 34 &amp; 35</h1>
+<p class="subtitle lead">2026/08/15 – 2026/08/28</p>
   <div class="quarto-categories">
     <div class="quarto-category">Weeknotes</div>
     <div class="quarto-category">Research</div>
     <div class="quarto-category">TESSERA</div>
-    <div class="quarto-category">Birds</div>
-    <div class="quarto-category">Crosswords</div>
+    <div class="quarto-category">Gardening</div>
+    <div class="quarto-category">Papers</div>
+    <div class="quarto-category">Code</div>
     <div class="quarto-category">SDM</div>
   </div>
   </div>
@@ -152,7 +153,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">August 16, 2026</p>
+      <p class="date">August 31, 2026</p>
     </div>
   </div>
   
@@ -164,49 +165,112 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Much briefer note this week!</p>
-<section id="natural-england-meeting" class="level2">
-<h2 class="anchored" data-anchor-id="natural-england-meeting">Natural England meeting</h2>
-<p>Last week we had a very fun mini-workshop in Cambridge, with three visitors from Natural England.</p>
-<p>We’re going to be collaborating on two fronts: - We’re going to investigate using Tessera for the change detection component of Natural England’s Living England product. - Natural England will share a lot of their field survey data with us, for our own habitat mapping tasks.</p>
-<p>The workshop covered a lot of technical details, such as their proposal for change detection, what the dataset looks like etc.</p>
-</section>
-<section id="species-distribution-modelling" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="species-distribution-modelling">Species Distribution Modelling</h2>
-<p>I made some progress on the SDM benchmarking project I’ve described in recent weeknotes (e.g.&nbsp;<a href="../blogposts/20260720_weeknotes_2026_29.html">29</a> and <a href="../blogposts/20260802_weeknotes_2026_31.html">31</a>).</p>
-<p>One of the main things I’ve done is to migrate Tessera versions, from version 1.0 to 2.0.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> The migration proved to be a bit of a pain: I’m downloading many small patches rather than one big continuous raster, and I wanted to choose the best data format. After a few mis-steps, I settled on zarr v3. As well as a small(er) data footprint because of clever compression, the “sharding” means that pytorch can read individual patches rather than loading a whole chunk into memory.</p>
-<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;With the caveat that I’m actually using an experimental version of Tessera v2.</p></div></div><div class="quarto-figure quarto-figure-center page-columns page-full">
+<section id="what-i-was-working-on" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="what-i-was-working-on">What I was working on</h2>
+<section id="species-distribution-modelling" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="species-distribution-modelling">Species Distribution Modelling</h3>
+<p>As in previous weeks recently (e.g.&nbsp;<a href="../blogposts/20260720_weeknotes_2026_29.html">29</a>, <a href="../blogposts/20260802_weeknotes_2026_31.html">31</a>, <a href="../blogposts/20260817_weeknotes_2026_33.html">33</a>), my main project these last couple of weeks has been my SDM benchmarking work.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> I promised in my last weeknote to run a few grids of models and show some resulting figures in this post. These are below.</p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;Recap: I’m essentially trying to find out how good <a href="https://geotessera.org/">Tessera</a> is at species distribution modelling (SDM), the problem of mapping the spatial distribution of a species given some occurrence data. To do this, I’m using the <a href="https://arxiv.org/abs/2408.13928">GeoPlant benchmark dataset</a>, as used in various <a href="https://www.kaggle.com/competitions/geolifeclef-2024/overview">GeoLifeClef</a> competitions.</p></div></div><section id="spatial-context" class="level4 page-columns page-full">
+<h4 class="anchored" data-anchor-id="spatial-context">Spatial Context</h4>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
 <figure class="figure page-columns page-full">
-<p><img src="../assets/blogpost_images/20260817_glc_fig.png" class="img-fluid figure-img" style="width:70.0%" alt="Bar chart showing GeoLifeClef scores for three models."></p>
-<figcaption class="margin-caption">Bar chart showing GeoLifeClef scores for three models: one fed with Sentinel-2 data, one with AlphaEarth embeddings, and one with TESSERA embeddings. The two geospatial foundation models beat the traditional remote sensing input quite convincingly. Of the two, TESSERA wins by a slight margin.</figcaption>
+<p><img src="../assets/blogpost_images/20260831_grid2_fig.png" class="img-fluid figure-img" style="width:80.0%" alt="Graph showing GeoLifeClef scores under varying spatial context."></p>
+<figcaption class="margin-caption">Figure showing GeoLifeClef scores for Tessera-trained and S2-trained models, as a function of spatial context (pixel size of patch fed to model). The S2 model benefits a great deal from additional spatial context, while Tessera only sees a modest boost.</figcaption>
 </figure>
 </div>
-<p>Migrating to version 2 gives a decent bump to the sample-weighted F1 score, and now Tessera is beating AlphaEarth by a more convincing margin than <a href="(20260802_weeknotes_2026_31.qmd)">last week</a>.</p>
-<p>I’ve also been running a wider series of experiments, the results of which I’ll post in my next note. These include:</p>
+<p>This figure shows how SDM performance varies as a function of spatial context fed to the model. The graph plots sample-weighted F1 scores (as plotted in previous weeknotes) as a function of “central crop size”: the pixel size of the input image fed to the model (ranging from a 16x16 square to a 128x128 square). It appears here that the S2-trained model benefits greatly from additional spatial context, while the Tessera-trained<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> model only sees a modest improvement. My interpretation of this is that the Tessera-trained model has plenty of species-discriminating information content in the temporal behaviour / phenology of the central pixels, and doesn’t really need the information contained in the surrounding pixels to learn any more. The S2-trained model, on the other hand, does not have nearly as much information about the central pixels and so takes what it can get in the environs.</p>
+<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;The eagle-eyed reader might notice I’ve switched from upper-case “TESSERA” to title-case “Tessera”. This follows a very emphatic and well-reasoned plea for a universal rebrand by Tessera’s comms officer: <a href="https://www.linkedin.com/in/constantino-panagopulos/">Constantino Panagopulos</a>.</p></div></div></section>
+<section id="label-efficiency" class="level4 page-columns page-full">
+<h4 class="anchored" data-anchor-id="label-efficiency">Label Efficiency</h4>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="../assets/blogpost_images/20260831_grid4_fig.png" class="img-fluid figure-img" style="width:80.0%" alt="Graph showing GeoLifeClef scores under varying training fraction."></p>
+<figcaption class="margin-caption">Figure showing performance of the S2-trained and Tessera trained model as a function of training set size. The Tessera-trained model achieves the same performance as the full S2-trained model with only ~10% of the data.</figcaption>
+</figure>
+</div>
+<p>This figure shows the various modalities behave when the models are fed increasingly smaller training datasets. Tessera yields the same performance as S2 with far fewer training labels. This mirrors findings with Tessera and other geospatial foundation models in many other downstream tasks. For example, see Fig. 4 in the <a href="https://arxiv.org/pdf/2506.20380">original Tessera paper</a>,<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> or Fig. 4 in <a href="https://www.sciencedirect.com/science/article/pii/S2666017226001045">James Ball’s brilliant work mapping tree species in Trentino</a>.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn3"><p><sup>3</sup>&nbsp;<a href="https://openaccess.thecvf.com/content/CVPR2026/html/Feng_TESSERA_Temporal_Embeddings_of_Surface_Spectra_for_Earth_Representation_and_CVPR_2026_paper.html">Feng, Z. et al., TESSERA: Temporal Embeddings of Surface Spectra for Earth Representation and Analysis, CVPR (2026)</a></p></div><div id="fn4"><p><sup>4</sup>&nbsp;<a href="https://www.sciencedirect.com/science/article/pii/S2666017226001045">Ball, J. G. C. et al., Geospatial foundation models enable data-efficient tree species mapping in temperate mountain forests, Sci. of Remote Sens. (2026)</a></p></div></div></section>
+<section id="additional-training-layers" class="level4 page-columns page-full">
+<h4 class="anchored" data-anchor-id="additional-training-layers">Additional Training Layers</h4>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="../assets/blogpost_images/20260831_grid5_fig.png" class="img-fluid figure-img" style="width:40.0%" alt="Graph showing GeoLifeClef scores after appending various additional data layers."></p>
+<figcaption class="margin-caption">Bar chart showing GeoLifeClef scores for S2-trained and Tessera-trained models, now with various additional layers added to the training data. As with spatial context above, the S2-trained models see a much bigger boost from providing additional data than the Tessera-trained models. In both cases, spatial coordinates, climatic variables, and landsat time series give the biggest boosts.</figcaption>
+</figure>
+</div>
+<p>This figure shows how performance changes when adding additional layers to the training inputs. The layers are:</p>
 <ul>
-<li>Testing a grid of patch sizes.</li>
-<li>Testing the addition of extra “environmental” layers, spatial coordinates, and Landsat time series data.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></li>
-<li>Testing a grid of training set sizes.</li>
-<li>Testing beefier and less beefy model architectures compared with my “fiducial” architecture.</li>
+<li>Spatial coordinates (lon/lat)</li>
+<li>Elevation</li>
+<li>19 soil variables</li>
+<li>A single landcover classification</li>
+<li>Bioclimatic variables (based on temperature and precipitation): summary values averaged over 1981-2010</li>
+<li>As above, both the full monthly time series (not averaged)</li>
+<li>12-year landsat time series (quarterly values, SWIR2, SWIR1, NIR, R, G, B).</li>
 </ul>
-<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;Tessera was trained on Sentinel alone, not Landsat. So, it might be interesting to see whether Landsat has an additional information that boosts performance.</p></div></div></section>
-<section id="various-other-projects" class="level2">
-<h2 class="anchored" data-anchor-id="various-other-projects">Various other projects</h2>
-<p>In addition to the above, I spent some time working on various other projects:</p>
-<ul>
-<li>As described <a href="../blogposts/20260802_weeknotes_2026_31.html">last week</a>: bird mapping from assemblages. Following a conversation with one of my collaborators, I had a go at migrating our bird-habitat database to a different taxonomic reference: the <a href="https://www.avilist.org/">AviList</a>. This proved a deep quagmire indeed: a myriad of taxonomic merges/splits and other ambiguities. In the end I decided to give up altogether: as this is a proof-of-concept project, so it shouldn’t matter too much that we use the very latest taxonomic reference.</li>
-<li>I’ve been working with PhD student <a href="https://coomeslab.org/research-group/current-members/nina-de-jong/">Nina de Jong</a>. She has a very interesting project studying long-term change in New Zealand. I’m going to be collaborating with her a little by doing some stats-crunching. So far, I’ve just been doing some exploratory data analyses with her data.</li>
-</ul>
+<p>As with spatial context above, the S2-trained models see a much bigger boost from providing additional data than the Tessera-trained models. In both cases, spatial coordinates, climatic variables, and the Landsat time series give the biggest boosts. I was particularly interested to get this result: ultimately the aim of this project is to find out what the best covariates are for SDM. It is therefore interesting to learn whether Tessera is missing anything important which might be captured by external datasets.</p>
 </section>
-<section id="crossword-corner" class="level2">
-<h2 class="anchored" data-anchor-id="crossword-corner">Crossword Corner</h2>
-<p>There was a fun clue in the Guardian’s Prize crossword last week (<a href="https://www.theguardian.com/crosswords/prize/30068">30,068, compiled by Paul</a>). 29 across:</p>
-<blockquote class="blockquote">
-<p>Really think on it, and open the door to a new basin? (3, 4, 4, 2)</p>
-</blockquote>
-<p>Double definition: LET THAT SINK IN.</p>
+</section>
+<section id="various-other-bits" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="various-other-bits">Various Other Bits</h3>
+<ul>
+<li><p><strong>New Zealand</strong>: I mentioned last week I am working on a project studying long-term ecosystem change in New Zealand, led by <a href="https://coomeslab.org/research-group/current-members/nina-de-jong/">Nina de Jong</a>. This past fortnight I’ve done a lot of thinking about the project, read Nina’s manuscript (see below), and done a lot of data exploration.</p></li>
+<li><p><strong>JASMIN</strong>: Last week, Tessera’s <a href="https://arxiv.org/abs/2607.03949">V2 embeddings</a> were uploaded in zarr format to the <a href="https://source.coop">source.coop</a> S3 bucket.<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> I spent a bit of time this past week creating a mirror of the UK+Ireland embeddings on <a href="https://www.jasmin.ac.uk/">JASMIN’s</a> S3 storage. My assumption is that large-scale Tessera-based workflows (e.g.&nbsp;ML inference jobs) on JASMIN will run much faster with the data close at hand, but in truth I haven’t really tested this assumption!</p></li>
+<li><p><strong>Task management system</strong>: See below.</p></li>
+<li><p><strong>Papers</strong>: several projects I’m involved with are at the point of producing manuscripts, and so I’ve been doing a lot of reading and reviewing this past week. In particular:</p>
+<ul>
+<li><a href="https://coomeslab.org/research-group/current-members/nina-de-jong/">Nina de Jong</a> has written a draft of a paper describing the New Zealand change-mapping work described above.</li>
+<li><a href="https://www.linkedin.com/in/ameer-alhashemi/">Ameer Alhashemi</a>, a summer intern in our group, has written a paper describing his summer research project, estimating forest structural heterogeneity metrics with Tessera.</li>
+<li>Louis Driver, another summer intern, is working on a paper describing the Tessera Embeddings Explorer (TEE).</li>
+<li><a href="https://scholar.google.com/citations?user=CeH8Kl4AAAAJ&amp;hl=en">Jovana Knezevic</a>, a PhD student of David Coomes and Srinivasan Keshav, has written a paper about wildfire mapping. I’m not on this project, but Jovana asked for my feedback so I read her draft last week.</li>
+</ul>
+<p>It’s been fun having such an eclectic reading list! I’ve learned a great deal.<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a></p></li>
+<li><p><strong><code>sbijax</code></strong>: I sometimes review for the Journal of Open Source Software (JOSS), in particular for submissions relating to data science / statistics. I’ve been asked to review a submission called <a href="https://github.com/dirmeier/sbijax"><code>sbijax</code></a>: a Python package for performing simulation-based inference (SBI) in a JAX-based framework.<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a> So far I’ve just read the accompanying paper and the some of the package docs, but next week I plan to properly stress test it with some mock problems. I’ve never really done any SBI but I know a reasonable amount about it because I’ve planned a few projects around it in the past (how did the editor know?), so I’m looking forward to playing with a shiny new tool for it.</p></li>
+</ul>
+<div class="no-row-height column-margin column-container"><div id="fn5"><p><sup>5</sup>&nbsp;Tessera on source.coop: <a href="https://source.coop/tessera/tessera/zarr/v1">v1</a>, <a href="https://source.coop/tessera/tessera/zarr/v1.1">v1.1</a>, and the <a href="https://source.coop/tessera/tessera/zarr/v2-2B-L~beta1">experimental v2</a>.</p></div><div id="fn6"><p><sup>6</sup>&nbsp;As an example of what I learned reading these papers: I learned a great deal about the various ways in which structural heterogeneity is measured in forests, using metrics such as <em>rugosity</em> and <em>rumple</em>.</p></div><div id="fn7"><p><sup>7</sup>&nbsp;I can write about this openly because the JOSS review process is fully open, and takes place entirely in public view on GitHub. <a href="https://github.com/openjournals/joss-reviews/issues/11195">Here</a> is the GitHub review thread for the submission.</p></div></div></section>
+</section>
+<section id="task-management-system" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="task-management-system">Task Management System</h2>
+<p>I have never in my life worked on this many different projects at the same time. I came into August with my head spinning a fair bit. To make this work, I invested a bit of time last week in setting up a new task management system. The goals of this system are:</p>
+<ol type="1">
+<li><strong>Keeping a centralised to-do list.</strong> I want to centrally list of all the various tasks that are spread across various projects, i.e., make sure nothing gets lost or forgotten if I switch away from a project for a few weeks.</li>
+<li><strong>Ordering upcoming tasks.</strong> I want to be able to choose the order in which I will go through my tasks, and flexibly rearrange as needed.</li>
+<li><strong>Forecasting the future</strong>. Based on the ordering set above, I want to be able to project how I’ll be dividing my upcoming time across various projects. I can then rearrange to make sure I’m dividing my time how I’d like to.</li>
+<li><strong>Interpreting the past</strong>. I want to be able to look back at completed tasks and reflect on how I’ve divided my time, how my forecasts differed from reality, how productive I’ve been, etc. In part, I’m hoping this will help me to be kinder to myself: I tend to get a little frustrated when I feel I haven’t had a productive day or week. However, I base this assessment mainly on a combination of vibes and progress on my “main” project. I have a suspicion that if I were more able to look at concrete data showing how much work I’ve done across the board, I’ll feel more satisfied with my productivity!</li>
+<li><strong>Gamify things</strong>. I’m not ashamed to admit that I respond <em>very</em> well to gamified incentive structures. I don’t tend to lack motivation generally, but I do find that I put off unpleasant tasks in favour of more exciting ones. I’m hoping a gamified system will help.</li>
+</ol>
+<p>The system I’ve come up with is based entirely on GitHub issues. Every single to-do item I have, regardless of which project it comes from, is written up as a GitHub issue on a central repository, and automatically assigned to my “Research Tasks” GitHub <em>Project</em>. Each issue has dropdown menus so I can assign it a current status (to-do, in progress, paused, completed), assign it to a research project,<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a> assign it a point score based on how long I think it will take (plus extra “dread bump” points if a particular task is a little unappealling), and assign it a deadline if it is particularly time sensitive.</p>
+<div class="no-row-height column-margin column-container"><div id="fn8"><p><sup>8</sup>&nbsp;I’m acutely aware that I’ve used the word “project” in three different senses in this section.</p></div></div><p>GitHub then gives me various useful “views” of the Research Tasks project, such as a “table” view where I can rearrange upcoming tasks like a podcast queue, and a “board” view where I can easily see my current / upcoming / recently completed / paused tasks.</p>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="../assets/blogpost_images/20260831_github.png" class="img-fluid figure-img" style="width:100.0%" alt="Screenshot showing a GitHub page."></p>
+<figcaption class="margin-caption">Screenshot of the “board” view of my GitHub task management platform.</figcaption>
+</figure>
+</div>
+<p>The system is still in its very early days, but so far I feel it’s been quite successful at goals 1 and 2. I haven’t yet implemented any functionality for goals 3/4/5, but all the required data are there so something should be possible!</p>
+</section>
+<section id="miscellanea" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="miscellanea">Miscellanea</h2>
+<section id="festivals" class="level3">
+<h3 class="anchored" data-anchor-id="festivals">Festivals</h3>
+<p>I’ve been up in Edinburgh the last three weeks. August is of course a fantastic month to be in Edinburgh. In previous years I have tried to see at least one thing from each of the festivals. This year we haven’t quite had the time or headspace to be that organised, but I have seen a small number of things. I’ll describe two:</p>
+<ol type="1">
+<li><p><a href="https://www.edfringe.com/tickets/whats-on/rob-duncan-printer-of-the-year">Rob Duncan: Printer of the Year</a> at the Fringe. This was one of the strangest comedy shows I’ve ever seen. It was entirely about printing, and apparently Rob Duncan was himself “Printer of the Year” in 2024. It is hard to describe in writing the feeling of utter chaos created by an energetic man talking in extreme technical detail about printing, while dozens of printers around the room are printing random things. 10/10.</p></li>
+<li><p><a href="https://www.edbookfest.co.uk/events/nonomiya-song-of-rona-island">Nonomiya / Song of Rona Island</a> at the Book Festival. Another quite unusual show, this time at the Edinburgh International Book Festival. It was the premiere of a piece of Japanese <em>noh</em> theatre, depicting a visitor arriving at the island of North Rona in the North Atlantic. It is based on Scottish author Kathleen Jamie’s book Sightlines. I’m not certain I was properly equipped to really understand or appreciate what I was seeing, but it was definitely an intense and impressive experience.</p></li>
+</ol>
+</section>
+<section id="vegetables" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="vegetables">Vegetables</h3>
+<p>In other news, the courgettes seedlings I wrote about a couple of months back have been negligently allowed to turn into enormous marrows. Photo below.</p>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="../assets/blogpost_images/20260831_marrow.jpeg" class="img-fluid figure-img" style="width:100.0%" alt="Photo of Aneesh with an enormous marrow."></p>
+<figcaption class="margin-caption">Photo of me with an enormous marrow.</figcaption>
+</figure>
+</div>
 
 
+</section>
 </section>
 
 
