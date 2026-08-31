@@ -59,7 +59,7 @@
 <li>19 soil variables</li>
 <li>A single landcover classification</li>
 <li>Bioclimatic variables (based on temperature and precipitation): summary values averaged over 1981-2010</li>
-<li>As above, both the full monthly time series (not averaged)</li>
+<li>As above, but the full monthly time series (not averaged)</li>
 <li>12-year landsat time series (quarterly values, SWIR2, SWIR1, NIR, R, G, B).</li>
 </ul>
 <p>As with spatial context above, the S2-trained models see a much bigger boost from providing additional data than the Tessera-trained models. In both cases, spatial coordinates, climatic variables, and the Landsat time series give the biggest boosts. I was particularly interested to get this result: ultimately the aim of this project is to find out what the best covariates are for SDM. It is therefore interesting to learn whether Tessera is missing anything important which might be captured by external datasets.</p>
