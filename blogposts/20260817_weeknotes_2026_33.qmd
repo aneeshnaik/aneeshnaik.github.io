@@ -1,6 +1,6 @@
 ---
 title: "Weeknotes: 2026 Weeks 32 & 33"
-subtitle: "2026/08/01 -- 2026/08/13"
+subtitle: "2026/08/01 -- 2026/08/14"
 date: 2026-08-16
 categories:
   - Weeknotes
@@ -26,8 +26,6 @@ The workshop covered a lot of technical details, such as their proposal for chan
 
 
 ## Species Distribution Modelling
-
-#TODO: write up properly
 
 I made some progress on the SDM benchmarking project I've described in recent weeknotes (e.g. [29](20260720_weeknotes_2026_29.qmd) and [31](20260802_weeknotes_2026_31.qmd)).
 
