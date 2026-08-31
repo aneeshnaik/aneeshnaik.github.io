@@ -32,7 +32,7 @@ This figure shows how SDM performance varies as a function of spatial context fe
 
 ![Figure showing performance of the S2-trained and Tessera trained model as a function of training set size. The Tessera-trained model achieves the same performance as the full S2-trained model with only ~10% of the data.](../assets/blogpost_images/20260831_grid4_fig.png){fig-align="center" fig-alt="Graph showing GeoLifeClef scores under varying training fraction." width="80%"}
 
-This figure shows the various modalities behave when the models are fed increasingly smaller training datasets. Tessera yields the same performance as S2 with far fewer training labels. This mirrors findings with Tessera and other geospatial foundation models in many other downstream tasks. For example, see Fig. 4 in the [original Tessera paper](https://arxiv.org/pdf/2506.20380),[^3] or Fig. 4 in [James Ball's brilliant work mapping tree species in Trentino](https://www.sciencedirect.com/science/article/pii/S2666017226001045).[^4]
+This figure shows how the various modalities behave when the models are fed increasingly smaller training datasets. Tessera yields the same performance as S2 with far fewer training labels. This mirrors findings with Tessera and other geospatial foundation models in many other downstream tasks. For example, see Fig. 4 in the [original Tessera paper](https://arxiv.org/pdf/2506.20380),[^3] or Fig. 4 in [James Ball's brilliant work mapping tree species in Trentino](https://www.sciencedirect.com/science/article/pii/S2666017226001045).[^4]
 
 [^3]: [Feng, Z. et al., TESSERA: Temporal Embeddings of Surface Spectra for Earth Representation and Analysis, CVPR (2026)](https://openaccess.thecvf.com/content/CVPR2026/html/Feng_TESSERA_Temporal_Embeddings_of_Surface_Spectra_for_Earth_Representation_and_CVPR_2026_paper.html)
 [^4]: [Ball, J. G. C. et al., Geospatial foundation models enable data-efficient tree species mapping in temperate mountain forests, Sci. of Remote Sens. (2026)](https://www.sciencedirect.com/science/article/pii/S2666017226001045)
@@ -42,17 +42,19 @@ This figure shows the various modalities behave when the models are fed increasi
 
 ![Bar chart showing GeoLifeClef scores for S2-trained and Tessera-trained models, now with various additional layers added to the training data. As with spatial context above, the S2-trained models see a much bigger boost from providing additional data than the Tessera-trained models. In both cases, spatial coordinates, climatic variables, and landsat time series give the biggest boosts.](../assets/blogpost_images/20260831_grid5_fig.png){fig-align="center" fig-alt="Graph showing GeoLifeClef scores after appending various additional data layers." width="40%"}
 
-This figure shows how performance changes when adding additional layers to the training inputs. The layers are:
+This figure shows how performance changes when adding additional layers to the training inputs. The various additional layers are described below (without going into too much detail about their provenance):
 
-- Spatial coordinates (lon/lat)
-- Elevation
-- 19 soil variables
-- A single landcover classification
-- Bioclimatic variables (based on temperature and precipitation): summary values averaged over 1981-2010
-- As above, but the full monthly time series (not averaged)
-- 12-year landsat time series (quarterly values, SWIR2, SWIR1, NIR, R, G, B).
+- "Coordinates": lon/lat
+- "Elevation": height above sea level
+- "Soil": 19 different soil variables
+- "Landcover": a single landcover classification
+- "Bioclim (average)": bioclimatic variables (based on temperature and precipitation): summary values averaged over 1981-2010
+- "Bioclim (monthly)": as above, but the full monthly time series (not averaged)
+- "Landsat": 12-year landsat time series (quarterly values, SWIR2, SWIR1, NIR, R, G, B).
 
-As with spatial context above, the S2-trained models see a much bigger boost from providing additional data than the Tessera-trained models. In both cases, spatial coordinates, climatic variables, and the Landsat time series give the biggest boosts. I was particularly interested to get this result: ultimately the aim of this project is to find out what the best covariates are for SDM. It is therefore interesting to learn whether Tessera is missing anything important which might be captured by external datasets.
+As with spatial context above, the S2-trained models see a much bigger boost from providing additional data than the Tessera-trained models. In both cases, spatial coordinates, climatic variables, and the Landsat time series give the biggest boosts.
+
+I was quite keen to see the outcome of this experiment: ultimately the aim of this project is to find out what the best covariates are for SDM. It is therefore interesting to learn whether Tessera is missing anything important which might be captured by external datasets. The Landsat boost in particular is interesting, as Tessera was trained on Sentinel alone, and landsat could well contain complementary information. However, I'm not yet sure whether the information boost came from the change of instrument or the additional temporal context of the long-range time series.
 
 ### Various Other Bits
 
