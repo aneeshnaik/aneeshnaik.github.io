@@ -10,7 +10,57 @@
 <atom:link href="https://www.aneeshnaik.com/blog.xml" rel="self" type="application/rss+xml"/>
 <description>Personal webpage and blog of Aneesh Naik.</description>
 <generator>quarto-1.10.18</generator>
-<lastBuildDate>Mon, 31 Aug 2026 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Tue, 15 Sep 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Weeknotes: 2026 Weeks 36 &amp; 37</title>
+  <link>https://www.aneeshnaik.com/blogposts/20260915_weeknotes_2026_37.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>I’m a little busy at the moment trying to wrap up various things before going on holiday next week, so a shorter note.</p>
+<section id="what-i-was-working-on" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="what-i-was-working-on">What I was working on</h2>
+<p>This past fortnight I interrupted my regular projects to instead focus on getting some results together for two meetings: a workshop in Oxford last week (see below) and the <a href="https://www.clr.conservation.cam.ac.uk/CLR-Conference-2026">Centre for Landscape Regeneration (CLR) conference</a> coming up this Friday in Cambridge.<sup>1</sup></p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;I’m giving a talk at the CLR conference called “Change at scale: Tessera and the future of environmental monitoring”. Will post slides here after the talk.</p></div></div><p>I won’t go into too much detail about the results, as these mostly relate to projects being led by some of my CLR colleagues. I merely came in as last-minute reinforcement. However, the goal of my work here was to be able to tell stories around post-fire vegetation recovery, peatland repair, and deer management.</p>
+</section>
+<section id="oxford-workshop" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="oxford-workshop">Oxford Workshop</h2>
+<p>Alongside my colleagues <a href="https://www.plantsci.cam.ac.uk/people/david-coomes">David Coomes</a> and Jessica Williams, I attended a workshop at Worcester College, Oxford last Thursday (September 10): “Measuring Landscape Health”. It was jointly convened by the <a href="https://naturerecovery.ox.ac.uk/">Leverhulme Centre for Nature Recovery</a> and DEFRA, with the goal of “bringing together leading academics, policy experts and practitioners to explore how landscape health can be understood and measured in ways that are scientifically meaningful and practically useful for landscape recovery”.</p>
+<p>I had a wonderful time at this workshop, and learned a great deal. In particular, I was exposed to a lot of different philosophies about “landscape health”, and why it is so difficult to come to a consensus about how best to measure it.</p>
+<p><a href="https://en.wikipedia.org/wiki/Rosie_Hails">Rosie Hails</a> from the National Trust gave a memorable final talk of the workshop, framed as “four uncomfortable truths”:</p>
+<ol type="1">
+<li>Some species will lose for others to win.</li>
+<li>Food production should not be primary object of every parcel of land.</li>
+<li>We should prioritise <em>resilience</em> as the proxy for habitat condition, rather than difference from a baseline.</li>
+<li>Managing nature is just as much about managing people.</li>
+</ol>
+<p>More generally, throughout the workshop, there was a lot of discussion of <em>resilience</em>, which in truth is not something I’ve thought a great deal about yet. I had an interesting conversation with James Kempton, whose team at DEFRA have a very concrete, quantitative way of measuring ecosystem resilience: get the species inventory of an ecosystem, get trait information for all species, measure the enclosed volume within the trait space distribution, then plot a curve showing how that volume decreases as species are removed. The area under the curve is then a measure of resilience: if the hypervolume decreases far too quickly as species are removed (low area), this shows that the ecosystem is precariously dependent on a small number of species.<sup>2</sup></p>
+<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;James sent me <a href="https://www.nature.com/articles/s41586-025-09788-0">this paper</a> which employs the methdology.</p></div><div id="fn3"><p><sup>3</sup>&nbsp;He also suggested, as a fallback option, Bactrian camels. Memorably, he also repeatedly implored us not to throw him in jail.</p></div></div><p>Another memorable talk was given by <a href="https://www.au.dk/en/skjold@ecos.au.dk">Skjold Søndergaard</a> (Aarhus University), who implored us to introduce Asian elephants into Oxfordshire.<sup>3</sup></p>
+</section>
+<section id="miscellanea" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="miscellanea">Miscellanea</h2>
+<p>In Oxford I got to stay in an excellent guest room at Magdalen College, thanks to my friend <a href="https://www.magd.ox.ac.uk/people/dr-giles-masters/">Giles Masters</a>, a musicologist and Junior Research Fellow at Magdalen.</p>
+<p>I had breakfast with Giles the next morning and he took me to Magdalen’s Senior Common Room, where they have an entirely unexplained (to me) tradition of weighing guests before meals on an antique jockey scale.</p>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="https://www.aneeshnaik.com/assets/blogpost_images/20260915_magdalen.jpg" class="img-fluid figure-img" style="width:50.0%" alt="Photograph of me sat on an antique jockey scale."></p>
+<figcaption class="margin-caption">Me being weighed at Magdalen.</figcaption>
+</figure>
+</div>
+
+
+</section>
+
+
+ ]]></description>
+  <category>Weeknotes</category>
+  <category>Conservation</category>
+  <category>Meetings</category>
+  <guid>https://www.aneeshnaik.com/blogposts/20260915_weeknotes_2026_37.html</guid>
+  <pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Weeknotes: 2026 Weeks 34 &amp; 35</title>
   <link>https://www.aneeshnaik.com/blogposts/20260831_weeknotes_2026_35.html</link>
@@ -489,6 +539,115 @@ Dial 4 clues (normal): clue’s first letter<br>
   <pubDate>Fri, 03 Jul 2026 00:00:00 GMT</pubDate>
 </item>
 <item>
+  <title>Weeknotes: 2026 Week 23</title>
+  <link>https://www.aneeshnaik.com/blogposts/20260605_weeknotes_2026_23.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>I’ve been up in Edinburgh this week after a fun couple of weeks down in Cambridge.</p>
+<section id="what-i-was-working-on" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="what-i-was-working-on">What I was working on</h2>
+<section id="research" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="research">Research</h3>
+<p>I made incremental progress on various projects. Don’t want to plant too many flags here yet until these are a <em>little</em> more mature. However, a couple of exciting bits:</p>
+<p><strong>KBAs.</strong> I’m going to be working with <a href="https://www.birdlife.org/">BirdLife International</a> on finding new candidates for <a href="https://www.keybiodiversityareas.org/">Key Biodiversity Areas (KBAs)</a>. These are areas around the world flagged as key for conservation.</p>
+<p>The criteria for identifying KBAs are a little complicated, and the existing method for longlisting KBAs involves many repeated iterations of manual validation (and is therefore quite expensive). We’re hoping to find a clever way, likely with TESSERA (see below), to automate a little bit of the longlisting.</p>
+<p>This past week, BirdLife shared some of their data with me and I’ve started getting my teeth into it.</p>
+<p><strong>TESSERA v1.1.</strong> I wrote about <a href="https://geotessera.org/">TESSERA</a> in last week’s notes. This past week, a new version (1.1) has been released.<sup>1</sup> This addresses some issues with v1.0, such as tiling artefacts. It also goes a little farther out from the coast everywhere. I’ve spent a bit of time playing around with the new embeddings, <a href="https://tze.geotessera.org/?store=v1.1">which are very pretty</a>!</p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;My very small contribution to v1.1 was my involvement in the discussion of landmask choice. In arguing for a more generous coastal buffer, my ulterior motive was that I would really like to make a nice goose map.</p></div></div></section>
+<section id="python-package-datahues" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="python-package-datahues">Python package: <code>datahues</code></h3>
+<p>Yesterday I tidied up and released a python package I made some months back. It’s called <a href="https://github.com/aneeshnaik/datahues"><code>datahues</code></a>, and has a very simple functionality: given two colours, generate a perceptually uniform colour ramp between them. I find myself needing<sup>2</sup> to do this all the time and in the past have always just bodged around with some quite complicated colour-space libraries, so I thought I would write a simple utility for it. It’s now available on PyPI and conda-forge.</p>
+<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;“Needing” is perhaps too strong a word here.</p></div></div><p>Here is the figure from the README, demonstrating the need for the utility:</p>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="https://www.aneeshnaik.com/assets/blogpost_images/20260605_ramp_comparison.png" class="img-fluid figure-img" alt="Two colour ramps: one perceptually uniform, the other not." width="600"></p>
+<figcaption class="margin-caption">Plots of some mock data (2D Gaussian mixture), comparing a naïve linear RGB colour ramp versus a ramp generated with <code>datahues</code>. The start and end colours here are #F61212 (“Pure Red”) and #12F612 (“Lime”).</figcaption>
+</figure>
+</div>
+<p>In the left-hand panel, the green transitions very unevenly to red: there is some awful banding in the transition zone. Without perceptual uniformity (as in the right-hand panel), one might well see patterns in data that aren’t truly there.</p>
+<p>Here is a map I made with <code>datahues</code> a few months ago, depicting the annual number of sunshine hours across GB:</p>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="https://www.aneeshnaik.com/assets/blogpost_images/20260605_sunshine.png" class="img-fluid figure-img" style="width:60.0%" alt="A map of annual sunshine hours across GB."></p>
+<figcaption class="margin-caption">Map of annual sunshine hours across GB. In truth, this isn’t really the archetypal use case for <code>datahues</code>: the map uses a series of discrete steps along the ramp, so would probably get away without strict perceptual uniformity. The map uses Met Office data licensed under the Open Government Licence v3.0. <a href="https://catalogue.ceda.ac.uk/uuid/f02cc6ddd92f45b18b9ab6ab544df7d9">Met Office (2025), <em>HadUK-Grid Gridded Climate Observations on a 1km grid over the UK, v1.3.1.ceda (1836-2024)</em>. NERC EDS Centre for Environmental Data Analysis.</a></figcaption>
+</figure>
+</div>
+<p>It is very gloomy in the Highlands!</p>
+</section>
+</section>
+<section id="what-i-was-reading" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="what-i-was-reading">What I was reading</h2>
+<p>Having written a first draft of my research plan <a href="../blogposts/20260529_weeknotes_2026_22.html">last week</a>, I spent a lot of time this week reading around the various topics that I plan to work on. Both contemporary methodological papers and some of older “classics” and foundational works.</p>
+<p>One work in particular I thought I would write about is “Gradient Analysis of Vegetation” by R. H. Whittaker (1967).<sup>3</sup> This was quite an important review work in vegetation ecology. Whittaker was interested in vegetation communities and how they are spatially distributed. The central idea he argued for is the “individualistic” concept, in which each species has its own unique response to environmental gradients. Observed communities then are just incidental assemblages of species at a given point along the gradient.</p>
+<div class="no-row-height column-margin column-container"><div id="fn3"><p><sup>3</sup>&nbsp;<a href="https://onlinelibrary.wiley.com/doi/10.1111/j.1469-185X.1967.tb01419.x">Whittaker, R.H. (1967). <em>Gradient Analysis of Vegetation</em>. Biological Reviews.</a></p></div></div><div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="https://www.aneeshnaik.com/assets/blogpost_images/20260605_whittaker.png" class="img-fluid figure-img" style="width:65.0%" alt="A figure from Whittaker 1967, showing various tree species' distributions as a function of environmental moisture level."></p>
+<figcaption class="margin-caption">Tree species distributions as a function of moisture level in the Smoky Mountains. Idem. Figure 3, top panel.</figcaption>
+</figure>
+</div>
+<p>Above, I’m reproducing a figure from the paper, showing distributions of major tree species in the Smoky Mountains. Each curve is the distribution of a single species as a function of environmental moisture level, from mesic (wet) to xeric (dry) with increasing x. The point being made here is that no two species have the same curve: each species shows an individualistic response to the environmental gradient. According to Whittaker, if you stand in a certain place and observe N species, that is an incidental assemblage of N species for which that environment falls within the acceptable range. It will be slightly less acceptable to some of them than others.</p>
+<p>These ideas didn’t originate with Whittaker: they are known as the “Gleasonian” paradigm, having originated in the earlier 1920s work of Harry Gleason. Whittaker’s work arguing in favour of the Gleasonian paradigm was rather controversial. It stood against the prevailing “Clementsian” paradigm, which understood communities as discrete, bounded units, with relatively sharp boundaries (“ecotones”) between them.</p>
+</section>
+<section id="miscellanea" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="miscellanea">Miscellanea</h2>
+<section id="garden" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="garden">Garden</h3>
+<p>Our vegetable seedlings had a bit of an adventure in May. They travelled 800 miles and lived in four different houses. Now, they’re finally in the ground in our garden in Edinburgh.</p>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="https://www.aneeshnaik.com/assets/blogpost_images/20260605_seedlings.jpg" class="img-fluid figure-img" style="width:65.0%" alt="A photograph of some seedlings in vegetable patch."></p>
+<figcaption class="margin-caption">Photograph of sweetcorn and courgette seedlings in our garden. Forgive the scruffy environs!</figcaption>
+</figure>
+</div>
+<p>These are sweetcorn and yellow courgettes. We’re growing them in the same bed (along with some upcoming borlotti beans), following the “three sisters” method of companion planting. The idea is that the corn provides a rigid structure for the beans to climb, while the beans fix nitrogen in the soil. The courgettes, meanwhile, provide ground cover to retain moisture and suppress weeds.</p>
+<p>All of our seeds were F1 varieties, a decision I now regret a little. Having recently read Dan Saladino’s excellent book <a href="https://www.dansaladino.com/about-the-book"><em>Eating to Extinction</em></a>, I’m a zealous convert to the idea of preserving traditional, open-pollinated seed varieties. Doing so helps preserve food heritage, rare flavours, and genetic diversity. Next year!<sup>4</sup></p>
+<div class="no-row-height column-margin column-container"><div id="fn4"><p><sup>4</sup>&nbsp;In particular, I’m planning to join the <a href="https://www.gardenorganic.org.uk/what-we-do/hsl">Heritage Seed Library</a>.</p></div></div></section>
+<section id="clerihews" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="clerihews">Clerihews</h3>
+<p>I learned this week about a very silly poetic form: the <a href="https://en.wikipedia.org/wiki/Clerihew">clerihew</a>. 4 lines, AABB, whimsical and funny, with the rhymes often extremely contrived and the metre absolutely all over the place. They were invented around the start of the twentieth century by Edmund Clerihew Bentley, and they are typically biographical, with the subject of the poem being the first line. For example, from Bentley’s 1905 <a href="https://www.gutenberg.org/ebooks/46691"><em>Biography for Beginners</em></a>:<sup>5</sup></p>
+<div class="no-row-height column-margin column-container"><div id="fn5"><p><sup>5</sup>&nbsp;Bentley, E. C. (1905). <em>Biography for Beginners</em>. Read Books.</p></div></div><blockquote class="blockquote">
+<p>Sir Humphry Davy<br>
+Abominated gravy.<br>
+He lived in the odium<br>
+Of having discovered sodium.</p>
+</blockquote>
+<p>Another example, also from Bentley’s collection:</p>
+<blockquote class="blockquote">
+<p>The people of Spain think Cervantes<br>
+Equal to half-a-dozen Dantes:<br>
+An opinion resented most bitterly<br>
+By the people of Italy.</p>
+</blockquote>
+<p>They aren’t always biographical. My favourite is from the introduction of Bentley’s collection, and is about the very nature of biography:</p>
+<blockquote class="blockquote">
+<p>The Art of Biography<br>
+Is different from Geography.<br>
+Geography is about Maps,<br>
+But Biography is about Chaps.</p>
+</blockquote>
+
+
+</section>
+</section>
+
+
+ ]]></description>
+  <category>Weeknotes</category>
+  <category>Research</category>
+  <category>TESSERA</category>
+  <category>Maps</category>
+  <category>Gardening</category>
+  <category>Papers</category>
+  <category>Code</category>
+  <category>Ecology</category>
+  <category>KBAs</category>
+  <guid>https://www.aneeshnaik.com/blogposts/20260605_weeknotes_2026_23.html</guid>
+  <pubDate>Fri, 05 Jun 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
   <title>Weeknotes: 2026 Weeks 24 &amp; 25</title>
   <link>https://www.aneeshnaik.com/blogposts/20260619_weeknotes_2026_25.html</link>
   <description><![CDATA[ 
@@ -677,115 +836,6 @@ Dial 4 clues (normal): clue’s first letter<br>
   <category>Ecology</category>
   <category>Birds</category>
   <guid>https://www.aneeshnaik.com/blogposts/20260619_weeknotes_2026_25.html</guid>
-  <pubDate>Fri, 05 Jun 2026 00:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Weeknotes: 2026 Week 23</title>
-  <link>https://www.aneeshnaik.com/blogposts/20260605_weeknotes_2026_23.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<p>I’ve been up in Edinburgh this week after a fun couple of weeks down in Cambridge.</p>
-<section id="what-i-was-working-on" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="what-i-was-working-on">What I was working on</h2>
-<section id="research" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="research">Research</h3>
-<p>I made incremental progress on various projects. Don’t want to plant too many flags here yet until these are a <em>little</em> more mature. However, a couple of exciting bits:</p>
-<p><strong>KBAs.</strong> I’m going to be working with <a href="https://www.birdlife.org/">BirdLife International</a> on finding new candidates for <a href="https://www.keybiodiversityareas.org/">Key Biodiversity Areas (KBAs)</a>. These are areas around the world flagged as key for conservation.</p>
-<p>The criteria for identifying KBAs are a little complicated, and the existing method for longlisting KBAs involves many repeated iterations of manual validation (and is therefore quite expensive). We’re hoping to find a clever way, likely with TESSERA (see below), to automate a little bit of the longlisting.</p>
-<p>This past week, BirdLife shared some of their data with me and I’ve started getting my teeth into it.</p>
-<p><strong>TESSERA v1.1.</strong> I wrote about <a href="https://geotessera.org/">TESSERA</a> in last week’s notes. This past week, a new version (1.1) has been released.<sup>1</sup> This addresses some issues with v1.0, such as tiling artefacts. It also goes a little farther out from the coast everywhere. I’ve spent a bit of time playing around with the new embeddings, <a href="https://tze.geotessera.org/?store=v1.1">which are very pretty</a>!</p>
-<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;My very small contribution to v1.1 was my involvement in the discussion of landmask choice. In arguing for a more generous coastal buffer, my ulterior motive was that I would really like to make a nice goose map.</p></div></div></section>
-<section id="python-package-datahues" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="python-package-datahues">Python package: <code>datahues</code></h3>
-<p>Yesterday I tidied up and released a python package I made some months back. It’s called <a href="https://github.com/aneeshnaik/datahues"><code>datahues</code></a>, and has a very simple functionality: given two colours, generate a perceptually uniform colour ramp between them. I find myself needing<sup>2</sup> to do this all the time and in the past have always just bodged around with some quite complicated colour-space libraries, so I thought I would write a simple utility for it. It’s now available on PyPI and conda-forge.</p>
-<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;“Needing” is perhaps too strong a word here.</p></div></div><p>Here is the figure from the README, demonstrating the need for the utility:</p>
-<div class="quarto-figure quarto-figure-center page-columns page-full">
-<figure class="figure page-columns page-full">
-<p><img src="https://www.aneeshnaik.com/assets/blogpost_images/20260605_ramp_comparison.png" class="img-fluid figure-img" alt="Two colour ramps: one perceptually uniform, the other not." width="600"></p>
-<figcaption class="margin-caption">Plots of some mock data (2D Gaussian mixture), comparing a naïve linear RGB colour ramp versus a ramp generated with <code>datahues</code>. The start and end colours here are #F61212 (“Pure Red”) and #12F612 (“Lime”).</figcaption>
-</figure>
-</div>
-<p>In the left-hand panel, the green transitions very unevenly to red: there is some awful banding in the transition zone. Without perceptual uniformity (as in the right-hand panel), one might well see patterns in data that aren’t truly there.</p>
-<p>Here is a map I made with <code>datahues</code> a few months ago, depicting the annual number of sunshine hours across GB:</p>
-<div class="quarto-figure quarto-figure-center page-columns page-full">
-<figure class="figure page-columns page-full">
-<p><img src="https://www.aneeshnaik.com/assets/blogpost_images/20260605_sunshine.png" class="img-fluid figure-img" style="width:60.0%" alt="A map of annual sunshine hours across GB."></p>
-<figcaption class="margin-caption">Map of annual sunshine hours across GB. In truth, this isn’t really the archetypal use case for <code>datahues</code>: the map uses a series of discrete steps along the ramp, so would probably get away without strict perceptual uniformity. The map uses Met Office data licensed under the Open Government Licence v3.0. <a href="https://catalogue.ceda.ac.uk/uuid/f02cc6ddd92f45b18b9ab6ab544df7d9">Met Office (2025), <em>HadUK-Grid Gridded Climate Observations on a 1km grid over the UK, v1.3.1.ceda (1836-2024)</em>. NERC EDS Centre for Environmental Data Analysis.</a></figcaption>
-</figure>
-</div>
-<p>It is very gloomy in the Highlands!</p>
-</section>
-</section>
-<section id="what-i-was-reading" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="what-i-was-reading">What I was reading</h2>
-<p>Having written a first draft of my research plan <a href="../blogposts/20260529_weeknotes_2026_22.html">last week</a>, I spent a lot of time this week reading around the various topics that I plan to work on. Both contemporary methodological papers and some of older “classics” and foundational works.</p>
-<p>One work in particular I thought I would write about is “Gradient Analysis of Vegetation” by R. H. Whittaker (1967).<sup>3</sup> This was quite an important review work in vegetation ecology. Whittaker was interested in vegetation communities and how they are spatially distributed. The central idea he argued for is the “individualistic” concept, in which each species has its own unique response to environmental gradients. Observed communities then are just incidental assemblages of species at a given point along the gradient.</p>
-<div class="no-row-height column-margin column-container"><div id="fn3"><p><sup>3</sup>&nbsp;<a href="https://onlinelibrary.wiley.com/doi/10.1111/j.1469-185X.1967.tb01419.x">Whittaker, R.H. (1967). <em>Gradient Analysis of Vegetation</em>. Biological Reviews.</a></p></div></div><div class="quarto-figure quarto-figure-center page-columns page-full">
-<figure class="figure page-columns page-full">
-<p><img src="https://www.aneeshnaik.com/assets/blogpost_images/20260605_whittaker.png" class="img-fluid figure-img" style="width:65.0%" alt="A figure from Whittaker 1967, showing various tree species' distributions as a function of environmental moisture level."></p>
-<figcaption class="margin-caption">Tree species distributions as a function of moisture level in the Smoky Mountains. Idem. Figure 3, top panel.</figcaption>
-</figure>
-</div>
-<p>Above, I’m reproducing a figure from the paper, showing distributions of major tree species in the Smoky Mountains. Each curve is the distribution of a single species as a function of environmental moisture level, from mesic (wet) to xeric (dry) with increasing x. The point being made here is that no two species have the same curve: each species shows an individualistic response to the environmental gradient. According to Whittaker, if you stand in a certain place and observe N species, that is an incidental assemblage of N species for which that environment falls within the acceptable range. It will be slightly less acceptable to some of them than others.</p>
-<p>These ideas didn’t originate with Whittaker: they are known as the “Gleasonian” paradigm, having originated in the earlier 1920s work of Harry Gleason. Whittaker’s work arguing in favour of the Gleasonian paradigm was rather controversial. It stood against the prevailing “Clementsian” paradigm, which understood communities as discrete, bounded units, with relatively sharp boundaries (“ecotones”) between them.</p>
-</section>
-<section id="miscellanea" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="miscellanea">Miscellanea</h2>
-<section id="garden" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="garden">Garden</h3>
-<p>Our vegetable seedlings had a bit of an adventure in May. They travelled 800 miles and lived in four different houses. Now, they’re finally in the ground in our garden in Edinburgh.</p>
-<div class="quarto-figure quarto-figure-center page-columns page-full">
-<figure class="figure page-columns page-full">
-<p><img src="https://www.aneeshnaik.com/assets/blogpost_images/20260605_seedlings.jpg" class="img-fluid figure-img" style="width:65.0%" alt="A photograph of some seedlings in vegetable patch."></p>
-<figcaption class="margin-caption">Photograph of sweetcorn and courgette seedlings in our garden. Forgive the scruffy environs!</figcaption>
-</figure>
-</div>
-<p>These are sweetcorn and yellow courgettes. We’re growing them in the same bed (along with some upcoming borlotti beans), following the “three sisters” method of companion planting. The idea is that the corn provides a rigid structure for the beans to climb, while the beans fix nitrogen in the soil. The courgettes, meanwhile, provide ground cover to retain moisture and suppress weeds.</p>
-<p>All of our seeds were F1 varieties, a decision I now regret a little. Having recently read Dan Saladino’s excellent book <a href="https://www.dansaladino.com/about-the-book"><em>Eating to Extinction</em></a>, I’m a zealous convert to the idea of preserving traditional, open-pollinated seed varieties. Doing so helps preserve food heritage, rare flavours, and genetic diversity. Next year!<sup>4</sup></p>
-<div class="no-row-height column-margin column-container"><div id="fn4"><p><sup>4</sup>&nbsp;In particular, I’m planning to join the <a href="https://www.gardenorganic.org.uk/what-we-do/hsl">Heritage Seed Library</a>.</p></div></div></section>
-<section id="clerihews" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="clerihews">Clerihews</h3>
-<p>I learned this week about a very silly poetic form: the <a href="https://en.wikipedia.org/wiki/Clerihew">clerihew</a>. 4 lines, AABB, whimsical and funny, with the rhymes often extremely contrived and the metre absolutely all over the place. They were invented around the start of the twentieth century by Edmund Clerihew Bentley, and they are typically biographical, with the subject of the poem being the first line. For example, from Bentley’s 1905 <a href="https://www.gutenberg.org/ebooks/46691"><em>Biography for Beginners</em></a>:<sup>5</sup></p>
-<div class="no-row-height column-margin column-container"><div id="fn5"><p><sup>5</sup>&nbsp;Bentley, E. C. (1905). <em>Biography for Beginners</em>. Read Books.</p></div></div><blockquote class="blockquote">
-<p>Sir Humphry Davy<br>
-Abominated gravy.<br>
-He lived in the odium<br>
-Of having discovered sodium.</p>
-</blockquote>
-<p>Another example, also from Bentley’s collection:</p>
-<blockquote class="blockquote">
-<p>The people of Spain think Cervantes<br>
-Equal to half-a-dozen Dantes:<br>
-An opinion resented most bitterly<br>
-By the people of Italy.</p>
-</blockquote>
-<p>They aren’t always biographical. My favourite is from the introduction of Bentley’s collection, and is about the very nature of biography:</p>
-<blockquote class="blockquote">
-<p>The Art of Biography<br>
-Is different from Geography.<br>
-Geography is about Maps,<br>
-But Biography is about Chaps.</p>
-</blockquote>
-
-
-</section>
-</section>
-
-
- ]]></description>
-  <category>Weeknotes</category>
-  <category>Research</category>
-  <category>TESSERA</category>
-  <category>Maps</category>
-  <category>Gardening</category>
-  <category>Papers</category>
-  <category>Code</category>
-  <category>Ecology</category>
-  <category>KBAs</category>
-  <guid>https://www.aneeshnaik.com/blogposts/20260605_weeknotes_2026_23.html</guid>
   <pubDate>Fri, 05 Jun 2026 00:00:00 GMT</pubDate>
 </item>
 <item>
