@@ -41,9 +41,22 @@ Another memorable talk was given by [Skjold Søndergaard](https://www.au.dk/en/s
 
 ## Miscellanea
 
+### Getting weighed
+
 In Oxford I got to stay in an excellent guest room at Magdalen College, thanks to my friend [Giles Masters](https://www.magd.ox.ac.uk/people/dr-giles-masters/), a musicologist and Junior Research Fellow at Magdalen. 
 
 I had breakfast with Giles the next morning and he took me to Magdalen's Senior Common Room, where they have an entirely unexplained (to me) tradition of weighing guests before meals on an antique jockey scale.
 
 ![Me being weighed at Magdalen.](../assets/blogpost_images/20260915_magdalen.jpg){fig-align="center" fig-alt="Photograph of me sat on an antique jockey scale." width="50%"}
 
+### Crossword Corner
+
+[A few weeks ago](20260802_weeknotes_2026_31.qmd) I wrote about July's "Genius crossword". There was another cracking crossword in August, with another hilariously inscrutable rubric:
+
+> In six of the across and seven of the down clues, a word connected to an unclued entry must be removed. All other clues contain an extra letter; these indicate a framework. Only seven other cells obey the rules of the framework and provide the keys needed for the 15ac 30ac 7d. Thanks for playing.
+
+Here is the solution:
+
+![August's "Genius" crossword in the Guardian. Highlighted are the notes of the Eastenders theme.](../assets/blogpost_images/20260915_xword.jpg){fig-align="center" fig-alt="A filled crossword." width="70%"}
+
+15ac 30ac 7d turned out to be SOAP OPERA THEME. Concatenating the various additional letters as instructed spelled out "FIRST ROW AND COLUMN". The first row and column spell out STAVE and F/D/B/G/E. The framework then is musical notation! The 7 other cells that "obey the rules of the framework" (i.e., cells with musical notes in the right places on the stave) are highlighted above: the Eastenders theme.
