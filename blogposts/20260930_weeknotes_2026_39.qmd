@@ -40,9 +40,9 @@ A few weeks ago [I mentioned](20260831_weeknotes_2026_35) that I was reviewing a
 
 [^3]: The open review thread can be seen [here](https://github.com/openjournals/joss-reviews/issues/11195).
 
-With JOSS reviews, I like to properly test submitted packages with mock scientific experiments. Just before I went on holiday last week, I spent a fun morning setting up a toy problem to test `sbijax`. I wrote it up in [this GitHub gist](https://gist.github.com/aneeshnaik/09ed93e428d0d0e9bd860ac4b23143b2). Here, I'm trying to Bayesily infer $p_\rm{heads}$ of a biased coin given some "observed" coin toss outcomes.
+With JOSS reviews, I like to properly test submitted packages with mock scientific experiments. Just before I went on holiday last week, I spent a fun morning setting up a toy problem to test `sbijax`. I wrote it up in [this GitHub gist](https://gist.github.com/aneeshnaik/09ed93e428d0d0e9bd860ac4b23143b2). Here, I'm trying to Bayesily infer $p_{\mathrm{heads}}$ of a biased coin given some "observed" coin toss outcomes.
 
-To do this inference with simulation-based inference, one simulates the outcomes of an ensemble of coins with different biases, then feeds these "data" to a neural process which "learns" the likelihood function describing the system. Given a user-defined prior and the actual observation data, one can then infer the posterior for $p_\rm{heads}$ given the observed data.[^4]
+To do this inference with simulation-based inference, one simulates the outcomes of an ensemble of coins with different biases, then feeds these "data" to a neural process which "learns" the likelihood function describing the system. Given a user-defined prior and the actual observation data, one can then infer the posterior for $p_{\mathrm{heads}}$ given the observed data.[^4]
 
 [^4]: I chose this silly coin example because an analytic posterior exists that I can check against: provided I use a beta prior, the binomial coin-flip likelihood gives me a beta posterior. If I *really* wanted to infer the bias of a coin given some coin toss observations, training a neural process would be like bringing an aircraft carrier to a knife fight.
 
