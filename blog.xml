@@ -9,8 +9,68 @@
 <link>https://www.aneeshnaik.com/blog.html</link>
 <atom:link href="https://www.aneeshnaik.com/blog.xml" rel="self" type="application/rss+xml"/>
 <description>Personal webpage and blog of Aneesh Naik.</description>
-<generator>quarto-1.10.18</generator>
-<lastBuildDate>Wed, 30 Sep 2026 00:00:00 GMT</lastBuildDate>
+<generator>quarto-1.10.19</generator>
+<lastBuildDate>Tue, 13 Oct 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Weeknotes: 2026 Weeks 40 &amp; 41</title>
+  <link>https://www.aneeshnaik.com/blogposts/20261013_weeknotes_2026_41.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>I didn’t find a great deal of time the past two weeks for my own primary work; I spent a lot of time working with collaborators and students on their projects. Planning to return to my SDM work<sup>1</sup> and KBA work<sup>2</sup> in the next couple of weeks.</p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;The SDM project was last described in <a href="20260831_weeknotes_2026_35">this weeknote</a>.</p></div><div id="fn2"><p><sup>2</sup>&nbsp;The KBA work was last described in <a href="20260605_weeknotes_2026_23">this weeknote</a>.</p></div></div><section id="what-i-was-working-on" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="what-i-was-working-on">What I was working on</h2>
+<ul>
+<li>TEE: This summer I was supervising an intern, Louis Driver. He’s writing up a paper on the <a href="https://tee.cl.cam.ac.uk/">Tessera Embeddings Explorer</a>. Last week I was working a bit on iterating this towards publication.</li>
+<li>Forest structural heterogeneity: My other intern, Ameer Alhashemi, is writing up a paper on using Tessera to measure the structural heterogeneity of forests, i.e., to see how well Tessera can reproduce the heterogeneity metrics derived from LiDAR observations. Ditto.</li>
+<li>Hinewai: In my last couple of weeknotes I described some work I’ve been doing with PhD student Nina de Jong on a paper about slow successional change on the Hinewai peninsula in New Zealand. I’ve developed a fun approach to quantify slow change in Landsat observations, but we’ve decided to save this and describe it in a future paper. For Nina’s current paper we’ll just use some simple stats to tell the basic story of the drivers behind successional change in her study area.</li>
+<li>Part II projects:<sup>3</sup> I’m working with two undergrad students, whose projects started last week. For both of them, I spent quite a bit of time last week reading and doing some (pen and paper!) maths to formulate the projects. I discuss these further below.</li>
+</ul>
+<div class="no-row-height column-margin column-container"><div id="fn3"><p><sup>3</sup>&nbsp;For reasons, third-year undergraduates in Cambridge are called Part II students.</p></div></div></section>
+<section id="part-ii-projects" class="level2">
+<h2 class="anchored" data-anchor-id="part-ii-projects">Part II projects</h2>
+<section id="who-looks-where" class="level3">
+<h3 class="anchored" data-anchor-id="who-looks-where">Who Looks Where</h3>
+<p>This is a project I came up with a few months ago and advertised through my own department, Plant Sciences. Tim Bongaerts, third-year Natural Sciences student, has taken on the project.</p>
+<p>The idea for the project is to take <a href="https://www.gbif.org/">GBIF</a> / other citizen-sampled nature data and ask the question: what are the variables that drive sampling effort in citizen science?</p>
+<p>It’s a statistically thorny question. Do we have more observations at a given site because there is increased sampling effort or increased biodiversity? I’ve written up a methodology that disentangles the two under a number of simplifying assumptions. Tim will throw some data at it and see if it works.</p>
+</section>
+<section id="geolocation-uncertainty" class="level3">
+<h3 class="anchored" data-anchor-id="geolocation-uncertainty">Geolocation Uncertainty</h3>
+<p>The idea for this project is that there are nicer ways we could be dealing with the (sometimes quite large!) geolocation uncertainty in GBIF data. For example, if we’re using GBIF data to build species distribution models, we should build these models in such a way that the models are uncertainty-aware, and ideally propagate this uncertainty.</p>
+<p>This is a project I didn’t advertise, but I was chatting with <a href="https://anil.recoil.org/">Prof.&nbsp;Anil Madhavapeddy</a> about it last week and mentioned that I had previously thought about advertising this project but didn’t this time round. 12 hours later, Anil had a student on it! Finley Stirk, from computer sciences.</p>
+<p>Finley will be primarily supervised by my colleague <a href="https://digitalflapjack.com/">Michael Dales</a>, with me chipping in regularly. The idea is to look specifically at the GBIF-based habitat mapping that Michael and I are working on, and testing whether an improved treatment of uncertainty improves the maps. Anil also wrote up the project on <a href="https://anil.recoil.org/ideas/tessera-gbif-uncertainty">his blog</a>.</p>
+</section>
+</section>
+<section id="miscellanea" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="miscellanea">Miscellanea</h2>
+<section id="aberlady-bay" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="aberlady-bay">Aberlady Bay</h3>
+<p>My wife and I take an annual autumn trip to Aberlady Bay in East Lothian, in the hope of seeing tens of thousands of pink-footed geese noisily arriving around dusk. This year we were perhaps a little too early in the year, and there were only a few dozen pink-footies. BUT, we managed to see a large gaggle of barnacle geese, precisely the species I had failed to find on <a href="20261013_weeknotes_2026_41">Islay two weeks earlier</a>!</p>
+<p>We were also delighted by an <em>enormous</em> flock of lapwings, the largest we had ever seen, putting on a murmuration-style display. Very bad photo (through my binocular lenses) with both sets of birds (barnacles and lapwings) below.</p>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="https://www.aneeshnaik.com/assets/blogpost_images/20261013_geese.jpg" class="img-fluid figure-img" style="width:80.0%" alt="Photo of geese through binoculars"></p>
+<figcaption class="margin-caption">Terrible photo of some barnacle geese and lapwings through my binoculars.</figcaption>
+</figure>
+</div>
+
+
+</section>
+</section>
+
+
+ ]]></description>
+  <category>Weeknotes</category>
+  <category>Birds</category>
+  <category>Research</category>
+  <category>Statistics</category>
+  <category>Students</category>
+  <guid>https://www.aneeshnaik.com/blogposts/20261013_weeknotes_2026_41.html</guid>
+  <pubDate>Tue, 13 Oct 2026 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Weeknotes: 2026 Weeks 38 &amp; 39</title>
   <link>https://www.aneeshnaik.com/blogposts/20260930_weeknotes_2026_39.html</link>
