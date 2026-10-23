@@ -6,7 +6,8 @@
   --site-serif: "EB Garamond", "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
   --site-sans: "Gill Sans", "Gill Sans MT", "Trebuchet MS", Arial, sans-serif;
 
-  --paper: #f8f4ea;
+  --paper: #eeeeee;
+  /* --paper: #f8f4ea; */
   --paper-2: #f3ebdc;
   --ink: #23211f;
   --ink-soft: #3b3832;
@@ -72,14 +73,14 @@ div.callout {
 /* code */
 code,
 pre {
-  background: #efe6d6;
+  background: var(--paper-2);
   color: var(--ink-soft);
   border-radius: 0.25rem;
 }
 
 /* navbar */
 .navbar {
-  background-color: rgba(248, 244, 234, 0.96) !important;
+  background-color: var(--paper) !important;
   border-bottom: 1px solid var(--border);
   box-shadow: 0 1px 0 rgba(35, 33, 31, 0.03);
 }
@@ -96,6 +97,12 @@ pre {
 }
 .navbar .nav-link.active {
   font-weight: 600;
+}
+
+/* footer */
+.footer,
+.nav-footer {
+  background-color: var(--paper);
 }
 
 /* margin notes and figure captions (which land in margin bc yaml setting) */
