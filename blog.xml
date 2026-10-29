@@ -10,7 +10,117 @@
 <atom:link href="https://www.aneeshnaik.com/blog.xml" rel="self" type="application/rss+xml"/>
 <description>Personal webpage and blog of Aneesh Naik.</description>
 <generator>quarto-1.10.19</generator>
-<lastBuildDate>Tue, 13 Oct 2026 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Wed, 28 Oct 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Weeknotes: 2026 Weeks 42 &amp; 43</title>
+  <link>https://www.aneeshnaik.com/blogposts/20261028_weeknotes_2026_43.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="kbas" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="kbas">KBAs</h2>
+<p>Last week I wrote up a planned methodology for my project building a new pipeline for longlisting potential <a href="https://www.keybiodiversityareas.org/en">KBA</a> sites, and presented it to my colleagues Daniele Baisero and Andy Plumptre from the KBA programme.</p>
+<p>Subsequently, they’ve shared a collection Area of Habitat<sup>1</sup> maps with me, spanning a huge number of species. I spent a bit of time last week just clicking through different species and marvelling at their geographic distributions. Pictured below is the AoH of the brent goose <em>(Branta bernicla)</em>. Like many geese, they lead a somewhat mad life summering in the high Arctic and wintering in Barrow-in-Furness.</p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;<em>Area of Habitat:</em> the actual space within a given species’ geographical range that contains suitable environmental conditions and habitat types for that species to inhabit.</p></div></div><div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="https://www.aneeshnaik.com/assets/blogpost_images/20261028_aoh_brent.png" class="img-fluid figure-img" style="width:60.0%" alt="Map showing area of habitat of the brent goose."></p>
+<figcaption class="margin-caption">The Area of Habitat (AoH) of the brent goose (Branta bernicla). Geese are nuts. Data from Key Biodiversity Areas programme.</figcaption>
+</figure>
+</div>
+<p>In the coming weeks, I’m going to get going on implementing the first steps of my planned pipeline.</p>
+</section>
+<section id="species-distribution-modelling" class="level2">
+<h2 class="anchored" data-anchor-id="species-distribution-modelling">Species Distribution Modelling</h2>
+<p>After a hiatus of a few weeks, I got going again on my project attempting species distribution modelling with Tessera. Few bits of progress here:</p>
+<ul>
+<li>I changed prediction strategy for the distribution models. Previously, each model would simply have a probability threshold (tuned using the held-out validation set). At inference time, the model would predict presences for all species with probabilities above the threshold, and absences otherwise. Now, I’m doing something slightly smarter: for <em>each survey plot</em> at inference time, I choose the number of species <img src="https://latex.codecogs.com/png.latex?k"> that is expected to maximise F1 accuracy for that specific plot. I then predict the presences for the top <img src="https://latex.codecogs.com/png.latex?k"> species by probability, and absences for everything else.</li>
+<li>I ran various additional ablation tests looking at supplementing Tessera with additional environmental data, trying different ML architectures, etc.</li>
+</ul>
+<p>At this stage I think I have all I need to put things together for a first draft of a manuscript. I’ll work on that this coming fortnight.</p>
+</section>
+<section id="habitat-mapping" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="habitat-mapping">Habitat Mapping</h2>
+<p>Another project I’m returning to after a long hiatus: mapping the <a href="https://press.princeton.edu/series/habitats-of-the-world">Habitats of the World</a> with <a href="https://ebird.org/home">eBird</a> data and <a href="https://geotessera.org/">Tessera</a>. This is conceptually quite similar to the habitat mapping project I’m working on with Michael Dales, although the differing habitat typology and species-habitat crosswalk leads to rather different methodologies. More importantly, this project isn’t a full-fledged research project, just a quick proof of concept I’m working on for some collaborators.</p>
+<p>Last week, I had a quick and dirty first pass at two 50x50km habitat maps, one in northern Queensland, Australia and one in Kruger National Park, South Africa.<sup>2</sup></p>
+<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;Also a small sliver of Mozambique.</p></div></div><div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="https://www.aneeshnaik.com/assets/blogpost_images/20261028_habmap_aus.png" class="img-fluid figure-img" style="width:80.0%" alt="Image showing habitat map."></p>
+<figcaption class="margin-caption">eBird-derived habitat map of a 50x50 km site in northern Queensland.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="https://www.aneeshnaik.com/assets/blogpost_images/20261028_habmap_rsa.png" class="img-fluid figure-img" style="width:80.0%" alt="Image showing habitat map."></p>
+<figcaption class="margin-caption">Ditto, for a site in Kruger national park.</figcaption>
+</figure>
+</div>
+<p>By my (admittedly inexpert) eye, the Australian map does a reasonably good job, while the African map does a rather poor job. I <em>think</em> this fundamentally comes down to the input bird observations: there aren’t enough sufficiently informative checklists (i.e., checklists spotting strong indicators / obligates for certain habitats) to discriminate between some of the different habitats here, and so everything collapses to a few habitats, often the wrong ones.</p>
+<p>I’m planning to do a bit of diagnosis this week before writing up a quick report for my collaborators.</p>
+</section>
+<section id="various-other-bits" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="various-other-bits">Various other bits</h2>
+<ul>
+<li>I mentioned last week that I’m involved with two Part II projects: Tim Bongaerts is modelling <a href="https://www.gbif.org/what-is-gbif">GBIF</a> sampling effort while Finley Stirk is trying to get his head aroung GBIF geolocation uncertainty. Both students have gotten going now and are already beginning to make progress.<sup>3</sup></li>
+<li>Last week, following a suggestion from new PhD student Sophie Jones, I gave a mini-workshop about Tessera for the new PhD students at the CRI.</li>
+</ul>
+<div class="no-row-height column-margin column-container"><div id="fn3"><p><sup>3</sup>&nbsp;<a href="https://finleystirk.github.io/weeknotes/24-10-26.html">Here</a> is Finley’s first blogpost about the geolocation project.</p></div></div></section>
+<section id="what-i-was-reading" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="what-i-was-reading">What I was reading</h2>
+<section id="pollen-records-of-lough-neagh" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="pollen-records-of-lough-neagh">Pollen Records of Lough Neagh</h3>
+<p>In October I’ve tried to get back into the habit of doing at least 30 minutes of (academic) reading every day. One quite fun thing I read last week was a recent paper by Chepstow-Lusty and Fossitt (2026).<sup>4</sup></p>
+<div class="no-row-height column-margin column-container"><div id="fn4"><p><sup>4</sup>&nbsp;<a href="https://muse.jhu.edu/pub/423/article/1001320">Chepstow-Lusty, A. &amp; Fossitt, J. (2026). <em>Reconstructing the Woodland History Around Lough Neagh Before and After Major Human Impact—Can Large-Scale Catchment Restoration Mitigate the Eutrophication Crisis?</em>. Biology and Environment: Proceedings of the Royal Irish Academy.</a></p></div></div><p>Looking at pollen records from Lough Neagh over the last centuries, the authors conclude that the times of the greatest algal content in the lough (i.e., the times of the worst eutrophication crises) coincided with times of diminished woodland cover surrounding the lough. We need to plant trees!</p>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="https://www.aneeshnaik.com/assets/blogpost_images/20261028_pollen.jpg" class="img-fluid figure-img" style="width:60.0%" alt="Figure showing species distributions within pollen records in Lough Neagh as a function of time."></p>
+<figcaption class="margin-caption">Fig. 3 from Chepstow-Lusty &amp; Fossitt (2026). According to the pollen records, the times with most algae (Pediastrum) correspond to the times with the fewest trees.</figcaption>
+</figure>
+</div>
+</section>
+<section id="clouds" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="clouds">Clouds</h3>
+<p>Outside of the academic literature, I’ve recently started reading <em>The Cloudspotter’s Guide</em> by Gavin Pretor-Pinney, founder of the <a href="https://cloudappreciationsociety.org/">Cloud Appreciation Society</a>. I’m reading this because I’ve long been acutely conscious that I’m woefully ignorant about how clouds work and how to read a clouded sky.<sup>5</sup></p>
+<div class="no-row-height column-margin column-container"><div id="fn5"><p><sup>5</sup>&nbsp;So far, I’ve learned to identify cumulus. This is the “classic” cloud one sees in children’s drawings. It’s going to get harder, I believe.</p></div></div><p>The book opens by reproducing the Society’s <a href="https://cloudappreciationsociety.org/manifesto/">manifesto</a>, which charmingly includes the line:</p>
+<blockquote class="blockquote">
+<p>We pledge to fight ‘blue-sky thinking’ wherever we find it.</p>
+</blockquote>
+</section>
+</section>
+<section id="miscellanea" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="miscellanea">Miscellanea</h2>
+<section id="national-plant-monitoring-scheme" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="national-plant-monitoring-scheme">National Plant Monitoring Scheme</h3>
+<p>My wife and I have signed up as volunteers with the <a href="https://www.npms.org.uk/">National Plant Monitoring Scheme</a>. We’ve been assigned a 1km^2 grid square (a <em>monad</em>) in the Cambridgeshire Fens, pictured below. Over the coming years we’ll visit it twice a year to perform surveys of indicator species.</p>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="https://www.aneeshnaik.com/assets/blogpost_images/20261028_npms.png" class="img-fluid figure-img" style="width:60.0%" alt="Map showing location of NPMS grid square, overlaid on Google Satellite images."></p>
+<figcaption class="margin-caption">Our NPMS monad (centre). Satellite imagery © Google 2026.</figcaption>
+</figure>
+</div>
+<p>As well as being fun, I have a professional motive here: if I’m going to be mapping British habitats from space, I want to really improve my understanding of what they look like on the ground. I know a decent number of plants, but I only have a very patchy understanding of how species assemblages relate to habitat classifications, and what “good” and “bad” habitat conditions look like.</p>
+<p>Our grid square is quite an interesting one: most of it sits in the <a href="https://en.wikipedia.org/wiki/Ouse_Washes">Ouse Washes SSSI</a>: a seasonally flooded grassland.<sup>6</sup> This is the diagonal linear feature visible in the satellite image above. We should find some quite interesting aquatic plants here. We drove out to visit our grid square at the weekend and explore it a little. We’ll be back in spring for our first survey.</p>
+
+
+<div class="no-row-height column-margin column-container"><div id="fn6"><p><sup>6</sup>&nbsp;In the NPMS habitat typology, I believe this is a <em>neutral damp grassland</em>.</p></div></div></section>
+</section>
+
+
+ ]]></description>
+  <category>Weeknotes</category>
+  <category>Research</category>
+  <category>Birds</category>
+  <category>TESSERA</category>
+  <category>Books</category>
+  <category>Papers</category>
+  <category>Ecology</category>
+  <category>KBAs</category>
+  <category>SDM</category>
+  <category>Students</category>
+  <guid>https://www.aneeshnaik.com/blogposts/20261028_weeknotes_2026_43.html</guid>
+  <pubDate>Wed, 28 Oct 2026 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Weeknotes: 2026 Weeks 40 &amp; 41</title>
   <link>https://www.aneeshnaik.com/blogposts/20261013_weeknotes_2026_41.html</link>
