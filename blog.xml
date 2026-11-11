@@ -9,8 +9,92 @@
 <link>https://www.aneeshnaik.com/blog.html</link>
 <atom:link href="https://www.aneeshnaik.com/blog.xml" rel="self" type="application/rss+xml"/>
 <description>Personal webpage and blog of Aneesh Naik.</description>
-<generator>quarto-1.10.19</generator>
-<lastBuildDate>Wed, 28 Oct 2026 00:00:00 GMT</lastBuildDate>
+<generator>quarto-1.11.9</generator>
+<lastBuildDate>Wed, 11 Nov 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Weeknotes: 2026 Weeks 44 &amp; 45</title>
+  <link>https://www.aneeshnaik.com/blogposts/20261111_weeknotes_2026_45.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="bird-based-habitat-mapping" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="bird-based-habitat-mapping">Bird-based Habitat Mapping</h2>
+<p>In my <a href="../blogposts/20261028_weeknotes_2026_43.html">previous post</a>, I described my work mapping habitats using eBird data. I’ve finished a run at the pipeline, written up a report, and shared it with my collaborators. I’ll summarise my findings here.</p>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="https://www.aneeshnaik.com/assets/blogpost_images/20261111_birdhabs_overview.png" class="img-fluid figure-img" style="width:100.0%" alt="Two satellite images side-by-side."></p>
+<figcaption class="margin-caption">The two sites I’ve mapped using eBird checklists.</figcaption>
+</figure>
+</div>
+<p>The figure above shows satellite imagery of the two 50x50 km sites I mapped, one in Australia (northern Queensland) and one in South Africa (Kruger National Park). The yellow points represent a small handful of ‘ground truth’ points that I’ll use to validate my map later on. In both places (Kruger in particular), this is far too limited a validation to be considered robust. I’m just using these points to give me a very first indication of map quality, alongside visual inspection of the maps. My collaborators, who collected these points, know the areas intimately.</p>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="https://www.aneeshnaik.com/assets/blogpost_images/20261111_birdhabs_tessera_rgb.png" class="img-fluid figure-img" style="width:80.0%" alt="Two brightly coloured false colour maps side-by-side."></p>
+<figcaption class="margin-caption">False colour images of Tessera embeddings over the same two sites.</figcaption>
+</figure>
+</div>
+<p>The figure above shows a false-colour image of the <a href="https://geotessera.org/">Tessera</a> embeddings over the same sites. I use these embeddings as covariates in my habitat classification model.</p>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="https://www.aneeshnaik.com/assets/blogpost_images/20261111_birdhabs_outings.png" class="img-fluid figure-img" style="width:100.0%" alt="Maps of eBird checklists over two sites."></p>
+<figcaption class="margin-caption">The spatial distribution of eBird checklists over the two sites.</figcaption>
+</figure>
+</div>
+<p>The figure above shows the points I use to train my habitat classification model: eBird checklists in the 200km box surrounding each site. There is a problem that is apparent from the outset: the checklists are tightly clustered around the road network, particularly in Kruger.<sup>1</sup> Not visible in this figure is a second problem, just as troubling: the checklists in Kruger are nearly all “traveling” [sic] checklists, taken over the course of a long (often &gt;100km) drive.</p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;As my colleague John Fanshawe put it: they don’t let you out of the car in Kruger so that you don’t get eaten.</p></div></div><div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="https://www.aneeshnaik.com/assets/blogpost_images/20261111_birdhabs_confidences.png" class="img-fluid figure-img" style="width:100.0%" alt="Graphs showing label confidence over two different sites."></p>
+<figcaption class="margin-caption">Habitat label “confidence” of the eBird checklists over the two sites.</figcaption>
+</figure>
+</div>
+<p>I created a procedure for assigning “soft” habitat labels to each checklist. In other words, each checklist is not assigned a single hard habitat classification, but a probability distribution over habitats. This figure shows the distribution of label confidence across the checklists (a label is <em>confident</em> if the probability distribution is narrow, i.e., most probability is assigned to only one or two habitats). Because of the problems I noted above, we have much cleaner labels in Queensland than Kruger.</p>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="https://www.aneeshnaik.com/assets/blogpost_images/20261111_birdhabs_hmap1.png" class="img-fluid figure-img" style="width:100.0%" alt="Two maps of habitat classifications."></p>
+<figcaption class="margin-caption">Habitat maps of the two sites.</figcaption>
+</figure>
+</div>
+<p>Having assigned these soft labels and used them to train a habitat classifier, here are the maps the trained model generates across both sites. The map seems largely reasonable in Australia, and the classifications are confident (see the uncertainty thumbnail) across most of the site. Comparing with the handful of validation points, the map correctly classifies 10 of 15 of them.</p>
+<p>In Kruger, very little of the map is confidently classified, and <em>none</em> of the validation points are correctly predicted. We’ll have to think of something smart to do here!</p>
+</section>
+<section id="uk-plant-maps" class="level2">
+<h2 class="anchored" data-anchor-id="uk-plant-maps">UK Plant Maps</h2>
+<p>Over the last several months I’ve spent a bit of time developing a multi-species plant distribution modelling pipeline using Tessera, benchmarking it against the <a href="https://arxiv.org/abs/2408.13928">GeoPlant</a> dataset (10k species across Europe). I’m writing up the results of those experiments into a manuscript, but at the same time I’ve turned the firehose on the UK: I took my “best” model, trained it on some citizen science data, and made a first ‘shoot from the hip’ pass at some GB-wide plant maps. They’re looking quite encouraging, but I will wait until a slightly more mature version before sharing visuals here.</p>
+<p>After I’ve matured these maps a little, the plan is to feed them into some actual <em>science</em>. That is, understand habitat change and the causes behind it.</p>
+</section>
+<section id="miscellanea" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="miscellanea">Miscellanea</h2>
+<section id="crossword-prize" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="crossword-prize">Crossword Prize</h3>
+<p>I have submitted maybe 80 completed entries for the Guardian’s weekly <a href="https://www.theguardian.com/crosswords/series/prize">Prize Crossword</a> competition. They draw five names out of a hat each week, and the chosen winners receive a prize in the post. Last week I <em>finally</em> got a prize!<sup>2</sup> <em>Après avoir vu ça, on peut mourir tranquille.</em><sup>3</sup></p>
+<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;This actually is for an entry I sent in August. The prize sat with a neighbour for two months before they posted it through my letterbox.</p></div><div id="fn3"><p><sup>3</sup>&nbsp;It is perhaps a little unlike me to make <a href="https://en.wikipedia.org/wiki/Thierry_Roland">oblique football references</a>. I once had a French colleague who, very memorably, used to utter this quote whenever anything nice happened to him.</p></div></div><p>The prize, pictured below, is <em>The Language Lover’s Puzzle Book</em> by Alex Bellos (he of <a href="https://www.theguardian.com/science/series/alex-bellos-monday-puzzle">Guardian Monday puzzle blog</a> fame). I thought this would be a book of <em>word puzzles</em>, but it turns out to be a book of <em>language puzzles</em>, along similar lines to a <a href="https://www.uklo.org/past-exam-papers/">linguistics olympiad</a>. Watch this space!</p>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="https://www.aneeshnaik.com/assets/blogpost_images/20261111_crossword.jpg" class="img-fluid figure-img" style="width:55.0%" alt="A photo of the Language Lover's Puzzle Book by Alex Bellos, and a congratulatory letter from the Guardian."></p>
+<figcaption class="margin-caption">My prize from the Guardian.</figcaption>
+</figure>
+</div>
+</section>
+<section id="sheep-stanes" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="sheep-stanes">Sheep Stanes</h3>
+<p>The week before last was my favourite week in the Edinburgh calendar: the (confusingly named?) <a href="https://www.sisf.org.uk/">Scottish International Storytelling Festival</a>. I didn’t have time to go to many things this year, but a real highlight was a performance called <em>Sheep Stanes</em> given by storyteller <a href="https://www.ailsadixonstoryteller.com/">Ailsa Dixon</a>. It was a wonderful, musical hour of dark, brooding folk stories from North Ronaldsay deftly interwoven with Dixon’s own funny and moving story of building a dry stane wall around the island.<sup>4</sup> My wife and I agreed this was the best show we’d ever seen at the festival.</p>
+
+
+<div class="no-row-height column-margin column-container"><div id="fn4"><p><sup>4</sup>&nbsp;The wall is so that the feral sheep of North Ronaldsay remain hemmed between the <em>groond</em> and the <em>watter</em>.</p></div></div></section>
+</section>
+
+
+ ]]></description>
+  <category>Weeknotes</category>
+  <category>Research</category>
+  <category>TESSERA</category>
+  <category>Crosswords</category>
+  <category>SDM</category>
+  <guid>https://www.aneeshnaik.com/blogposts/20261111_weeknotes_2026_45.html</guid>
+  <pubDate>Wed, 11 Nov 2026 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Weeknotes: 2026 Weeks 42 &amp; 43</title>
   <link>https://www.aneeshnaik.com/blogposts/20261028_weeknotes_2026_43.html</link>
