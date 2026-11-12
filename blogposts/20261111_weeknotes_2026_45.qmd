@@ -32,7 +32,7 @@ The figure above shows the points I use to train my habitat classification model
 
 I created a procedure for assigning "soft" habitat labels to each checklist. In other words, each checklist is not assigned a single hard habitat classification, but a probability distribution over habitats. This figure shows the distribution of label confidence across the checklists (a label is *confident* if the probability distribution is narrow, i.e., most probability is assigned to only one or two habitats). Because of the problems I noted above, we have much cleaner labels in Queensland than Kruger.
 
-![Habitat maps of the two sites.](../assets/blogpost_images/20261111_birdhabs_hmap1.png){fig-align="center" fig-alt="Two maps of habitat classifications." width="100%"}
+![Habitat maps of the two sites.](../assets/blogpost_images/20261111_birdhabs_hmap.png){fig-align="center" fig-alt="Two maps of habitat classifications." width="100%"}
 
 Having assigned these soft labels and used them to train a habitat classifier, here are the maps the trained model generates across both sites. The map seems largely reasonable in Australia, and the classifications are confident (see the uncertainty thumbnail) across most of the site. Comparing with the handful of validation points, the map correctly classifies 10 of 15 of them.
 
