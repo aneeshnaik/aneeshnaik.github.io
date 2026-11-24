@@ -10,7 +10,76 @@
 <atom:link href="https://www.aneeshnaik.com/blog.xml" rel="self" type="application/rss+xml"/>
 <description>Personal webpage and blog of Aneesh Naik.</description>
 <generator>quarto-1.11.9</generator>
-<lastBuildDate>Wed, 11 Nov 2026 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Tue, 24 Nov 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Weeknotes: 2026 Weeks 46 &amp; 47</title>
+  <link>https://www.aneeshnaik.com/blogposts/20261124_weeknotes_2026_47.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="species-and-habitat-mapping" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="species-and-habitat-mapping">Species and Habitat Mapping</h2>
+<p>I had a good couple of weeks on the species mapping and habitat mapping front. To summarise:</p>
+<ul>
+<li>Having previously claimed this a few times, I now truly have done my last species mapping experiments with the GeoPlant dataset. What I’ve come out with from this exercise is an understanding of how best to do species distribution modelling with Tessera.<sup>1</sup> I’ve put all my figures together into a manuscript, and I’m working on writing this up.</li>
+<li>I’m now turning this pipeline to the UK, building plant species maps using various datasets. One advance over my GeoPlant pipeline: I’m incorporating it into a <em>Bayesian</em> workflow, so that we get (hopefully well-calibrated) uncertainties on our species maps. I spent an extremely enjoyable day working out the theoretical framework for this.</li>
+<li>With a quick first pass at the pipeline, I’ve made species maps of 124 plant species across Great Britain. Here are some examples:</li>
+</ul>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;In particular, I’ve built a pipeline for plant SDMs with Tessera that would have won the 2024 GeoLifeClef competition.</p></div></div><div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="https://www.aneeshnaik.com/assets/blogpost_images/20261124_species_maps.png" class="img-fluid figure-img" style="width:60.0%" alt="Three maps showing plant distributions of three species."></p>
+<figcaption class="margin-caption">Distribution maps of three rather different plant species.</figcaption>
+</figure>
+</div>
+<ul>
+<li>With these species maps in hand, I then have a <em>plant assemblage</em> at each pixel. Using some labelled habitat polygons, a model can then learn an assemblage-habitat link, and make a habitat map. I have access to a large number of such habitat polygons: the ground-truth polygons used to create the <a href="https://defraenvironment.blog.gov.uk/2024/12/18/living-england-a-national-habitat-map-for-everyone/">Living England</a> habitat maps. Using these polygons, I made two habitat maps: one using this <em>species-up</em> approach, and one with the conventional <em>top-down</em> approach (i.e., simply training a habitat classifier with remote sensing covariates). The figure below compares the two maps.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="https://www.aneeshnaik.com/assets/blogpost_images/20261124_habmap_comparison.png" class="img-fluid figure-img" style="width:80.0%" alt=""></p>
+<figcaption class="margin-caption">A comparison of two approaches to habitat mapping. The agreement is, somewhat unexpectedly, excellent!</figcaption>
+</figure>
+</div>
+<ul>
+<li>The agreement between the two maps is rather good, despite the differing methodologies / philosophies.<sup>2</sup> This is encouraging, because I much prefer this (unconventional) species-up approach for two reasons. First, it aligns better with a more ecological understanding of <em>habitat</em>. Second, with this kind of approach, one is able to map a little more <em>fuzzily</em>, i.e., look at how species assemblages vary spatially and use this to map more spatially gradual boundaries between habitats.</li>
+</ul>
+<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;<a href="../blogposts/20260605_weeknotes_2026_23.html">A few months ago</a> I wrote a little about the Clementsian versus Gleasonian philosophies regarding ecological communities. We can understand these top-down and species-up approaches to habitat mapping as being approximately Clementsian and Gleasonian respectively.</p></div></div><p>I haven’t yet turned on the Bayesian switch. Will experiment with that next week!</p>
+</section>
+<section id="uk-green-spaces" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="uk-green-spaces">UK Green Spaces</h2>
+<p>We got an enquiry last week from the British Trust for Ornithology about habitat mapping British “greenspaces” (urban parks etc.) using Tessera. Following this enquiry, I’ve been playing around a little bit with what my habitat/species maps looked like in these settings. Some examples below.</p>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="https://www.aneeshnaik.com/assets/blogpost_images/20261124_greenspace_species.png" class="img-fluid figure-img" style="width:100.0%" alt="A 4x3 grid of maps: maps of four plant distributions across three UK parks."></p>
+<figcaption class="margin-caption">Species maps of four example species across three <em>greenspaces</em>.</figcaption>
+</figure>
+</div>
+<p>I don’t yet have a clear science goal for this work, I’m simply doing some exploration ahead of a meeting with the BTO this coming week.</p>
+</section>
+<section id="crossword-corner" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="crossword-corner">Crossword Corner</h2>
+<p>After the dizzying heights of <a href="../blogposts/20261111_weeknotes_2026_45.html">last month’s crossword prize</a>, I’ve been on a bit of a comedown: the last couple of weeks have been relatively light on crossword <em>solving</em> front.<sup>3</sup> On the other hand, I have recently gotten back into the practice of <em>writing</em> crosswords. I’m working on a themed crossword, and this is my favourite clue so far:</p>
+<div class="no-row-height column-margin column-container"><div id="fn3"><p><sup>3</sup>&nbsp;However, I did receive a delightful crossword clue in the post (!) from my colleague <a href="https://www.samreynolds.org/">Sam Reynolds</a>. I would like to <strong>strongly</strong> encourage this kind of behaviour. Readers, take note.</p></div></div><blockquote class="blockquote">
+<p>Countertop hi-fi installation nine feet long (4)</p>
+</blockquote>
+<p>Solutions to me. No prizes.</p>
+
+
+</section>
+
+
+ ]]></description>
+  <category>Weeknotes</category>
+  <category>Research</category>
+  <category>TESSERA</category>
+  <category>Maps</category>
+  <category>Crosswords</category>
+  <category>SDM</category>
+  <guid>https://www.aneeshnaik.com/blogposts/20261124_weeknotes_2026_47.html</guid>
+  <pubDate>Tue, 24 Nov 2026 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Weeknotes: 2026 Weeks 44 &amp; 45</title>
   <link>https://www.aneeshnaik.com/blogposts/20261111_weeknotes_2026_45.html</link>
